@@ -9,6 +9,8 @@ import { ServiceProcess } from "@/components/service-single/serviceProcess";
 import { FaqSection } from "@/components/service-single/faqSection";
 import Clients from "@/components/shared/Clients";
 import Services from "@/components/shared/Services";
+import { DataTable } from "@/components/service-single/dataTable";
+import { CommonChallengesSection } from "@/components/service-single/commonChallengesSection";
 
 const ServiceContent = ({ data = {} }) => {
   return (
@@ -21,6 +23,109 @@ const ServiceContent = ({ data = {} }) => {
           link={data?.heroSection?.link || "#"}
         />
 
+        {/* NEW: sections */}
+          {data?.whatIsIGamingSection && (
+            <section className="py-16 px-4 max-w-5xl mx-auto">
+              <div className="max-w-5xl mx-auto">
+                <h2 className="text-2xl font-bold text-center mb-8">{data.whatIsIGamingSection.title}</h2>
+                <div className="prose prose-lg dark:prose-invert max-w-none mx-auto">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line text-center">
+                    {data.whatIsIGamingSection.content}
+                  </p>
+                </div>
+                {data.whatIsIGamingSection.ctaButton && data.whatIsIGamingSection.ctaLink && (
+                  <div className="text-center mt-10">
+                    <a href={data.whatIsIGamingSection.ctaLink} className="btn">
+                      {data.whatIsIGamingSection.ctaButton}
+                    </a>
+                  </div>
+                )}
+              </div>
+            </section>
+          )}
+
+          {data?.tableOne && (
+            <DataTable data={data.tableOne} />
+          )}
+
+          {data?.GrowthSection && (
+            <section className="py-16 px-4 max-w-5xl mx-auto">
+              <div className="max-w-5xl mx-auto">
+                <h2 className="text-2xl font-bold text-center mb-8">{data.GrowthSection.title}</h2>
+                <div className="prose prose-lg dark:prose-invert max-w-none mx-auto">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line text-center">
+                    {data.GrowthSection.content}
+                  </p>
+                </div>
+                {data.GrowthSection.ctaButton && data.GrowthSection.ctaLink && (
+                  <div className="text-center mt-10">
+                    <a href={data.GrowthSection.ctaLink} className="btn">
+                      {data.GrowthSection.ctaButton}
+                    </a>
+                  </div>
+                )}
+              </div>
+            </section>
+          )}
+
+          {data?.tableTwo && (
+            <DataTable data={data.tableTwo} />
+          )}
+
+          {data?.tableThree && (
+            <DataTable data={data.tableThree} />
+          )}
+          {data?.commonChallengesSection && (
+            <CommonChallengesSection data={data.commonChallengesSection} />
+          )}
+          {data?.tableFour && (
+            <DataTable data={data.tableFour} />
+          )}
+
+          {data?.tableFive && (
+            <DataTable data={data.tableFive} />
+          )}
+
+          {data?.extraDataDescription && (
+            <section className="py-16 px-4 max-w-5xl mx-auto">
+              <div className="max-w-5xl mx-auto">
+                <h2 className="text-2xl font-bold text-center mb-8">{data.extraDataDescription.title}</h2>
+                <div className="prose prose-lg dark:prose-invert max-w-none mx-auto">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line text-center">
+                    {data.extraDataDescription.content}
+                  </p>
+                </div>
+                {data.extraDataDescription.ctaButton && data.extraDataDescription.ctaLink && (
+                  <div className="text-center mt-10">
+                    <a href={data.extraDataDescription.ctaLink} className="btn">
+                      {data.extraDataDescription.ctaButton}
+                    </a>
+                  </div>
+                )}
+              </div>
+            </section>
+          )}
+
+          {data?.daikiMediaHelpSection && (
+            <section className="py-16 px-4 bg-red-50 dark:bg-red-800/30 rounded-xl max-w-5xl mx-auto">
+              <div className="max-w-5xl mx-auto">
+                <h2 className="text-2xl font-bold text-center mb-8">{data.daikiMediaHelpSection.title}</h2>
+                <div className="prose prose-lg dark:prose-invert max-w-none mx-auto">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line text-center">
+                    {data.daikiMediaHelpSection.content}
+                  </p>
+                </div>
+                {data.daikiMediaHelpSection.ctaButton && data.daikiMediaHelpSection.ctaLink && (
+                  <div className="text-center mt-10">
+                    <a href={data.daikiMediaHelpSection.ctaLink} className="btn">
+                      {data.daikiMediaHelpSection.ctaButton}
+                    </a>
+                  </div>
+                )}
+              </div>
+            </section>
+          )}
+        {/* NEW: sections end */}
         {data?.servicesInclude && <ServiceInclude data={data.servicesInclude} sectionTitle={data?.servicesIncludeTitle || `What Our ${data?.title || "Services"} Include`} />}
         {data?.infoStatsSection && <InfoStatsSection data={data.infoStatsSection} />}
 
@@ -52,9 +157,28 @@ const ServiceContent = ({ data = {} }) => {
         {data?.additionalInfo && <AdditionalInfo data={data.additionalInfo} />}
         {data?.faqSection && <FaqSection data={data.faqSection} heading={data?.faqSectionHeading} />}
 
+        {/* NEW: Explore Services Section */}
+        {data?.exploreServicesSection && (
+          <section className="py-16 px-4 mb-[100px] max-w-5xl mx-auto">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-2xl font-bold mb-4">{data.exploreServicesSection.title}</h2>
+              <p className="text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto text-center">
+                {data.exploreServicesSection.description}
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                {data.exploreServicesSection.services?.map((service, idx) => (
+                  <a key={idx} href={service.link} className="btn">
+                    {service.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {data?.conclusionSection && (
           <section>
-            <div className="mb-[100px] text-center">
+            <div className="mb-[100px] text-center max-w-5xl mx-auto">
               <p className="mb-4 font-medium uppercase">TOP INTEGRATION</p>
               <h2 className="mb-10 max-lg:mb-10">
                 {data.conclusionSection?.title || "Default Conclusion Title"}

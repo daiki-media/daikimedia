@@ -1,14 +1,14 @@
 import HomePage from "./HomePage";
 
 export const metadata = {
-  title: "Digital Marketing Agency Kuala Lumpur | Daiki Media",
+  title: "SEO Agency for Rankings & Growth | Daiki Media ",
   description:
-    "Partner with Daiki Media, a top digital marketing agency in Kuala Lumpur offering expert SEO and online marketing strategies that drive measurable business growth.",
+    "Boost rankings, traffic, and revenue with Daiki Media SEO. Data-driven strategies, technical fixes, and content that converts. Book a free call.",
   keywords:
-    "digital marketing agency kuala lumpur, search engine optimization and digital marketing,best seo agencies",
-  og_title: "Digital Marketing Agency Kuala Lumpur | Daiki Media",
+    "Meta Description: Struggling to reach the top of search engine results? Daiki Media delivers proven search engine optimization that improves user experience, drives visibility across different types of SEO, and turns search result clicks into revenue. Explore our SEO courses and strategies. Book a free call today.",
+  og_title: "SEO Agency for Rankings & Growth | Daiki Media ",
   og_description:
-    "Partner with Daiki Media, a top digital marketing agency in Kuala Lumpur offering expert SEO and online marketing strategies that drive measurable business growth.",
+    "Boost rankings, traffic, and revenue with Daiki Media SEO. Data-driven strategies, technical fixes, and content that converts. Book a free call.",
   og_image: "https://www.daikimedia.com/images/logo.png",
   og_url: "https://www.daikimedia.com",
   og_type: "website",

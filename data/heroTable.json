@@ -1,0 +1,310 @@
+{
+  "tableOne": {
+    "title": "SEO Service Overview: What Daiki Media Delivers",
+    "description": "Here is a clear breakdown of what our SEO service covers, who it is built for, and what results you can expect.",
+    "rows": [
+      {
+        "category": "Service Type",
+        "detail": "On-Page SEO",
+        "detail2": "Off-Page SEO",
+        "detail3": "Technical SEO"
+      },
+      {
+        "category": "Platforms",
+        "detail": "Google, Bing, Yahoo",
+        "detail2": "Authority sites, PR, directories",
+        "detail3": "Core Web Vitals, structured data"
+      },
+      {
+        "category": "Timeline",
+        "detail": "Results visible in 60-90 days",
+        "detail2": "Momentum builds in 90-180 days",
+        "detail3": "Immediate impact on crawlability"
+      },
+      {
+        "category": "Results Expectation",
+        "detail": "Higher search result positions, more traffic",
+        "detail2": "Domain authority growth, referral traffic",
+        "detail3": "Faster indexing, better ranking signals"
+      },
+      {
+        "category": "Pricing Model",
+        "detail": "Monthly retainer or project-based",
+        "detail2": "Outreach packages available",
+        "detail3": "Audit + ongoing optimization"
+      },
+      {
+        "category": "Best For",
+        "detail": "eCommerce, SaaS, lead generation sites",
+        "detail2": "New domains, competitive industries",
+        "detail3": "Sites with SEO issues or poor performance"
+      }
+    ],
+    "closingContent": "Get a Custom SEO Growth Plan for Your Business",
+    "ctaButton": "Get a Custom SEO Growth Plan for Your Business",
+    "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
+  },
+  "tableTwo": {
+    "title": "Search Intent Mapping: How We Optimize Each Content Layer",
+    "description": "Our SEO strategy begins with mapping every target keyword to its search intent: informational, navigational, commercial, or transactional. This determines the content format, depth, internal linking structure, and CTA placement for every page we optimize.",
+    "rows": [
+      {
+        "searchIntent": "Informational",
+        "exampleQuery": "what is SEO",
+        "bestContentFormat": "Blog, guide, FAQ",
+        "seoGoal": "Visibility and authority"
+      },
+      {
+        "searchIntent": "Navigational",
+        "exampleQuery": "Daiki Media SEO agency",
+        "bestContentFormat": "Homepage, About page",
+        "seoGoal": "Brand search result capture"
+      },
+      {
+        "searchIntent": "Commercial",
+        "exampleQuery": "best SEO agency for SaaS",
+        "bestContentFormat": "Service page, comparison",
+        "seoGoal": "High-value ranking positions"
+      },
+      {
+        "searchIntent": "Transactional",
+        "exampleQuery": "hire SEO agency now",
+        "bestContentFormat": "Landing page, CTA-led page",
+        "seoGoal": "Conversion from organic search"
+      }
+    ],
+    "ctaButton": "Speak to an SEO Expert at Daiki Media Today",
+    "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
+  },
+  "tableThree": {
+    "title": "Different Types of SEO Daiki Media Covers for Your Business",
+    "description": "SEO is not a single tactic. It is an ecosystem of interconnected strategies, each targeting a different aspect of how search engines index and rank your content.",
+    "rows": [
+      {
+        "seoType": "On-Page SEO",
+        "whatItCovers": "Keyword placement, meta description, heading structure, content optimization, internal linking, page optimization",
+        "primaryBenefit": "Direct ranking improvement"
+      },
+      {
+        "seoType": "Off-Page SEO",
+        "whatItCovers": "Link building, digital PR, brand mentions, authority signals from users and search engines",
+        "primaryBenefit": "Domain authority and trust"
+      },
+      {
+        "seoType": "Technical SEO",
+        "whatItCovers": "Site speed, crawlability, structured data, XML sitemaps, help search engines index your pages efficiently",
+        "primaryBenefit": "Crawl efficiency and indexing"
+      },
+      {
+        "seoType": "Local SEO",
+        "whatItCovers": "Google Business profile optimization, local citations, map pack ranking for location-specific search result pages",
+        "primaryBenefit": "Foot traffic and local leads"
+      },
+      {
+        "seoType": "Ecommerce SEO",
+        "whatItCovers": "Product page optimization, category structure, schema markup, ecommerce search queries targeting for online stores",
+        "primaryBenefit": "Product visibility and sales"
+      },
+      {
+        "seoType": "International SEO",
+        "whatItCovers": "Hreflang implementation, geo-targeting, multilingual content strategy for global search engines",
+        "primaryBenefit": "Global ranking and traffic"
+      },
+      {
+        "seoType": "News SEO",
+        "whatItCovers": "News sitemaps, Google News inclusion, topical freshness signals and speed optimization for news SEO",
+        "primaryBenefit": "Featured in news search results"
+      }
+    ],
+    "closingContent": "We also offer guidance on generative engine optimization, the emerging discipline of optimizing content for AI-powered search environments, including tools such as ChatGPT and other AI tools that are reshaping how people search. Staying current with the latest SEO shifts is how we protect your investment as the SEO industry evolves.",
+    "ctaButton": "Start Scaling Your Organic Search Results Now",
+    "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
+  },
+  "tableFour": {
+    "title": "SEO Goals and Budget Allocation Strategy by Business Type",
+    "description": "SEO goals vary significantly depending on your industry, growth stage, and marketing strategy. We build every campaign around your specific SEO goals, then align budget, effort, and channel selection accordingly.",
+    "rows": [
+      {
+        "businessType": "Local Business",
+        "primarySeoGoal": "Show up in local search results",
+        "coreFocus": "Local SEO, Google Business",
+        "expectedRankingTimeline": "60-90 days"
+      },
+      {
+        "businessType": "eCommerce",
+        "primarySeoGoal": "Product visibility and sales",
+        "coreFocus": "Ecommerce SEO, keyword targeting",
+        "expectedRankingTimeline": "90-150 days"
+      },
+      {
+        "businessType": "SaaS / B2B",
+        "primarySeoGoal": "Pipeline from organic search",
+        "coreFocus": "On-page SEO, content strategy",
+        "expectedRankingTimeline": "90-180 days"
+      },
+      {
+        "businessType": "Healthcare",
+        "primarySeoGoal": "Trust and local visibility",
+        "coreFocus": "Local SEO, off-page SEO, E-E-A-T",
+        "expectedRankingTimeline": "120-180 days"
+      },
+      {
+        "businessType": "Media / News",
+        "primarySeoGoal": "Featured content in search results",
+        "coreFocus": "News SEO, topical authority",
+        "expectedRankingTimeline": "30-60 days"
+      },
+      {
+        "businessType": "Enterprise",
+        "primarySeoGoal": "Market-wide ranking dominance",
+        "coreFocus": "Technical SEO, international SEO",
+        "expectedRankingTimeline": "180-365 days"
+      }
+    ],
+    "closingContent": "Our SEO performance reviews are delivered monthly with full transparency via a custom dashboard. We track every keyword, ranking movement, and organic search result change so your team always knows where growth is coming from. SEO is also one of the few digital marketing channels where gains are cumulative, meaning the work we do today continues to compound in your favor as time goes on.",
+    "ctaButton": "Get a Custom SEO Budget Allocation Plan",
+    "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
+  },
+  "tableFive": {
+    "title": "SEO Tools and Platforms We Use to Optimize Your Rankings",
+    "description": "Our team combines industry-leading SEO tools with proprietary processes to audit, optimize, and scale your search engine presence.",
+    "rows": [
+      {
+        "toolCategory": "Audit and Crawl",
+        "toolsUsed": "Screaming Frog, Sitebulb",
+        "purpose": "Identify technical SEO issues and site errors"
+      },
+      {
+        "toolCategory": "Keyword Research",
+        "toolsUsed": "Tools such as SEMrush, Ahrefs",
+        "purpose": "Identify high-value keywords and search queries"
+      },
+      {
+        "toolCategory": "Rank Tracking",
+        "toolsUsed": "AccuRanker, SEO software dashboards",
+        "purpose": "Monitor ranking changes daily across search engines"
+      },
+      {
+        "toolCategory": "Webmaster Tools",
+        "toolsUsed": "Tools such as Google Search Console, Bing Webmaster Tools",
+        "purpose": "Track index status, search result impressions, click data"
+      },
+      {
+        "toolCategory": "On-Page Optimization",
+        "toolsUsed": "Yoast SEO Premium, SEO plugin integrations",
+        "purpose": "Streamline on-page SEO and content optimization"
+      },
+      {
+        "toolCategory": "AI and Automation",
+        "toolsUsed": "AI tools, tools such as ChatGPT for ideation",
+        "purpose": "Content research, topic clustering, search behavior analysis"
+      }
+    ],
+    "closingContent": "We stay informed through authoritative sources including the Google Search Central Blog, Search Engine Land, and Google for Developers documentation. This ensures our SEO tactics reflect best practices and the latest SEO algorithm guidance directly from major search engines.",
+    "ctaButton": "Book a Free SEO Audit with Daiki Media",
+    "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
+  },
+  "tableSix": {
+    "title": "Our Step-by-Step SEO Process: From Audit to Ranking",
+    "description": "SEO starts with understanding your current position. Before we optimize anything, we audit everything. Here is how our structured process works from day one.",
+    "rows": [
+      {
+        "step": "1",
+        "phase": "SEO Audit",
+        "whatHappens": "Full technical SEO audit covering crawlability, indexing status, SEO issues, and page optimization gaps across the entire site"
+      },
+      {
+        "step": "2",
+        "phase": "Keyword Strategy",
+        "whatHappens": "Research and map target keywords to search intent, identify search terms with high conversion potential, and analyse competitor ranking positions"
+      },
+      {
+        "step": "3",
+        "phase": "On-Page SEO",
+        "whatHappens": "Optimize title tags, meta description, headings, content, and internal linking structure to align with how search engines evaluate relevance"
+      },
+      {
+        "step": "4",
+        "phase": "Technical SEO Fixes",
+        "whatHappens": "Resolve crawl errors, improve site speed, implement structured data, and ensure search engines index your pages efficiently and accurately"
+      },
+      {
+        "step": "5",
+        "phase": "Off-Page SEO",
+        "whatHappens": "Build authoritative backlinks, conduct digital PR outreach, and strengthen signals that help search engines trust your domain"
+      },
+      {
+        "step": "6",
+        "phase": "Reporting and Scaling",
+        "whatHappens": "Monthly SEO performance reports, ranking tracking, and strategy refinement based on search result data and user experience signals"
+      }
+    ],
+    "ctaButton": "Start Your SEO Campaign with Daiki Media",
+    "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
+  },
+  "tableSeven": {
+    "title": "SEO Pricing Models Built Around Your Marketing Strategy",
+    "description": "We offer flexible pricing to match different business sizes, SEO goals, and marketing strategy requirements. Transparent pricing is part of how we build trust with every client from day one.",
+    "rows": [
+      {
+        "package": "SEO Starter",
+        "bestFor": "Local businesses, new sites",
+        "includes": "Local SEO, on-page SEO, monthly reporting",
+        "startingFrom": "Custom quote"
+      },
+      {
+        "package": "Growth SEO",
+        "bestFor": "eCommerce and mid-market",
+        "includes": "Full SEO strategy, off-page SEO, content plan",
+        "startingFrom": "Custom quote"
+      },
+      {
+        "package": "Enterprise SEO",
+        "bestFor": "Large sites, global brands",
+        "includes": "Technical SEO, international SEO, news SEO, dedicated team",
+        "startingFrom": "Custom quote"
+      },
+      {
+        "package": "SEO Audit Only",
+        "bestFor": "Businesses starting with SEO",
+        "includes": "Full site audit, SEO issues report, roadmap",
+        "startingFrom": "Custom quote"
+      }
+    ],
+    "closingContent": "All packages include transparent monthly reporting, keyword ranking tracking, and SEO performance analysis. We align every investment with measurable outcomes.",
+    "ctaButton": "Request Custom SEO Pricing from Daiki Media",
+    "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
+  },
+  "tableEight": {
+    "title": "Common SEO Issues Businesses Face and How We Solve Them",
+    "description": "SEO is also one of the most misunderstood disciplines in digital marketing. Here are the most common challenges we help businesses overcome.",
+    "rows": [
+      {
+        "commonChallenge": "Low visibility in search results despite good content",
+        "daikiMediaSolution": "Full technical SEO audit plus keyword and content gap analysis"
+      },
+      {
+        "commonChallenge": "Pages indexed by search engines but not ranking",
+        "daikiMediaSolution": "On-page SEO overhaul, intent alignment, and off-page SEO authority building"
+      },
+      {
+        "commonChallenge": "Strong ranking in one market but poor international SEO",
+        "daikiMediaSolution": "International SEO implementation with hreflang and geo-targeting"
+      },
+      {
+        "commonChallenge": "Algorithm updates causing ranking drops",
+        "daikiMediaSolution": "Regular SEO performance reviews, E-E-A-T compliance, and best practices alignment"
+      },
+      {
+        "commonChallenge": "No visibility on search engine results page for local queries",
+        "daikiMediaSolution": "Local SEO strategy, Google Business optimization, and local citation building"
+      },
+      {
+        "commonChallenge": "Unclear what changes over time are affecting ranking",
+        "daikiMediaSolution": "Custom analytics dashboards and monthly SEO strategy reviews with actionable insights"
+      }
+    ],
+    "ctaButton": "Book a Free Strategy Call to Resolve Your SEO Challenges",
+    "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
+  }
+}

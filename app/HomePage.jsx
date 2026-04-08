@@ -4,6 +4,9 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Hero from "@/components/home-1/Hero";
 import PrimaryNavbar from "@/components/navbar/PrimaryNavbar";
+import { DataTable } from "@/components/service-single/dataTable"
+import heroTableData from '@/data/heroTable';
+
 
 // Lazy imports
 const Footer = dynamic(() => import("@/components/footer/Footer"));
@@ -67,8 +70,11 @@ export default function HomePage() {
             />
           </div>
         </div>
+        
+        <DataTable data={heroTableData.tableOne} />
 
         <RegionalStory />
+        <DataTable data={heroTableData.tableTwo} />
         <LazyClients 
           title="Best Companies Trust Daiki Media."
           description="Trusted by thousands of companies across 50+ countries"
@@ -76,6 +82,8 @@ export default function HomePage() {
         <Services />
         <MarketsWeServe />
         <WhoWeHelp />
+        <DataTable data={heroTableData.tableThree} />
+        <DataTable data={heroTableData.tableFour} />
         <WhyChooseUs />
         <LazyCounter />
         <Vision />
@@ -83,6 +91,10 @@ export default function HomePage() {
         <Integration />
         <CustomSectionOne />
         <ContentCards />
+        <DataTable data={heroTableData.tableFive} />
+        <DataTable data={heroTableData.tableSix} />
+        <DataTable data={heroTableData.tableSeven} />
+        <DataTable data={heroTableData.tableEight} />
         <ComprehensiveServicesShowcase />
         <LazyFaq />
         <Cta />

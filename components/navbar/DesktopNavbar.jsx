@@ -11,7 +11,7 @@ const DesktopNavbar = () => {
   return (
     <>
       {/* Desktop Navigation */}
-      <ul className="nav-list mx-auto hidden rounded-large bg-white p-2.5 shadow-nav dark:bg-dark-200 lg:flex [&>*:not(:last-child)]:me-1">
+      <ul className="nav-list mx-auto hidden rounded-large  p-2.5 dark:bg-dark-200 lg:flex [&>*:not(:last-child)]:me-1">
         {menuData.menuContent.map((menuItem) => (
           <li
             className={`${menuItem.megaMenu ? "group" : !menuItem.path ? "group relative" : ""}`}

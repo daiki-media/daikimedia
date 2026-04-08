@@ -9,16 +9,19 @@ const HeroContent = () => {
           5k+ Trusted Businesses
         </p>
         <h1 className="mb-4 max-md:mb-8">
-          Grow Your Revenue{" "}
+          SEO That Turns{" "}
           <span className="inline-block rounded-[88px] border-2 border-paragraph bg-transparent px-5 pb-2.5 pt-1 font-playfair italic leading-none dark:border-[#F0F3EA]">
-            with SEO & Digital
+             Rankings  Into
           </span>{" "}
-          Marketing Services.
+           Revenue
         </h1>
         <p className="mb-4 max-w-[590px] max-md:mb-8">
-          Partner with a results-driven digital agency that delivers measurable
-          impact for forward-thinking businesses. From strategy to execution, we
-          transform ideas into digital success stories.
+          SEO starts long before a page goes live. Most businesses invest in websites, content, and ads, yet still fail to show up in search where their customers are actually looking. The problem is not effort. It is strategy. Without a data-backed approach to search engine optimization, even the best content stays invisible.
+
+          At Daiki Media, SEO is the practice of aligning every element of your digital presence with how search engines discover, evaluate, and rank content. We help businesses improve their search result positions, grow organic traffic, and build lasting visibility that compounds over time. From technical SEO to content optimization, off-page SEO to local SEO, we handle every aspect of your SEO performance.
+
+          SEO stands for search engine optimization, and it is one of the most cost-effective channels in any marketing strategy. We make it work harder for your business.
+
         </p>
         <a
           href="https://api.whatsapp.com/send?phone=601114850067"
@@ -31,7 +34,7 @@ const HeroContent = () => {
       </div>
 
       <div className="col-span-12 md:col-span-6 hidden md:flex items-center justify-center">
-        <div className="relative w-full h-auto">
+        <div className="relative w-full h-full">
           <Image
             src="/images/hero/testimg-mobile.avif"
             alt="Illustration representing SEO and digital marketing growth"
