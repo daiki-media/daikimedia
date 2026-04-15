@@ -1,10 +1,9 @@
 "use client";
-
-// import { useState } from "react";
 import {
   Check,
   Target,
 } from "lucide-react";
+import Link from "next/link";
 
 // const services = [
 //   {
@@ -43,7 +42,6 @@ import {
 // ];
 
 export default function ComprehensiveServicesShowcase() {
-  // const [activeService, setActiveService] = useState(0);
 
   const marketPerspectives = [
     "Some brands are focused on local visibility",
@@ -209,18 +207,18 @@ export default function ComprehensiveServicesShowcase() {
               </div>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
+              <Link
                 href="https://api.whatsapp.com/send?phone=601114850067"
                 className="btn"
               >
                 Book a Free Consultation
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/contact"
                 className="btn"
               >
                 Get in Touch
-              </a>
+              </Link>
             </div>
           </div>
         </div>

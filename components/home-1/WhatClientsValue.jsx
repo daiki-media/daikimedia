@@ -61,7 +61,7 @@ const WhatClientsValue = () => {
 
         {/* Client Values Grid - Redesigned with Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {clientValues.map((value) => (
+          {clientValues.map((value, index) => (
             <div
               key={index}
               className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white to-rose-50 dark:from-dark-200 dark:to-rose-950/20 p-6 shadow-lg hover:shadow-rose-200/50 dark:hover:shadow-rose-900/30 transition-all duration-500 hover:-translate-y-2 border border-rose-100 dark:border-rose-800/30"
@@ -101,7 +101,7 @@ const WhatClientsValue = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
                 className="group relative bg-gradient-to-br from-white to-rose-50/50 dark:from-dark-200 dark:to-rose-950/20 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-rose-100 dark:border-rose-800/30"
