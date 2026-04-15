@@ -3,29 +3,42 @@ import { fadeUpAnimation } from "@/data/animation";
 import useWhileInView from "@/hooks/useWhileInView";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import Link from "next/link";
 
 const WhoWeHelp = () => {
   const ref = useRef(null);
   const controlAnimation = useWhileInView(ref);
 
-  const helpSections = [
+  const whatWeDoSections = [
     {
       id: 1,
-      heading: "Aesthetic Clinics That Need Trust And Steady Leads",
-      text: "From Kuala Lumpur to Singapore and Dubai, aesthetic clinics need one thing first. Trust. We create search friendly pages, lead focused funnels and social content that makes patients feel safe, informed and ready to book.",
-      microLine: "Ideal for: aesthetic clinics, skin clinics, medical practices",
+      heading: "SEO",
+      text: "We help your brand get found where people are already searching. From technical improvements to content direction, our SEO work is built to support long-term visibility and sustainable traffic growth.",
     },
     {
       id: 2,
-      heading: "Local Service Businesses And SMEs",
-      text: "We help local brands show up on Google, appear on Google Maps and get found when people search things like near me or best in my area. Perfect for salons, tuition centres, home services and growing SMEs across all three regions.",
-      microLine: "Ideal for: SMEs, local services, retail, home based businesses",
+      heading: "Content Strategy",
+      text: "We create content with purpose. That means clearer messaging, stronger page structure, and content that helps users move from interest to action.",
     },
     {
       id: 3,
-      heading: "iGaming And High Competition Brands That Need Smart Strategy",
-      text: "Some industries move faster than others. iGaming and other high CPC niches need careful strategy, safe promotion and sharp SEO. We support these brands with technical work, conversion focused content and performance tracking tuned for Singapore and Dubai.",
-      microLine: "Ideal for: iGaming, finance, high CPC brands",
+      heading: "Performance Marketing",
+      text: "Paid campaigns work better when the strategy behind them is aligned. We help businesses run digital campaigns that are backed by stronger landing pages, better targeting, and clearer goals.",
+    },
+    {
+      id: 4,
+      heading: "Website Strategy",
+      text: "Your website should do more than exist online. It should support trust, clarity, and conversions. We help improve the digital experience so the rest of your marketing performs better too.",
+    },
+    {
+      id: 5,
+      heading: "Creative Direction",
+      text: "Strong brands feel consistent. We help shape the way your business looks and communicates across digital touchpoints, so the overall experience feels more professional and more convincing.",
+    },
+    {
+      id: 6,
+      heading: "Growth Strategy",
+      text: "Sometimes the problem is not one channel. It is the lack of a bigger digital direction. We help brands connect the dots and focus on what matters most.",
     },
   ];
 
@@ -34,13 +47,17 @@ const WhoWeHelp = () => {
       <div className="container">
         <div className="mb-12">
           <div className="flex flex-col max-lg:text-center lg:flex gap-4 max-w-5xl mx-auto">
+            {/* What We Do - Subtitle */}
+            <p className="text-center text-primary-600 dark:text-primary-400 font-medium uppercase tracking-wide">
+              What We Do
+            </p>
+            {/* Main Title */}
             <h2 className="text-center">
-              Who We Help Across Malaysia, Singapore And Dubai
+              The Core Areas We Bring Together
             </h2>
+            {/* Description */}
             <p className="text-center text-gray-600 dark:text-gray-400">
-              Every city has its own rhythm. Every market has its own pressure.
-              We shape our strategy around the reality of your region and your
-              industry.
+              DaikiMedia combines the essential parts of digital growth under one roof, so your business is not dealing with disconnected strategies or mixed direction.
             </p>
           </div>
         </div>
@@ -52,7 +69,7 @@ const WhoWeHelp = () => {
             animate={controlAnimation}
             variants={fadeUpAnimation}
           >
-            {helpSections.map((section) => (
+            {whatWeDoSections.map((section) => (
               <div
                 key={section.id}
                 className="relative scale-100 rounded-medium bg-white p-2.5 shadow-nav transition-transform duration-500 hover:scale-105 hover:transition-transform hover:duration-500 dark:bg-dark-200"
@@ -64,13 +81,19 @@ const WhoWeHelp = () => {
                   <p className="mb-4 text-gray-700 dark:text-gray-300">
                     {section.text}
                   </p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 italic">
-                    {section.microLine}
-                  </p>
                 </div>
               </div>
             ))}
           </motion.div>
+        </div>
+        {/* CTA Button */}
+        <div className="mt-15 flex items-center justify-center">
+          <Link
+            href="#"
+            className="dark:bg-white dark:text-black hover:dark:bg-black hover:dark:text-white btn"
+          >
+            Explore Our Services
+          </Link>
         </div>
       </div>
     </section>
@@ -78,4 +101,3 @@ const WhoWeHelp = () => {
 };
 
 export default WhoWeHelp;
-

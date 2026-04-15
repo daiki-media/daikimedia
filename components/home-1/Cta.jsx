@@ -20,7 +20,7 @@ const Cta = () => {
           <h2 className="mb-5 text-[48px] font-semibold max-lg:text-[32px]">
             Ready to Reach the Top <br />  of Search Engine Results?
           </h2>
-          <p className="mx-auto mb-12 max-w-[400px] max-lg:mt-6">
+          <p className="mx-auto mb-12 max-w-[700px] max-lg:mt-6">
             Every day your competitors are investing in SEO, capturing search result clicks, and building organic ranking authority that compounds over time. The businesses that dominate search engines tomorrow are investing in their SEO strategy today.
 
             Daiki Media combines deep technical SEO expertise with proven content optimization, off-page SEO outreach, and local SEO precision to help businesses at every stage grow faster through organic search. Whether you need to fix critical SEO issues, build a new SEO strategy from the ground up, or scale what is already working, we are ready to start.

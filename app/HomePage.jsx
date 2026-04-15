@@ -4,8 +4,6 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Hero from "@/components/home-1/Hero";
 import PrimaryNavbar from "@/components/navbar/PrimaryNavbar";
-import { DataTable } from "@/components/service-single/dataTable"
-import heroTableData from '@/data/heroTable';
 
 
 // Lazy imports
@@ -18,6 +16,7 @@ const RegionalStory = dynamic(() => import("@/components/home-1/RegionalStory"))
 const MarketsWeServe = dynamic(() => import("@/components/home-1/MarketsWeServe"));
 const WhoWeHelp = dynamic(() => import("@/components/home-1/WhoWeHelp"));
 const WhyChooseUs = dynamic(() => import("@/components/home-1/WhyChooseUs"));
+const WhatClientsValue  = dynamic(() => import("@/components/home-1/WhatClientsValue"));
 const LazyFaq = dynamic(() => import("@/components/lazy/LazyFaq"));
 const LazyCounter = dynamic(() => import("@/components/lazy/LazyCounter"));
 const LazyClients = dynamic(() => import("@/components/lazy/LazyClients"));
@@ -25,9 +24,9 @@ const FinancialBlog = dynamic(
   () => import("@/components/shared/FinancialBlog")
 );
 const Services = dynamic(() => import("@/components/shared/Services"));
-const CustomSectionOne = dynamic(
-  () => import("@/components/customSections/customSectionOne")
-);
+// const CustomSectionOne = dynamic(
+//   () => import("@/components/customSections/customSectionOne")
+// );
 const ContentCards = dynamic(
   () => import("@/components/customSections/customContentCards")
 );
@@ -71,30 +70,30 @@ export default function HomePage() {
           </div>
         </div>
         
-        <DataTable data={heroTableData.tableOne} />
 
         <RegionalStory />
-        <DataTable data={heroTableData.tableTwo} />
         <LazyClients 
-          title="Best Companies Trust Daiki Media."
-          description="Trusted by thousands of companies across 50+ countries"
-        />
+          title="Trusted By Brands Ready to Grow Smarter"
+          description={
+            <>
+              We work with brands that want more than random marketing activity.<br />
+              They want structure.<br />
+              They want consistency.<br />
+              They want better outcomes from the work they are already investing in.
+            </>
+          }
+          />
         <Services />
         <MarketsWeServe />
         <WhoWeHelp />
-        <DataTable data={heroTableData.tableThree} />
-        <DataTable data={heroTableData.tableFour} />
         <WhyChooseUs />
         <LazyCounter />
         <Vision />
         <Solution />
         <Integration />
-        <CustomSectionOne />
+        {/* <CustomSectionOne /> */}
+        <WhatClientsValue />
         <ContentCards />
-        <DataTable data={heroTableData.tableFive} />
-        <DataTable data={heroTableData.tableSix} />
-        <DataTable data={heroTableData.tableSeven} />
-        <DataTable data={heroTableData.tableEight} />
         <ComprehensiveServicesShowcase />
         <LazyFaq />
         <Cta />

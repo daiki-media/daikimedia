@@ -8,28 +8,27 @@ const HeroContent = () => {
         <p className="mb-8 font-medium uppercase max-lg:mb-4">
           5k+ Trusted Businesses
         </p>
-        <h1 className="mb-4 max-md:mb-8">
-          SEO That Turns{" "}
-          <span className="inline-block rounded-[88px] border-2 border-paragraph bg-transparent px-5 pb-2.5 pt-1 font-playfair italic leading-none dark:border-[#F0F3EA]">
-             Rankings  Into
+        <h1 className="mb-4 max-md:mb-8 lg:text-6xl">
+          Growth Marketing {" "}
+          <span className="block rounded-[88px] mr-4 my-2  border-2 border-paragraph bg-transparent px-5 pb-2.5 pt-1 font-playfair italic leading-none dark:border-[#F0F3EA]">
+            That Actually Moves
           </span>{" "}
-           Revenue
+           Your Business Forward
         </h1>
         <p className="mb-4 max-w-[590px] max-md:mb-8">
-          SEO starts long before a page goes live. Most businesses invest in websites, content, and ads, yet still fail to show up in search where their customers are actually looking. The problem is not effort. It is strategy. Without a data-backed approach to search engine optimization, even the best content stays invisible.
-
-          At Daiki Media, SEO is the practice of aligning every element of your digital presence with how search engines discover, evaluate, and rank content. We help businesses improve their search result positions, grow organic traffic, and build lasting visibility that compounds over time. From technical SEO to content optimization, off-page SEO to local SEO, we handle every aspect of your SEO performance.
-
-          SEO stands for search engine optimization, and it is one of the most cost-effective channels in any marketing strategy. We make it work harder for your business.
-
+          At DaikiMedia, we help brands grow with sharper strategy, stronger visibility, and digital marketing that feels connected from start to finish.
+          A lot of businesses invest in websites, ads, content, and SEO, but still struggle to see real momentum. The issue usually is not effort. It is the lack of direction behind it.
+          That is where we come in.
+          We bring together strategy, search, content, performance marketing, and web experience to help businesses grow in a way that feels clear, focused, and commercially useful.
+          Whether you are trying to generate more leads, improve your online presence, or create a stronger digital foundation for the next stage of growth, DaikiMedia helps you move with more clarity and less guesswork.
         </p>
         <a
           href="https://api.whatsapp.com/send?phone=601114850067"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn col-span-4 max-lg:!px-3 max-lg:!text-sm xs:col-span-4"
+          className="btn col-span-4 max-lg:!px-3 max-lg:!text-sm xs:col-span-4 mx-2"
         >
-          Get Started
+          Book a Free Consultation
         </a>
       </div>
 

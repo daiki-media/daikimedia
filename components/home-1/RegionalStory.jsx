@@ -3,29 +3,28 @@ import { fadeUpAnimation } from "@/data/animation";
 import useWhileInView from "@/hooks/useWhileInView";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import Link from "next/link";
 
 const RegionalStory = () => {
   const ref = useRef(null);
   const controlAnimation = useWhileInView(ref);
-
-  const ctaButtons = [
-    {
-      id: 1,
-      text: "Explore Malaysia services",
-      link: "/",
-    },
-    {
-      id: 2,
-      text: "Explore Singapore services",
-      link: "/singapore-marketing-agency",
-    },
-    {
-      id: 3,
-      text: "Explore Dubai services",
-      link: "/dubai-marketing-agency",
-    },
-  ];
+// 
+//   const ctaButtons = [
+//     {
+//       id: 1,
+//       text: "Explore Malaysia services",
+//       link: "/",
+//     },
+//     {
+//       id: 2,
+//       text: "Explore Singapore services",
+//       link: "/singapore-marketing-agency",
+//     },
+//     {
+//       id: 3,
+//       text: "Explore Dubai services",
+//       link: "/dubai-marketing-agency",
+//     },
+//   ];
 
   return (
     <section className="relative bg-white py-16 dark:bg-dark-300">
@@ -38,25 +37,18 @@ const RegionalStory = () => {
           className="max-w-4xl mx-auto"
         >
           <h2 className="mb-4 text-3xl font-bold lg:text-4xl">
-            SEO Ranking Factors and Search Intent Mapping Framework
+            A Digital Growth Partner for Brands That Want More Than Just Marketing Services
           </h2>
           <p className="mb-6 text-lg text-gray-600 dark:text-gray-400">
-            Most agencies optimize for keywords. We optimize for intent. Understanding why people search is as important as understanding what they search for. Search behavior has evolved dramatically, and major search engines like Google now prioritize pages that satisfy user intent, not just pages that repeat a keyword.
-            Our SEO strategy begins with mapping every target keyword to its search intent: informational, navigational, commercial, or transactional. This determines the content format, depth, internal linking structure, and CTA placement for every page we optimize.
+           Some agencies focus on isolated tasks.
           </p>
           <div className="mb-8 space-y-4 text-gray-700 dark:text-gray-300">
-            <h2>SEO ranking factors we optimize across every campaign:</h2>
-            <p>Today we bring that same belief to Singapore and Dubai.</p>
               <ul className="space-y-4 mb-12">
                 {[
-                  "Keyword relevance and semantic depth of content",
-                  "Page speed and Core Web Vitals scores (technical SEO)",
-                  "Mobile usability and improve user experience signals",
-                  "Backlink authority and anchor text diversity (off-page SEO)",
-                  "Structured data and schema markup to help search engines understand content",
-                  "Meta description quality and click-through optimization",
-                  "Internal linking architecture to distribute ranking equity",
-                  "Content freshness, search queries coverage, and topical authority"
+                    "A campaign here.",
+                   " A website there.",
+                   " A few SEO updates.",
+                   " A monthly report.",
                 ].map((item, index) => (
                   <li key={index} className="flex flex-start gap-3 group hover:translate-x-1 transition-transform duration-200">
                     <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-primary/20 transition-colors">
@@ -69,11 +61,12 @@ const RegionalStory = () => {
                 ))}
               </ul>
 
-            <p>
-              We use tools such as SEMrush, tools such as Google Search Console, and Bing Webmaster Tools to audit existing pages, identify SEO issues, and track ranking movement across all target search terms. Our SEO software stack gives us a complete picture of where your website stands and what needs to change.
-            </p>
+            <p>But when everything is handled separately, growth often feels scattered too.</p>
+            <p>At DaikiMedia, we take a more connected approach. We help businesses build a stronger digital presence by making sure strategy, visibility, messaging, and performance are working together.</p>
+            <p>That means we do not just look at traffic. We look at how your brand is showing up online, how people are finding you, how they experience your website, and what is helping or stopping them from taking action.</p>
+            <p>Our goal is simple: to help your business grow through digital work that is clearer, stronger, and built with purpose.</p>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-4 max-sm:flex-col">
+          {/* <div className="flex flex-wrap items-center justify-center gap-4 max-sm:flex-col">
             {ctaButtons.map((button) => (
               <Link
                 key={button.id}
@@ -83,7 +76,7 @@ const RegionalStory = () => {
                 {button.text}
               </Link>
             ))}
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </section>

@@ -2,7 +2,7 @@ import FadeUpAnimation from "../animations/FadeUpAnimation";
 
 const PageHero = ({ subtitle, title, paragraph, link }) => {
   return (
-    <section className="hero relative  overflow-hidden pt-32 max-lg:pt-150">
+    <section className="hero relative  overflow-hidden pt-24">
       <div className="container">
         <FadeUpAnimation className="mx-auto max-w-[948px] text-center">
           {subtitle && (

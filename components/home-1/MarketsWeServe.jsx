@@ -3,7 +3,6 @@ import { fadeUpAnimation } from "@/data/animation";
 import useWhileInView from "@/hooks/useWhileInView";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import Link from "next/link";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -16,24 +15,52 @@ const MarketsWeServe = () => {
   const markets = [
     {
       id: 1,
-      heading: "Malaysia – Kuala Lumpur Based Support",
-      text: "Our home base. We help Malaysian brands build strong visibility on Google, social media and across the web. Ideal for clinics, SMEs, e-commerce and service businesses that want stable long term growth.",
-      linkText: "View Malaysia focused services",
-      linkUrl: "/",
+      heading: "Build stronger online visibility",
+      text: "Increase your brand's presence across search engines and social platforms to reach more potential customers.",
+      linkUrl: "/services/visibility",
+      linkText: "Learn More",
     },
     {
       id: 2,
-      heading: "Singapore – SEO And Digital Marketing For Competitive Niches",
-      text: "Singapore is fast, intense and highly competitive. We help clinics, SMEs, iGaming and high ticket brands stand out with clear SEO, content and social media marketing strategies made for the Singapore market.",
-      linkText: "Discover our Singapore SEO and digital marketing",
-      linkUrl: "/singapore-marketing-agency",
+      heading: "Attract more qualified traffic",
+      text: "Drive visitors who are genuinely interested in your products or services, improving conversion potential.",
+      linkUrl: "/services/traffic",
+      linkText: "Learn More",
     },
     {
       id: 3,
-      heading: "Dubai and UAE – High Growth And High CPC Markets",
-      text: "Dubai rewards bold brands. We support clinics, real estate, luxury and iGaming companies with SEO, digital campaigns and social media marketing that match the energy and expectations of the UAE audience.",
-      linkText: "Explore our Dubai and UAE services",
-      linkUrl: "/dubai-marketing-agency",
+      heading: "Improve website performance",
+      text: "Enhance speed, user experience, and technical SEO to keep visitors engaged and reduce bounce rates.",
+      linkUrl: "/services/performance",
+      linkText: "Learn More",
+    },
+    {
+      id: 4,
+      heading: "Strengthen brand messaging",
+      text: "Develop clear, consistent communication that resonates with your target audience and builds trust.",
+      linkUrl: "/services/messaging",
+      linkText: "Learn More",
+    },
+    {
+      id: 5,
+      heading: "Generate better leads and enquiries",
+      text: "Create optimized funnels that turn casual visitors into qualified leads and paying customers.",
+      linkUrl: "/services/leads",
+      linkText: "Learn More",
+    },
+    {
+      id: 6,
+      heading: "Create a more consistent digital presence",
+      text: "Maintain brand coherence across all channels for a professional and trustworthy online image.",
+      linkUrl: "/services/consistency",
+      linkText: "Learn More",
+    },
+    {
+      id: 7,
+      heading: "Support long-term business growth",
+      text: "Implement sustainable marketing strategies that scale with your business and deliver lasting results.",
+      linkUrl: "/services/growth",
+      linkText: "Learn More",
     },
   ];
 
@@ -41,22 +68,29 @@ const MarketsWeServe = () => {
     <section className="relative bg-gray-50 py-16 dark:bg-dark-200 sm:overflow-hidden">
       <div className="container">
         <div className="mb-12">
-          <div className="flex flex-col max-lg:text-center lg:flex gap-4 max-w-5xl mx-auto">
-            <h2 className="text-center">Markets We Serve</h2>
+          <div className="flex flex-col max-lg:text-center lg:flex gap-4 max-w-4xl mx-auto">
+            {/* What We Help You Achieve - Subtitle */}
+            <p className="text-center text-primary-600 dark:text-primary-400 font-medium uppercase tracking-wide">
+              What We Help You Achieve
+            </p>
+            {/* Main Title */}
+            <h2 className="text-center">
+              Digital Growth That Feels More Structured and More Effective
+            </h2>
+            {/* Description lines */}
             <p className="text-center text-gray-600 dark:text-gray-400">
-              DaikiMedia is built for brands that want to grow beyond one city.
-              We understand how people search, click and make decisions in each
-              market.
+              We work with brands that want their digital marketing to do more than just look active.
             </p>
             <p className="text-center text-gray-600 dark:text-gray-400">
-              Choose your region to see how we can support your growth.
+              Our focus is on helping businesses:
             </p>
           </div>
         </div>
+
+        {/* Desktop Grid View - Showing all 7 items */}
         <div className="relative z-10">
-          {/* Desktop Grid View */}
           <motion.div
-            className="hidden lg:grid grid-cols-3 gap-8"
+            className="hidden lg:grid lg:grid-cols-3 gap-8"
             ref={ref}
             initial="initial"
             animate={controlAnimation}
@@ -72,12 +106,12 @@ const MarketsWeServe = () => {
                   <p className="mb-6 text-gray-700 dark:text-gray-300">
                     {market.text}
                   </p>
-                  <Link
+                  {/* <Link
                     href={market.linkUrl}
                     className="inline-block text-primary-600 hover:text-primary-700 font-medium transition-colors duration-300 dark:text-primary-400 dark:hover:text-primary-300"
                   >
                     {market.linkText} →
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             ))}
@@ -110,12 +144,12 @@ const MarketsWeServe = () => {
                       <p className="mb-6 text-gray-700 dark:text-gray-300">
                         {market.text}
                       </p>
-                      <Link
+                      {/* <Link
                         href={market.linkUrl}
                         className="inline-block text-primary-600 hover:text-primary-700 font-medium transition-colors duration-300 dark:text-primary-400 dark:hover:text-primary-300"
                       >
                         {market.linkText} →
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 </SwiperSlide>
@@ -123,10 +157,26 @@ const MarketsWeServe = () => {
             </Swiper>
           </div>
         </div>
+
+        {/* Closing Statement */}
+        <motion.div
+          className="mt-16 text-center"
+          initial="initial"
+          animate={controlAnimation}
+          variants={fadeUpAnimation}
+        >
+          <div className="max-w-3xl mx-auto space-y-3">
+            <p className="text-lg text-gray-700 dark:text-gray-300 font-medium">
+              We are not here to add more noise to your marketing.
+            </p>
+            <p className="text-xl text-primary-600 dark:text-primary-400 font-semibold">
+              We are here to make it work better.
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
 };
 
 export default MarketsWeServe;
-

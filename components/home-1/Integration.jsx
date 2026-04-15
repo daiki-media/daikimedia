@@ -3,7 +3,7 @@ import IntegrationAnimation from "./IntegrationAnimation";
 
 const Integration = () => {
   return (
-    <section className="bg-white pb-150  dark:bg-dark-300 max-md:pb-20">
+    <section className="bg-white py-8 md:py-100  dark:bg-dark-300 max-md:pb-20">
       <div className="container relative z-10">
         <div className="mx-auto max-w-[620px] text-center">
           <p className="section-tagline">Best-in-Class SEO</p>
