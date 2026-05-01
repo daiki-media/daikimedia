@@ -15,13 +15,7 @@ const ShareClientMarquee = ({
       <div className="container overflow-hidden max-lg:!px-0">
         {sectionTitle && (
           <div className=" px-10px mx-auto max-w-[550px] text-center max-lg:px-2.5">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-dark dark:text-white mt-20">
-              Why Leading Brands Trust DaikiMedia
-            </h2>
-            {/* Subtitle text */}
-            <p className="text-light mb-15">
-              Trusted by thousands of companies across 50+ countries
-            </p>
+            <p className="text-light mb-15">Trusted by thousands of companies across 50+ countries</p>
           </div>
         )}
 

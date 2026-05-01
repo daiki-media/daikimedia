@@ -1,7 +1,5 @@
-"use client";
-
 import Image from "next/image";
-
+import Link from "next/link";
 const featuredLogos = [
   {
     name: "Yahoo Finance",
@@ -151,7 +149,7 @@ export default function AfterHeroSeoService() {
                 </ul>
             </div>
 
-              <a href="/about" className="btn"> About Us </a>
+              <Link href="/about/">About Us</Link>
             </div>
         </div>
     </section>

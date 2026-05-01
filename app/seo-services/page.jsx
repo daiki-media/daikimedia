@@ -8,13 +8,16 @@ import SuccessStory from "./SuccessStory";
 import ContactForm from "./ContactForm";
 import FaqSeoService from "./FaqSeoService";
 import Footer from "@/components/footer/Footer";
-import ShareClientMarquee from "@/components/home-4/ShareClientMarquee";
+import Clients from "@/components/shared/Clients";
 
 export default function SEOServicesPage() {
   return (
     <>
       <HeroSeoService />
-      <ShareClientMarquee sectionTitle={true} border={true} spacing={'py-0 bg-transparent'} />
+      <Clients 
+          title={"Why Leading Brands Trust DaikiMedia"}
+          description={"Trusted by thousands of companies across 50+ countriesupport."}
+        />
       <AfterHeroSeoService />
       <Carousel />
       <PricingSeoService />
