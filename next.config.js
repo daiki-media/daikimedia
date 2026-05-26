@@ -6,15 +6,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 const nextConfig = {
   transpilePackages: ['swiper'],
-  
-  async rewrites() {
-    return [
-      {
-        source: "/api/blogs/:slug",
-        destination: "https://cms.daikimedia.com/api/blogs/:slug",
-      },
-    ];
-  },
+  staticPageGenerationTimeout: 180,
 
   async redirects() {
     return [
@@ -62,7 +54,7 @@ const nextConfig = {
 
   images: {
     formats: ["image/avif", "image/webp"],
-    minimumCacheTTL: 60,
+    minimumCacheTTL: 2592000,
     remotePatterns: [
       {
         protocol: 'https',

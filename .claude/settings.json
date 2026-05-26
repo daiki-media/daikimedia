@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -sS \"https://cms.daikimedia.com/api/blogs\" -o /tmp/blogs.json)",
+      "Bash(echo \"EXIT:$?\")",
+      "Read(//tmp/**)"
+    ]
+  }
+}

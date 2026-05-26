@@ -1,22 +1,4 @@
-async function getBlogsFromAPI() {
-  try {
-    const response = await fetch("https://cms.daikimedia.com/api/blogs", {
-      next: {
-        revalidate: 3600,
-        tags: ["blogs"],
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    return await response.json();
-  } catch (error) {
-    console.error("Error fetching blogs from API:", error);
-    return [];
-  }
-}
+import { getAllBlogs } from "@/lib/blogs";
 
 async function getServiceRoutes() {
   try {
@@ -151,7 +133,7 @@ export default async function sitemap() {
     },
   ];
 
-  const apiBlogs = await getBlogsFromAPI();
+  const apiBlogs = await getAllBlogs();
 
   const blogRoutes = apiBlogs.map((blog) => ({
     url: `${baseUrl}/blog/${blog.slug}`,

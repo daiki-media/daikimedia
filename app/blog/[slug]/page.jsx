@@ -1,77 +1,53 @@
 import { redirect } from "next/navigation";
-import Link from "next/link";
 import Footer from "@/components/footer/Footer";
 import NewsLetter from "@/components/shared/NewsLetter";
-import PageHero from "@/components/shared/PageHero";
 import ArticleSchema from "@/components/schema/ArticleSchema";
-import FallbackImage from "@/components/shared/FallbackImage";
-import { getCMSImageUrl } from "@/utils/imageUtils";
 import BlogContent from "@/components/blogs/BlogContent";
+import BlogDetailHero from "@/components/blogs/BlogDetailHero";
+import RelatedBlogs from "@/components/blogs/RelatedBlogs";
+import { getAllBlogs, getBlogBySlug, getRelatedBlogs } from "@/lib/blogs";
+import { getCMSImageUrl } from "@/utils/imageUtils";
+import {
+  decodeHtmlEntities,
+  stripHtml,
+  getReadingTime,
+  truncate,
+} from "@/utils/textUtils";
 import dayjs from "dayjs";
 
-async function getBlogsFromAPI() {
-  try {
-    const response = await fetch("https://cms.daikimedia.com/api/blogs", {
-      next: {
-        tags: ["blogs"],
-      },
-    });
+// Segment-level ISR: regenerate each detail page at most once per hour.
+// Combined with the module-level memo in lib/blogs.js this means the slow
+// 15MB CMS list is downloaded at most ~once per hour per worker / instance.
+export const revalidate = 3600;
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    return await response.json();
-  } catch (error) {
-    console.error("Error fetching blogs from API:", error);
-    return null;
-  }
-}
+const AUTHOR_HREF = "/author/lukesh-pillai";
 
 async function getBlogData(slug) {
-  const apiBlogs = await getBlogsFromAPI();
+  // Fetch the full blog (with content) and the lightweight list (for related
+  // blogs) in parallel. The list endpoint no longer carries `content` per item,
+  // so we MUST go to /api/blogs/{slug} for the body of this post.
+  const [blog, allBlogs] = await Promise.all([
+    getBlogBySlug(slug),
+    getAllBlogs(),
+  ]);
+  if (!blog) return null;
 
-  if (apiBlogs) {
-    const apiBlog = apiBlogs.find((item) => item.slug === slug);
-    if (apiBlog) {
-      const relatedBlogs = apiBlogs
-        .filter(
-          (item) =>
-            item.slug !== slug &&
-            (item.category === apiBlog.category ||
-              item.author === apiBlog.author)
-        )
-        .slice(0, 3);
-
-      return {
-        blog: apiBlog,
-        relatedBlogs,
-        isApiBlog: true,
-      };
-    }
-  }
-
-  return null;
+  return {
+    blog,
+    relatedBlogs: getRelatedBlogs(allBlogs, blog, 3),
+    isApiBlog: true,
+  };
 }
 
 export async function generateStaticParams() {
-  const params = [];
+  const blogs = await getAllBlogs();
 
-  try {
-    const apiBlogs = await getBlogsFromAPI();
-    if (apiBlogs) {
-      params.push(...apiBlogs.map((blog) => ({ slug: blog.slug })));
-    }
-  } catch (error) {
-    console.error("Error fetching API slugs:", error);
-  }
+  const params = blogs.map((blog) => ({ slug: blog.slug }));
 
-  const uniqueParams = params.filter(
+  return params.filter(
     (param, index, self) =>
       index === self.findIndex((p) => p.slug === param.slug)
   );
-
-  return uniqueParams;
 }
 
 export async function generateMetadata({ params }) {
@@ -79,8 +55,7 @@ export async function generateMetadata({ params }) {
   const data = await getBlogData(slug);
 
   if (!data?.blog) {
-    // Return metadata for redirect - this won't be used since we redirect
-    // but it's good practice to have fallback metadata
+    // Fallback metadata — the page redirects to /blog when no blog is found.
     return {
       title: "Redirecting to Blog",
       description:
@@ -90,30 +65,17 @@ export async function generateMetadata({ params }) {
 
   const { blog } = data;
 
-  const decodeHtmlEntities = (html) => {
-    if (!html) return "";
-    return html
-      .replace(/&amp;/g, "&")
-      .replace(/&lt;/g, "<")
-      .replace(/&gt;/g, ">")
-      .replace(/&quot;/g, '"')
-      .replace(/&#39;/g, "'");
-  };
-
-  const getImageUrl = (imagePath) => {
-    return getCMSImageUrl(imagePath);
-  };
-
-  const title = decodeHtmlEntities(
-    blog.meta_title || blog.title || "Blog Details"
-  );
+  const title = decodeHtmlEntities(blog.meta_title || blog.title || "Blog Details");
 
   const description = decodeHtmlEntities(
     blog.meta_description ||
       blog.description ||
-      blog.content?.replace(/<[^>]*>/g, "").substring(0, 150) ||
+      stripHtml(blog.content).substring(0, 150) ||
       "Blog post details"
   );
+
+  const imageUrl = getCMSImageUrl(blog.featuredImage);
+  const imageAlt = decodeHtmlEntities(blog.featuredImageAlt || blog.title || title);
 
   return {
     title,
@@ -123,21 +85,22 @@ export async function generateMetadata({ params }) {
       description,
       images: [
         {
-          url: getImageUrl(blog.featuredImage),
+          url: imageUrl,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: imageAlt,
         },
       ],
       type: "article",
       publishedTime: blog.created_at,
+      modifiedTime: blog.updated_at || blog.created_at,
       authors: [blog.author || "Daiki Media"],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [getImageUrl(blog.featuredImage)],
+      images: [imageUrl],
     },
     alternates: {
       canonical: `https://www.daikimedia.com/blog/${slug}`,
@@ -150,140 +113,78 @@ export default async function BlogDetails({ params }) {
   const data = await getBlogData(slug);
 
   if (!data?.blog) {
-    // Instead of showing 404, redirect to main blog page
-    // This handles all the broken blog links from Ahrefs report dynamically
+    // Instead of a 404, redirect to the main blog page.
+    // This dynamically handles broken blog links from the Ahrefs report.
     redirect("/blog");
   }
 
   const { blog, relatedBlogs } = data;
 
-  const decodeHtmlEntities = (html) => {
-    if (!html) return "";
-    return html
-      .replace(/&amp;/g, "&")
-      .replace(/&lt;/g, "<")
-      .replace(/&gt;/g, ">")
-      .replace(/&quot;/g, '"')
-      .replace(/&#39;/g, "'");
-  };
+  const getCurrentUrl = () => `https://www.daikimedia.com/blog/${slug}`;
 
-  const getImageUrl = (imagePath) => {
-    return getCMSImageUrl(imagePath);
-  };
+  // ---- Derived display values ----
+  const title = decodeHtmlEntities(blog.title || "Untitled Blog");
 
-  const getFormattedDate = () => {
-    return blog.created_at
-      ? dayjs(blog.created_at).format("MMMM D, YYYY")
-      : "Unknown Date";
-  };
+  const heroDescription =
+    decodeHtmlEntities(blog.description || "") ||
+    truncate(stripHtml(blog.content), 160);
 
-  const getSchemaDate = (dateField) => {
-    return blog[dateField] || blog.created_at || new Date().toISOString();
-  };
+  const imageUrl = getCMSImageUrl(blog.featuredImage);
 
-  const getCurrentUrl = () => {
-    return `https://www.daikimedia.com/blog/${slug}`;
-  };
+  // Featured image alt: featuredImageAlt, falling back to the title.
+  const featuredImageAlt =
+    decodeHtmlEntities((blog.featuredImageAlt || "").trim()) || title;
+
+  const formattedDate = blog.created_at
+    ? dayjs(blog.created_at).format("MMMM D, YYYY")
+    : "";
+
+  const readTime = getReadingTime(blog.content);
+
+  const schemaDescription = decodeHtmlEntities(
+    blog.description ||
+      stripHtml(blog.content).substring(0, 160) ||
+      "Blog post content"
+  );
 
   return (
     <>
       <ArticleSchema
-        headline={decodeHtmlEntities(blog.title || "Untitled Blog")}
-        description={decodeHtmlEntities(
-          blog.description ||
-            blog.content?.replace(/<[^>]*>/g, "").substring(0, 160) ||
-            "Blog post content"
-        )}
+        headline={title}
+        description={schemaDescription}
         authorName={blog.author || "Daiki Media"}
         authorUrl="https://www.daikimedia.com/author"
         publisherName="Daiki Media"
         publisherLogo="https://www.daikimedia.com/logo.png"
-        datePublished={getSchemaDate("created_at")}
+        datePublished={blog.created_at || new Date().toISOString()}
         dateModified={
-          getSchemaDate("updated_at") || getSchemaDate("created_at")
+          blog.updated_at || blog.created_at || new Date().toISOString()
         }
         mainEntityUrl={getCurrentUrl()}
-        imageUrl={getImageUrl(blog.featuredImage)}
+        imageUrl={imageUrl}
         imageWidth={1200}
         imageHeight={630}
       />
 
-      <main className="flex flex-col items-center justify-center">
-        <PageHero
-          subtitle=""
-          title={decodeHtmlEntities(blog.title || "Untitled Blog")}
+      <main className="flex flex-col">
+        <BlogDetailHero
+          title={title}
+          category={blog.category}
+          formattedDate={formattedDate}
+          dateISO={blog.created_at}
+          description={heroDescription}
+          author={blog.author || "Daiki Media"}
+          authorHref={AUTHOR_HREF}
+          readTime={readTime}
+          imageUrl={imageUrl}
+          imageAlt={featuredImageAlt}
         />
-        <article className="relative pb-150 w-full max-w-4xl mx-auto">
-          <div className="container relative">
-            <div className="mb-16 overflow-hidden rounded-medium p-2.5 max-md:h-[400px] flex justify-center items-center">
-              <FallbackImage
-                src={getImageUrl(blog.featuredImage)}
-                alt={decodeHtmlEntities(blog.title || "Untitled Blog")}
-                className="rounded max-md:h-full max-md:object-cover w-[700px] h-[500px] max-md:object-center"
-                width={700}
-                height={500}
-              />
-            </div>
 
-          <div className="blog-details">
-            <div className="flex items-center justify-center gap-6">
-              <div className="flex items-center gap-2">
-                <span className="text-red-300 text-xl">✦</span>
-                <Link 
-                  href="/author/lukesh-pillai" 
-                  className="text-xl font-bold bg-gradient-to-r from-gray-900 to-red-600 bg-clip-text text-transparent hover:from-red-600 hover:to-gray-900 transition-all duration-300"
-                >
-                  {blog.author || "Daiki Media"}
-                </Link>
-              </div>
-              <time dateTime={blog.created_at} className="text-lg text-black-500">
-                {getFormattedDate()}
-              </time>
-            </div>
-          </div>
-
-            {/* <div className="blog-details-body text-center">
-              <div
-                className="text-gray-700 leading-relaxed mx-auto max-w-4xl prose prose-lg "
-                dangerouslySetInnerHTML={{
-                  __html: decodeHtmlEntities(blog.content || ""),
-                }}
-              ></div>
-            </div> */}
-            <BlogContent content={blog.content} />
-
-            {relatedBlogs.length > 0 && (
-              <div className="mt-16">
-                <h2 className="text-2xl font-bold mb-8">Related Blogs</h2>
-                <div
-                  className={`grid grid-cols-1 md:grid-cols-${relatedBlogs.length > 4 ? 4 : relatedBlogs.length} gap-8`}
-                >
-                  {relatedBlogs.map((relatedBlog) => (
-                    <div
-                      key={relatedBlog.slug}
-                      className="border rounded-lg p-4"
-                    >
-                      <FallbackImage
-                        src={getImageUrl(relatedBlog.featuredImage)}
-                        alt={decodeHtmlEntities(relatedBlog.title)}
-                        className="w-full h-48 object-cover rounded-md mb-4"
-                        width={300}
-                        height={192}
-                        loading="lazy"
-                      />
-                      <h3 className="text-xl font-semibold mb-2">
-                        <a href={`/blog/${relatedBlog.slug}`}>
-                          {decodeHtmlEntities(relatedBlog.title)}
-                        </a>
-                      </h3>
-                      <p className="text-gray-600">{relatedBlog.author}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
+        <article className="w-full pt-12 pb-16">
+          <BlogContent content={blog.content} />
         </article>
+
+        <RelatedBlogs blogs={relatedBlogs} />
 
         <NewsLetter />
       </main>

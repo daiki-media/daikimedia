@@ -4,52 +4,54 @@ import Pagination from "../shared/Pagination";
 import BlogItems from "./BlogItems";
 import { getCMSImageUrl } from "@/utils/imageUtils";
 
-const RecentNews = () => {
+const stripHtml = (html) => {
+  if (!html) return "";
+  return html.replace(/<\/?[^>]+(>|$)/g, "");
+};
+
+const processBlogs = (blogs) =>
+  (blogs || []).map((blog) => ({
+    ...blog,
+    // Prefer the server-provided excerpt; fall back to stripping content for
+    // the client-fetch path.
+    content: blog.excerpt ?? stripHtml(blog.content?.rendered || blog.content || ""),
+    featuredImage: getCMSImageUrl(blog.featuredImage),
+    date: blog.created_at || "Unknown Creator",
+  }));
+
+const RecentNews = ({ initialBlogs = [] }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [featureBlog, setFeatureBlog] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [rawBlogs, setRawBlogs] = useState(initialBlogs);
+  // Only show a spinner if we arrived without server-provided data.
+  const [isLoading, setIsLoading] = useState(initialBlogs.length === 0);
   const itemsPerPage = 12;
 
   useEffect(() => {
+    // Server already supplied the data — skip the client fetch entirely.
+    if (initialBlogs.length > 0) return;
+
+    let cancelled = false;
     const fetchBlogs = async () => {
       setIsLoading(true);
-
-      const stripHtml = (html) => {
-        if (!html) return "";
-        return html.replace(/<\/?[^>]+(>|$)/g, "");
-      };
-
-      const fixImagePath = (path) => {
-        return getCMSImageUrl(path);
-      };
-
       try {
         const response = await fetch("https://cms.daikimedia.com/api/blogs");
-
-        if (response.ok) {
-          const apiBlogs = await response.json();
-
-          const processedApiBlogData = apiBlogs.map((blog) => ({
-            ...blog,
-            content: stripHtml(blog.content?.rendered || blog.content || ""),
-            featuredImage: fixImagePath(blog.featuredImage),
-            date: blog.created_at || "Unknown Creator",
-          }));
-
-          setFeatureBlog(processedApiBlogData);
-        } else {
-          setFeatureBlog([]);
-        }
+        const apiBlogs = response.ok ? await response.json() : [];
+        if (!cancelled) setRawBlogs(Array.isArray(apiBlogs) ? apiBlogs : []);
       } catch (error) {
         console.error("Error fetching blogs:", error);
-        setFeatureBlog([]);
+        if (!cancelled) setRawBlogs([]);
       } finally {
-        setIsLoading(false);
+        if (!cancelled) setIsLoading(false);
       }
     };
 
     fetchBlogs();
-  }, []);
+    return () => {
+      cancelled = true;
+    };
+  }, [initialBlogs.length]);
+
+  const featureBlog = useMemo(() => processBlogs(rawBlogs), [rawBlogs]);
 
   const paginationData = useMemo(() => {
     const totalPage = Math.ceil(featureBlog.length / itemsPerPage);

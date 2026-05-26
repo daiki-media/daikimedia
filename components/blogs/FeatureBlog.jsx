@@ -6,6 +6,7 @@ import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import useSWR from "swr";
 import { getCMSImageUrl } from "@/utils/imageUtils";
+import FallbackImage from "@/components/shared/FallbackImage";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -48,13 +49,16 @@ const fetcher = async (url) => {
   }
 };
 
-const FeatureBlog = () => {
+const FeatureBlog = ({ initialBlogs }) => {
   const { data: apiBlogs, error: apiError } = useSWR(
     "https://cms.daikimedia.com/api/blogs",
     fetcher,
     {
+      // Server-rendered data seeds the cache so the swiper renders instantly.
+      fallbackData: initialBlogs,
       revalidateOnFocus: false,
       revalidateIfStale: false,
+      revalidateOnMount: !initialBlogs,
       dedupingInterval: 3600000,
       errorRetryCount: 2,
     }
@@ -63,7 +67,8 @@ const FeatureBlog = () => {
   const processedApiBlogs = apiBlogs
     ? apiBlogs.map((blog) => ({
         ...blog,
-        content: stripHtml(blog.content?.rendered || blog.content || ""),
+        content:
+          blog.excerpt ?? stripHtml(blog.content?.rendered || blog.content || ""),
         featuredImage: fixImagePath(blog.featuredImage),
         date: blog.created_at || "Unknown Date",
       }))
@@ -110,19 +115,17 @@ const FeatureBlog = () => {
                 >
                   <article>
                     <div className="grid grid-cols-2 items-center gap-12 max-md:grid-cols-1 max-md:gap-y-5">
-                      <div className="relative h-full w-full xl:min-h-[330px]">
-                        <img
+                      <div className="relative h-[450px] w-full overflow-hidden rounded-xl xl:min-h-[330px]">
+                        <FallbackImage
                           src={
                             blogItem.featuredImage ||
                             "/images/blog/blog-fallback-img.webp"
                           }
                           alt={blogItem.title || "Blog image"}
-                          className="w-full rounded-xl h-[450px] max-md:object-cover max-md:object-center"
-                          onError={(e) => {
-                            e.target.onerror = null;
-                            e.target.src =
-                              "/images/blog/blog-fallback-img.webp";
-                          }}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          className="object-cover object-center"
+                          priority={index === 0}
                         />
                       </div>
                       <div>

@@ -1,57 +1,37 @@
-import Head from "next/head";
 import FeatureBlog from "@/components/blogs/FeatureBlog";
 import RecentNews from "@/components/blogs/RecentNews";
 import Footer from "@/components/footer/Footer";
 import NewsLetter from "@/components/shared/NewsLetter";
 import PageHero from "@/components/shared/PageHero";
+import { getAllBlogs, toBlogSummary } from "@/lib/blogs";
 
+export const metadata = {
+  title: "Blog | Daiki Media",
+  description:
+    "Explore the latest blogs and articles from Daiki Media — SEO, digital marketing, and growth insights.",
+  keywords:
+    "Daiki Media, blogs, SEO, digital marketing, content, articles, updates",
+  alternates: {
+    canonical: "https://www.daikimedia.com/blog",
+  },
+};
+export const revalidate = 3600;
 export default async function Blog() {
-  try {
-    const res = await fetch("https://daiki.media/wp-json/wp/v2/posts", {
-      next: { revalidate: 10 },
-    });
-    const metadata = res.ok ? await res.json() : [];
+  // Fetch once on the server (cached/ISR via lib/blogs) and hand SUMMARIES to
+  // the client widgets as initial state — this removes the client-side fetch
+  // waterfall + loading spinners that made this page feel slow, and keeps the
+  // browser payload tiny (full content stays server-side).
+  const initialBlogs = (await getAllBlogs()).map(toBlogSummary);
 
-    const firstPost = metadata[0] || {};
-
-    return (
-      <>
-        <Head>
-          <title>{firstPost?.title?.rendered || "Blog | Daiki Media"}</title>
-          <meta
-            name="description"
-            content={
-              firstPost?.excerpt?.rendered?.replace(/<[^>]+>/g, "") ||
-              "Explore the latest blogs and articles from Daiki Media."
-            }
-          />
-          <meta
-            name="keywords"
-            content="Daiki Media, blogs, media, content, articles, updates"
-          />
-        </Head>
-
-        <main>
-          <PageHero
-            subtitle="OUR BLOG"
-            title="Recent Blogs <br/> By Daiki Media"
-          />
-          <FeatureBlog />
-          <RecentNews />
-          <NewsLetter />
-        </main>
-        <Footer />
-      </>
-    );
-  } catch (error) {
-    console.error("Error rendering blog page:", error);
-    return (
-      <div>
-        <h1>Error Loading Blogs</h1>
-        <p>
-          Sorry, we couldn&apos;t load the blog content. Please try again later.
-        </p>
-      </div>
-    );
-  }
+  return (
+    <>
+      <main>
+        <PageHero subtitle="OUR BLOG" title="Recent Blogs <br/> By Daiki Media" />
+        <FeatureBlog initialBlogs={initialBlogs} />
+        <RecentNews initialBlogs={initialBlogs} />
+        <NewsLetter />
+      </main>
+      <Footer />
+    </>
+  );
 }

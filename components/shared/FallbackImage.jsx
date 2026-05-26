@@ -9,6 +9,8 @@ const FallbackImage = ({
   className = "",
   width,
   height,
+  fill = false,
+  sizes,
   ...props
 }) => {
   const [imgSrc, setImgSrc] = useState(src);
@@ -21,7 +23,22 @@ const FallbackImage = ({
     }
   };
 
-  // If we're using Next.js Image component
+  // Fill mode — optimized responsive image that covers its (positioned) parent.
+  if (fill) {
+    return (
+      <Image
+        src={imgSrc}
+        alt={alt}
+        fill
+        sizes={sizes || "100vw"}
+        className={className}
+        onError={handleError}
+        {...props}
+      />
+    );
+  }
+
+  // Fixed-size Next.js Image
   if (width && height) {
     return (
       <Image
@@ -29,6 +46,7 @@ const FallbackImage = ({
         alt={alt}
         width={width}
         height={height}
+        sizes={sizes}
         className={className}
         onError={handleError}
         {...props}

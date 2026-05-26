@@ -20,7 +20,6 @@ import {
   Languages,
   Network,
   Trophy,
-  Zap,
   TrendingUp,
   Users,
   ShieldCheck,

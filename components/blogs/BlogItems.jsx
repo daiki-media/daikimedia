@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import dayjs from "dayjs";
+import FallbackImage from "@/components/shared/FallbackImage";
 
 const BlogItems = ({ slug, blogData, content, column, thumbnail }) => {
   const stripHTML = (html) => {
@@ -35,13 +36,13 @@ const BlogItems = ({ slug, blogData, content, column, thumbnail }) => {
           <div className="text-sm text-gray-500 dark:text-gray-400">
             <p>{dayjs(blogData.date).format("MMMM D, YYYY")}</p>
           </div>
-          <div className="mb-6">
-            <img
+          <div className="relative mb-6 h-[200px] w-full overflow-hidden rounded-lg shadow-md">
+            <FallbackImage
               src={imageUrl}
-              alt="service logo"
-              className="aspect-square h-[200px] w-full rounded-lg object-cover object-center shadow-md transition-all duration-300 ease-in-out"
-              width={350}
-              height={400}
+              alt={title || "Blog image"}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover object-center transition-all duration-300 ease-in-out"
             />
           </div>
           <div className="space-y-4">

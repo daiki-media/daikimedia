@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   Tag,
   Star,
@@ -314,8 +314,13 @@ const DynamicCompanyListing = ({
   const [selectedPriceRange, setSelectedPriceRange] = useState("");
   const [filteredCompanies, setFilteredCompanies] = useState([]);
 
-  // Get companies data from the provided data object
-  const companiesData = data?.[dataKey] || [];
+  // Get companies data from the provided data object.
+  // Memoised so the `|| []` fallback doesn't return a new array reference on
+  // every render — which would re-fire the useEffect below in a loop.
+  const companiesData = useMemo(
+    () => data?.[dataKey] || [],
+    [data, dataKey]
+  );
 
   // Initialize filtered companies
   useEffect(() => {

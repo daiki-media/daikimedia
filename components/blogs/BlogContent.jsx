@@ -1,21 +1,24 @@
 import styles from './BlogContent.module.css';
-import { cleanBlogContent } from '@/utils/contentCleaner';
+import {
+  cleanBlogContent,
+  enhanceBlogContent,
+  markFaqQuestions,
+} from '@/utils/contentCleaner';
 
 export default function BlogContent({ content }) {
-  const processedContent = cleanBlogContent(content);
-  
-  // Add your existing FAQ processing
-  const processedWithFAQs = processedContent.replace(
-    /<p><strong>(FAQ|FAQs|Frequently Asked Questions)<\/strong>/g,
-    '<p data-type="faq-title"><strong>$1</strong>'
-  ).replace(
-    /<p><strong>(.*?\?)<\/strong><\/p>/g,
-    '<p data-type="faq-question"><strong>$1</strong></p>'
-  );
+  // 1. Strip Quill artifacts / decode entities (existing behaviour, preserved)
+  const cleaned = cleanBlogContent(content);
+  // 2. Resolve image src to absolute, add alt + lazy-loading
+  const withImages = enhanceBlogContent(cleaned);
+  // 3. Flag question paragraphs so they render as FAQ accents
+  const finalHtml = markFaqQuestions(withImages);
 
   return (
     <div className={styles.wrapper}>
-      <div dangerouslySetInnerHTML={{ __html: processedWithFAQs }} />
+      <div
+        className={styles.body}
+        dangerouslySetInnerHTML={{ __html: finalHtml }}
+      />
     </div>
   );
 }

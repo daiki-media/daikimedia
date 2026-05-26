@@ -1,509 +1,328 @@
+/* ============================================================
+   Blog article body — clean editorial styling
+   Brand red: #c8102e   |   Light red wash: #fff0f2
+   ============================================================ */
+
 .wrapper {
-  max-width: 75rem;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0 1.25rem;
   background: #ffffff;
 }
-/* Typography with Beautiful Background Variations */
-.wrapper h1 {
-  font-size: 2.75rem;
-  font-weight: 800;
-  color: #111827;
-  margin: 2rem 0 1.5rem;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #111827 0%, #ea1d2e 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  position: relative;
-  display: inline-block;
-}
 
-.wrapper h1::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, #ea1d2e, #f87171);
-  border-radius: 2px;
-}
-
-.wrapper h2 {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #111827;
-  margin: 3rem 0 1.5rem;
-  padding: 1rem 0 0.75rem 1.5rem;
-  background: linear-gradient(90deg, #fef2f2 0%, transparent 100%);
-  border-radius: 0 12px 12px 0;
-  border-left: 6px solid #ea1d2e;
-  position: relative;
-}
-
-.wrapper h2::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100px;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(234, 29, 46, 0.05));
-  border-radius: 0 12px 12px 0;
-  pointer-events: none;
-}
-
-.wrapper h3 {
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: #1f2937;
-  margin: 2.5rem 0 1.25rem;
-  padding: 0.75rem 0 0.75rem 1.25rem;
-  background: linear-gradient(90deg, #f9fafb 0%, #ffffff 100%);
-  border-radius: 8px;
-  border-left: 4px solid #ea1d2e;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
-}
-
-.wrapper h4 {
-  font-size: 1.35rem;
-  font-weight: 600;
-  color: #374151;
-  margin: 2rem 0 1rem;
-  padding: 0.5rem 0 0.5rem 1rem;
-  background: rgba(234, 29, 46, 0.03);
-  border-radius: 6px;
-  display: inline-block;
-}
-
-/* First Paragraph - Featured Style */
-.wrapper p:first-of-type {
-  font-size: 1.25rem;
-  color: #1f2937;
-  background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
-  padding: 2rem 2rem 2rem 3rem;
-  border-radius: 16px;
-  border: 1px solid #fee2e2;
-  position: relative;
-  margin: 2rem 0 2.5rem;
-  font-weight: 500;
-  line-height: 1.7;
-  box-shadow: 0 10px 25px -10px rgba(234, 29, 46, 0.15);
-}
-
-.wrapper p:first-of-type::before {
-  content: '"';
-  position: absolute;
-  left: 1rem;
-  top: 0.5rem;
-  font-size: 4rem;
-  color: #ea1d2e;
-  opacity: 0.15;
-  font-family: Georgia, serif;
-}
-
-.wrapper p:first-of-type::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at top right, rgba(234, 29, 46, 0.03), transparent 70%);
-  border-radius: 16px;
-  pointer-events: none;
-}
-
-/* Regular Paragraphs with subtle hover effect */
-.wrapper p {
-  color: #111827;
+/* ---- Base typography ---- */
+.body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
   line-height: 1.8;
-  margin-bottom: 1.5rem;
-  font-size: 1.0625rem;
-  transition: all 0.2s ease;
-  padding: 0.25rem 0;
+  color: #181f28;
+  word-break: break-word;
 }
 
-/* Strong/Bold Tags with Beautiful Background */
-.wrapper strong {
-  font-weight: 700;
-  color: #ea1d2e;
-  background: linear-gradient(90deg, #fff5f5, transparent);
-  padding: 0.2rem 0.6rem;
-  border-radius: 6px;
-  display: inline-block;
-  font-size: 1.05em;
-  border-left: 3px solid #ea1d2e;
+.body p {
+  margin: 0 0 1.5em;
 }
 
-/* Paragraphs containing strong tags */
-.wrapper p strong {
-  font-size: 1.125rem;
-  background: linear-gradient(90deg, #fff5f5, transparent);
-  padding: 0.25rem 1rem 0.25rem 1rem;
-  border-radius: 30px;
-  display: inline-block;
-  margin-right: 0.5rem;
-  border-left: none;
-}
-
-/* Lists with alternating background */
-.wrapper ul,
-.wrapper ol {
-  margin: 2rem 0 2.5rem;
-  padding: 1.5rem 2rem;
-  border-radius: 20px;
-  border: 1px solid #f0f0f0;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
-  text-align: left;
-  background: radial-gradient(
-    140% 80% at bottom center,
-    rgba(234, 29, 46, 0.08) 0%,
-    rgba(234, 29, 46, 0.04) 35%,
-    rgba(234, 29, 46, 0.015) 55%,
-    transparent 70%
-);
-
-}
-
-.wrapper li {
-  color: #0f1012;
+/* Lead paragraph gets a touch more presence */
+.body > p:first-of-type {
+  font-size: 1.18em;
   line-height: 1.7;
-  margin-bottom: 0.875rem;
-  font-size: 1.0625rem;
-  padding-left: 0.5rem;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.wrapper li:hover {
   color: #111827;
-  transform: translateX(4px);
 }
 
-.wrapper ul > li {
-  list-style-type: none;
-  position: relative;
-  padding-left: 2rem;
+.body strong,
+.body b {
+  font-weight: 700;
+  color: #111827;
 }
 
-.wrapper ul > li::before {
-  content: "✧";
-  color: #ea1d2e;
-  font-weight: bold;
-  font-size: 1.5rem;
-  position: absolute;
-  left: 0;
-  top: 3px;
+.body em,
+.body i {
+  font-style: italic;
 }
 
-.wrapper ul ul {
-  background: transparent;
-  margin: 0.5rem 0 0.5rem 1.5rem;
-  padding: 0.5rem 0 0.5rem 1rem;
-  border: none;
-  box-shadow: none;
-  border-left: 2px dashed #ea1d2e;
-  border-radius: 0;
+/* ---- Headings (sans-serif for contrast against serif body) ---- */
+.body h1,
+.body h2,
+.body h3,
+.body h4,
+.body h5,
+.body h6 {
+  font-family: "Plus Jakarta Sans", "Inter", system-ui, -apple-system, sans-serif;
+  color: #50020d;
+  line-height: 1.25;
+  scroll-margin-top: 100px;
 }
 
-.wrapper ul ul > li::before {
-  content: "◦";
-  font-size: 1.2rem;
-  color: #ea1d2e;
-  opacity: 0.8;
-}
-
-.wrapper ol {
-  counter-reset: custom-counter;
-}
-
-.wrapper ol > li {
-  list-style-type: none;
-  position: relative;
-  padding-left: 2.5rem;
-}
-
-.wrapper ol > li::before {
-  content: counter(custom-counter);
-  counter-increment: custom-counter;
-  position: absolute;
-  left: 0;
-  width: 28px;
-  height: 28px;
-  background: #ea1d2e;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.875rem;
-  font-weight: 600;
-  box-shadow: 0 4px 8px rgba(234, 29, 46, 0.2);
-}
-
-/* FAQ Section - Premium Design */
-.wrapper .faq-section,
-.wrapper [class*="faq"],
-.wrapper div:has(> strong:contains("FAQ")),
-.wrapper div:has(> strong:contains("FAQS")) {
-  margin: 3.5rem 0;
-  background: linear-gradient(135deg, #ffffff 0%, #fef9f9 100%);
-  border-radius: 24px;
-  padding: 2.5rem;
-  border: 1px solid #fee2e2;
-  box-shadow: 0 20px 40px -15px rgba(234, 29, 46, 0.15);
-  position: relative;
-  overflow: hidden;
-}
-
-.wrapper div:has(> strong:contains("FAQ"))::before,
-.wrapper div:has(> strong:contains("FAQS"))::before {
-  content: '?';
-  position: absolute;
-  right: -20px;
-  bottom: -20px;
-  font-size: 12rem;
+.body h2 {
+  font-size: 1.9rem;
   font-weight: 800;
-  color: #ea1d2e;
-  opacity: 0.03;
-  font-family: Georgia, serif;
-  pointer-events: none;
-}
-
-.wrapper div:has(> strong:contains("FAQ")) strong:first-child,
-.wrapper div:has(> strong:contains("FAQS")) strong:first-child {
-  font-size: 2rem;
-  color: #111827;
-  display: block;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 3px solid #ea1d2e;
-  position: relative;
-  background: linear-gradient(90deg, #111827, #ea1d2e);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* FAQ Questions */
-.wrapper div:has(> strong:contains("FAQ")) p strong,
-.wrapper div:has(> strong:contains("FAQS")) p strong {
-  font-size: 1.25rem;
-  color: #ffffff;
-  background: #ea1d2e;
-  display: inline-block;
-  padding: 0.6rem 1.5rem;
-  border-radius: 40px;
-  margin: 1.5rem 0 1rem;
-  box-shadow: 0 8px 16px -6px rgba(234, 29, 46, 0.3);
-  border-left: none;
-  position: relative;
+  margin: 2.6rem 0 1.1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ececec;
   letter-spacing: -0.01em;
 }
 
-/* FAQ Answers */
-.wrapper div:has(> strong:contains("FAQ")) p:not(:has(strong)),
-.wrapper div:has(> strong:contains("FAQS")) p:not(:has(strong)) {
-  margin: 0.5rem 0 2rem 1.5rem;
-  padding: 1.25rem 1.5rem;
-  background: #ffffff;
-  border-radius: 16px;
-  border: 1px solid #fee2e2;
-  color: #4b5563;
+.body h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin-top: 0.5rem;
+  background: #c8102e;
+  border-radius: 2px;
+}
+
+.body h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 2rem 0 0.9rem;
+}
+
+.body h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 1.6rem 0 0.75rem;
+}
+
+/* ---- Links ---- */
+.body a {
+  color: #c8102e;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.body a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: #a00d24;
+}
+
+/* ---- Unordered lists — branded card with sparkle bullets ---- */
+.body ul {
+  list-style: none;
+  margin: 2em 0;
+  padding: 1.75rem 2rem;
+  border-radius: 18px;
+  border: 1px solid #fbe0e4;
+  box-shadow: 0 12px 30px -20px rgba(200, 16, 46, 0.3);
+  background: radial-gradient(
+    140% 85% at bottom center,
+    rgba(200, 16, 46, 0.08) 0%,
+    rgba(200, 16, 46, 0.04) 35%,
+    rgba(200, 16, 46, 0.015) 55%,
+    #ffffff 75%
+  );
+}
+
+.body ul > li {
   position: relative;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-}
-
-/* Blockquotes - Elegant Design */
-.wrapper blockquote {
-  margin: 2.5rem 0;
-  padding: 2rem 2.5rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #fff5f5 100%);
-  border-radius: 20px;
-  border-left: 6px solid #ea1d2e;
-  color: #1f2937;
-  font-style: italic;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  position: relative;
-  box-shadow: 0 10px 25px -12px rgba(0, 0, 0, 0.1);
-}
-
-.wrapper blockquote::before {
-  content: '"';
-  position: absolute;
-  left: 1rem;
-  top: 0.5rem;
-  font-size: 5rem;
-  color: #ea1d2e;
-  opacity: 0.1;
-  font-family: Georgia, serif;
-}
-
-.wrapper blockquote p {
-  margin-bottom: 0;
-  color: inherit;
-}
-
-.wrapper blockquote p:hover {
-  color: inherit;
-}
-
-/* Images with beautiful frame */
-.wrapper img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 16px;
-  margin: 2.5rem 0;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.wrapper img:hover {
-  transform: scale(1.01);
-  box-shadow: 0 25px 35px -12px rgba(234, 29, 46, 0.2);
-}
-
-/* Code blocks with modern design */
-.wrapper pre {
-  background: #1e1e2e;
-  color: #e2e8f0;
-  padding: 1.5rem;
-  border-radius: 16px;
-  overflow-x: auto;
-  margin: 2rem 0;
-  font-size: 0.9375rem;
+  list-style: none;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
   line-height: 1.7;
-  border: 1px solid #2d2d3a;
-  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
 }
 
-.wrapper code {
-  background: #fff1f1;
-  color: #ea1d2e;
-  padding: 0.2rem 0.5rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  border: 1px solid #fee2e2;
+.body ul > li:last-child {
+  margin-bottom: 0;
 }
 
-.wrapper pre code {
-  background: transparent;
+.body ul > li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  color: #c8102e;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+/* Nested unordered lists — lighter, no card */
+.body ul ul {
+  margin: 0.75rem 0 0;
+  padding: 0 0 0 0.25rem;
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+.body ul ul > li::before {
+  content: "✧";
+  font-size: 1em;
+  opacity: 0.85;
+}
+
+/* ---- Ordered lists ---- */
+.body ol {
+  margin: 1.6em 0;
+  padding-left: 1.5rem;
+}
+
+.body ol > li {
+  margin-bottom: 0.6em;
+  padding-left: 0.25rem;
+}
+
+.body ol > li::marker {
+  color: #c8102e;
+  font-weight: 700;
+}
+
+/* ---- Blockquotes ---- */
+.body blockquote {
+  margin: 2em 0;
+  padding: 1.1rem 1.5rem;
+  border-left: 4px solid #c8102e;
+  background: #fff0f2;
+  border-radius: 0 10px 10px 0;
+  font-style: italic;
+  color: #3f3f46;
+}
+
+.body blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- FAQ questions (paragraphs ending in "?") ---- */
+.body p[data-faq-question] {
+  border-left: 3px solid #c8102e;
+  padding: 0.35rem 0 0.35rem 1rem;
+  margin: 1.8em 0 0.6em;
+  font-weight: 700;
+  color: #111827;
+  font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+}
+
+.body p[data-faq-question] strong {
   color: inherit;
-  padding: 0;
+}
+
+/* ---- Images ---- */
+.body img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 2.4em auto;
+  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.25);
+}
+
+.body figure {
+  margin: 2.4em 0;
+}
+
+.body figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+/* ---- Tables ---- */
+.body table {
+  width: 100%;
+  margin: 2.2em 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px -14px rgba(0, 0, 0, 0.25);
+  font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  font-size: 0.95rem;
+}
+
+.body thead th,
+.body th {
+  background: #111111;
+  color: #ffffff;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.85rem 1.1rem;
   border: none;
 }
 
-/* Tables with striped design */
-.wrapper table {
-  width: 100%;
-  margin: 2.5rem 0;
-  border-collapse: separate;
-  border-spacing: 0;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px -12px rgba(0, 0, 0, 0.1);
-}
-
-.wrapper th {
-  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
-  padding: 1rem 1.25rem;
-  font-weight: 600;
-  color: #111827;
-  border-bottom: 2px solid #ea1d2e;
-  text-align: left;
-  font-size: 1rem;
-}
-
-.wrapper td {
-  padding: 1rem 1.25rem;
-  border-bottom: 1px solid #e5e7eb;
+.body td {
+  padding: 0.8rem 1.1rem;
+  border-top: 1px solid #ececec;
   color: #374151;
   background: #ffffff;
 }
 
-.wrapper tr:nth-child(even) td {
-  background: linear-gradient(90deg, #fff5f5, transparent);
+.body tbody tr:nth-child(even) td {
+  background: #fafafa;
 }
 
-.wrapper tr:last-child td {
-  border-bottom: none;
+.body tbody tr:hover td {
+  background: #fff0f2;
+  transition: background 0.18s ease;
 }
 
-.wrapper tr:hover td {
-  background: #fff5f5;
-  transition: background 0.2s ease;
+/* ---- Code ---- */
+.body code {
+  background: #fff0f2;
+  color: #c8102e;
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
-/* Horizontal Rule with gradient */
-.wrapper hr {
-  margin: 3rem 0;
+.body pre {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin: 2em 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.body pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* ---- Horizontal rule ---- */
+.body hr {
+  margin: 2.5rem 0;
   border: none;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #ea1d2e, #f87171, transparent);
+  height: 1px;
+  background: #e5e7eb;
 }
 
-/* Selection styling */
-.wrapper ::selection {
-  background: #ea1d2e;
-  color: white;
-}
-
-/* Numbered paragraphs (like 1., 2., etc) */
-.wrapper p:has(> strong:only-child) {
-  background: linear-gradient(90deg, #fff5f5, transparent);
-  padding: 0.5rem 1rem;
-  border-radius: 40px;
-  display: inline-block;
-  margin: 1rem 0;
-  border: 1px solid #e5e7eb;
-}
-
-/* Responsive adjustments */
+/* ---- Responsive ---- */
 @media (max-width: 768px) {
   .wrapper {
-    padding: 1.5rem 1rem;
+    padding: 0 1rem;
   }
-  
-  .wrapper h1 {
-    font-size: 2.25rem;
-  }
-  
-  .wrapper h2 {
-    font-size: 1.75rem;
-    padding: 0.75rem 0 0.75rem 1rem;
-  }
-  
-  .wrapper h3 {
-    font-size: 1.35rem;
-    padding: 0.5rem 0 0.5rem 1rem;
-  }
-  
-  .wrapper p:first-of-type {
-    font-size: 1.125rem;
-    padding: 1.5rem 1.5rem 1.5rem 2.5rem;
-  }
-  
-  .wrapper ul,
-  .wrapper ol {
-    padding: 1.25rem 1.25rem 1.25rem 1.75rem;
-  }
-  
-  .wrapper div:has(> strong:contains("FAQ")),
-  .wrapper div:has(> strong:contains("FAQS")) {
-    padding: 1.5rem;
-  }
-  
-  .wrapper blockquote {
-    padding: 1.5rem 1.5rem 1.5rem 2rem;
-  }
-}
 
-/* Smooth hover transitions */
-.wrapper * {
-  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  .body {
+    font-size: 16px;
+  }
+
+  .body h2 {
+    font-size: 1.55rem;
+  }
+
+  .body h3 {
+    font-size: 1.25rem;
+  }
+
+  .body table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .body ul {
+    padding: 1.25rem 1.25rem;
+  }
+
+  .body ul > li {
+    padding-left: 1.6rem;
+  }
 }

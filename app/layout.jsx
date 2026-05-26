@@ -37,6 +37,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://www.daikimedia.com"),
   title: "Daiki Media | Expert SEO & Website Development Agency",
   description: "Connect with the best graphic design agencies...",
 };
