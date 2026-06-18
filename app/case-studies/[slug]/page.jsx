@@ -64,7 +64,7 @@ export default async function CaseStudyDetail({ params }) {
   return (
     <>
       <main className="flex flex-col items-center justify-center">
-        <PageHero subtitle={caseStudy.subtitle} title={caseStudy.h1 || caseStudy.title} />
+        {/* <PageHero subtitle={caseStudy.subtitle} title={caseStudy.h1 || caseStudy.title} /> */}
         
         <CaseStudyContent caseStudy={caseStudy} />
 

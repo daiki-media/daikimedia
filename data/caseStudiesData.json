@@ -803,6 +803,270 @@
         "title": "Call to Action",
         "content": "If you operate a property rental or sales portal and want search engines to treat your site as a go to destination for local property searches, a targeted SEO strategy can help you unlock significantly more organic traffic and enquiries. Contact our team for a tailored review of your current search performance and a roadmap for improvement."
       }
+    },
+    {
+      "id": 8,
+      "slug": "healthcare-seo-pistil",
+      "niche": "Women's Healthcare",
+      "metaTitle": "Healthcare SEO Case Study: 76 to 6,900+ Monthly Visitors in 7 Months",
+      "metaDescription": "Discover how Daiki Media grew Pistil.io from 76 to 6,947 monthly organic visitors in 7 months through healthcare E-E-A-T, topic clusters and content strategy. Real results, real timeline.",
+      "h1": "Pistil.io SEO Case Study: From 76 to 6,900+ Monthly Organic Visitors in Less Than 7 Months",
+      "title": "Pistil.io SEO Case Study: From 76 to 6,900+ Monthly Organic Visitors in Less Than 7 Months",
+      "subtitle": "Women's Healthcare",
+      "thumbnail": "/images/case-studies/healthcare-seo-pistil.jpeg",
+      "featuredImage": "/images/case-studies/healthcare-seo-pistil2.jpeg",
+      "featuredImage2": "/images/case-studies/healthcare-seo-pisti3l.jpeg",
+      "excerpt": "Discover how Daiki Media grew Pistil.io from 76 to 6,947 monthly organic visitors in 7 months through healthcare E-E-A-T, topic clusters and content strategy. Real results, real timeline.",
+      "period": "November 2025 to June 2026",
+      "atAGlance": {
+        "title": "At a Glance",
+        "columns": ["Metric", "November 2025", "June 2026"],
+        "rows": [
+          {
+            "metric": "Organic Traffic",
+            "before": "76/month",
+            "after": "6,947/month"
+          },
+          {
+            "metric": "Organic Pages",
+            "before": "4",
+            "after": "48+"
+          },
+          {
+            "metric": "Growth",
+            "before": "-",
+            "after": "+9,000%+"
+          },
+          {
+            "metric": "Industry",
+            "before": "Women's Healthcare",
+            "after": "Women's Healthcare"
+          }
+        ]
+      },
+      "background": {
+        "title": "Background of the Business",
+        "content": "Women's health is one of the most competitive healthcare niches online. Patients search every day for answers about emergency contraception, birth control, hormonal health, fertility and women's wellness. Yet most healthcare brands struggle to earn Google's trust in this space. When Pistil partnered with Daiki Media in November 2025, organic visibility was almost non-existent. Seven months later, the site was generating nearly 7,000 monthly organic visitors from thousands of non-branded searches."
+      },
+      "initialSituation": {
+        "title": "The Starting Point",
+        "content": "When we first audited Pistil, the picture was clear. The site had almost no organic footprint.",
+        "points": [
+          "4 indexed organic pages.",
+          "76 monthly organic visitors.",
+          "Minimal keyword visibility.",
+          "Limited topical authority.",
+          "No content cluster structure.",
+          "Competing against established health publishers in a YMYL niche."
+        ]
+      },
+      "contextSection": {
+        "title": "Why Healthcare SEO Is Different",
+        "content": "Many healthcare companies make the same mistake. They build a website, publish a few articles, then expect Google to send traffic. Healthcare does not work that way. Google places healthcare websites under YMYL standards, which stands for Your Money or Your Life. This means content that could affect someone's health, safety or financial wellbeing is held to a higher standard than most other industries. Google evaluates these sites against E-E-A-T criteria: Experience, Expertise, Authoritativeness and Trustworthiness. Without strong signals across all four, even excellent content struggles to rank competitively. This was the core challenge for Pistil. The brand had genuine healthcare expertise and a quality product. The missing piece was demonstrating that expertise to Google in a way the algorithm could recognise and reward."
+      },
+      "strategy": {
+        "title": "Our Strategy",
+        "content": "Instead of chasing hundreds of keywords randomly, we focused on four pillars designed to build real topical authority.",
+        "pillars": [
+          {
+            "title": "Search Intent Mapping:",
+            "points": [
+              "Every page we created was anchored to a real search demand. We identified what women were actively searching for, including emergency contraception and morning after pill queries, emergency contraceptive pill brand searches, birth control education and comparison queries, women's health questions at various stages of the decision journey, and fertility and cycle-related informational searches.",
+              "We pulled data from Google Search Console, cross-referenced with keyword research tools, and mapped each opportunity to a specific URL with a clear intent match.",
+              "Concrete example: The keyword cluster around emergency contraception in Malaysia showed combined search demand with no single site owning the space comprehensively. We identified 11 supporting queries with no dedicated page on the Pistil site, grouped them into a logical content cluster, and built each page to answer one specific question completely."
+            ]
+          },
+          {
+            "title": "Healthcare E-E-A-T Framework:",
+            "points": [
+              "Experience: Content was grounded in real healthcare scenarios that patients face. Language was accurate, practical and written at a level patients could understand and act on.",
+              "Expertise: Every key page referenced evidence-based medical information, cited trusted sources and was written or reviewed by someone with healthcare knowledge. We implemented author profiles with credentials visible on the page.",
+              "Authoritativeness: We built content clusters around core topics so that Pistil covered each subject comprehensively, not in isolated articles. This signals to Google that the site is a genuine authority on a topic, not just a publisher of one-off posts.",
+              "Trustworthiness: We added clear medical disclaimers, transparent sourcing, consistent contact information and structured data across all pages. Trust signals need to be visible to both users and crawlers."
+            ]
+          },
+          {
+            "title": "Topic Cluster Architecture:",
+            "points": [
+              "Instead of isolated articles, we built content ecosystems around each core topic.",
+              "Hub page: Emergency Contraception Malaysia (main pillar).",
+              "Supporting pages covered: What is emergency contraception, How does emergency contraception work, Emergency contraception side effects, Emergency contraception cost and pricing in Malaysia, How soon should you take emergency contraception, Emergency contraception effectiveness by timing, Emergency contraception frequently asked questions, Postinor-2 complete guide, Ella One vs Postinor-2 comparison, Emergency contraception myths and facts, Where to get emergency contraception in Malaysia, and Emergency contraception and breastfeeding.",
+              "Each supporting page was interlinked with the hub and with each other where contextually relevant. This gave Google a clear signal: Pistil is not a site with one article about this topic. It is the most thorough resource on this topic.",
+              "We replicated this cluster model across multiple women's health topics throughout the campaign."
+            ]
+          },
+          {
+            "title": "Technical SEO Foundation:",
+            "points": [
+              "Internal linking across all existing and new pages.",
+              "Crawlability and indexation, resolving pages that were not being picked up.",
+              "Site architecture so Google could understand the hierarchy of content.",
+              "On-page elements including title tags, meta descriptions, heading structure and canonical tags.",
+              "Structured data implementation including Article, FAQPage, MedicalWebPage and BreadcrumbList schema.",
+              "Page speed and Core Web Vitals where they were affecting user experience."
+            ]
+          },
+          {
+            "title": "Authority Building:",
+            "points": [
+              "Earning quality backlinks from relevant healthcare and women's health publications.",
+              "Building topical relevance through consistent content publishing in the women's health space.",
+              "Strengthening domain authority through citations and mentions in trusted healthcare contexts.",
+              "Ensuring consistent brand information across all platforms."
+            ]
+          }
+        ]
+      },
+      "timeline": {
+        "title": "Campaign Timeline",
+        "content": "This is what the seven months looked like in practice.",
+        "months": [
+          {
+            "month": "November 2025",
+            "focus": "Audit and Foundation",
+            "actions": "Full technical and content audit. Identified crawlability issues, missing structured data, thin content on core pages and zero cluster architecture. Keyword mapping completed. Content plan built across four priority topic areas. Technical fixes implemented."
+          },
+          {
+            "month": "December 2025",
+            "focus": "First Content Cluster Published",
+            "actions": "The Emergency Contraception cluster launched with the hub page and five supporting articles. Internal linking structure connected all pages. On-page optimisation applied across existing pages. Schema markup deployed site-wide."
+          },
+          {
+            "month": "January 2026",
+            "focus": "Cluster Expansion and Backlink Outreach",
+            "actions": "Second content cluster published covering birth control education topics. Backlink outreach campaign began targeting relevant health and pharmacy publications. Additional technical improvements applied based on GSC crawl data."
+          },
+          {
+            "month": "February 2026",
+            "focus": "Content Velocity and Index Growth",
+            "actions": "Organic page count crossed 20 indexed pages. Third cluster live. GSC began showing keyword impressions increasing across non-branded terms. Traffic remained modest but keyword coverage was expanding significantly."
+          },
+          {
+            "month": "March 2026",
+            "focus": "Google Recognition",
+            "actions": "This was the turning point. Organic traffic crossed 1,000 monthly visitors for the first time. Multiple pages began appearing in positions 5 to 15 for target keywords. Google was clearly beginning to recognise Pistil as a topical authority in the women's health space."
+          },
+          {
+            "month": "April to May 2026",
+            "focus": "Acceleration",
+            "actions": "Traffic climbed from 1,000 to 3,500 monthly visitors as more content pages moved into the top 10. The Postinor-2 page began ranking competitively and became the single highest-traffic page on the site. Non-branded search drove the majority of new sessions."
+          },
+          {
+            "month": "June 2026",
+            "focus": "6,900+ Monthly Visitors",
+            "actions": "Organic traffic reached 6,947 monthly visitors. 48+ pages indexed and ranking. Thousands of keyword positions captured. The site now operates as a genuine content authority in the Malaysian women's healthcare space."
+          }
+        ]
+      },
+      "topPerformingPage": {
+        "title": "Top Performing Page",
+        "pageName": "Postinor-2 Emergency Contraceptive Pill",
+        "metrics": [
+          {
+            "label": "Monthly organic visitors",
+            "value": "4,400+"
+          },
+          {
+            "label": "Ranking keywords",
+            "value": "46"
+          },
+          {
+            "label": "Traffic intent",
+            "value": "Strong commercial intent"
+          },
+          {
+            "label": "Growth trend",
+            "value": "Consistent month-on-month growth"
+          }
+        ],
+        "summary": "This single page now accounts for a significant share of the site's total organic traffic. It ranks for branded product queries, informational questions and comparison searches, capturing users at multiple points in the decision journey."
+      },
+      "results": {
+        "title": "The Results",
+        "content": "Traffic grew from 76 to 6,947 monthly organic visitors. That is a growth of over 9,000% in approximately seven months. The majority of that growth came from non-branded searches. This matters because it means users were discovering Pistil through Google, not searching for the brand directly. Non-branded organic traffic is the most valuable kind. It represents new potential customers who did not know the brand existed before searching.",
+        "metrics": [
+          {
+            "label": "Monthly organic visitors (start)",
+            "value": "76"
+          },
+          {
+            "label": "Monthly organic visitors (end)",
+            "value": "6,947"
+          },
+          {
+            "label": "Total traffic growth",
+            "value": "9,000%+"
+          },
+          {
+            "label": "Organic pages indexed",
+            "value": "48+"
+          }
+        ],
+        "summary": "Organic page count grew from 4 to 48+. Thousands of new keyword positions captured. Topical authority established across core women's health topics in the Malaysian market. A sustainable organic acquisition channel created that compounds month on month. Reduced dependence on paid advertising for traffic and customer acquisition."
+      },
+      "insights": {
+        "title": "Key Takeaways",
+        "points": [
+          "Traffic increased from 76 to 6,947 monthly visitors in under 7 months.",
+          "Organic pages expanded from 4 to 48+.",
+          "Healthcare topical authority established across women's health topics.",
+          "Thousands of new keyword opportunities captured and ranked for.",
+          "Non-branded search became the primary traffic driver.",
+          "Sustainable organic acquisition channel created.",
+          "Campaign ran from November 2025 to June 2026."
+        ]
+      },
+      "businessImpact": {
+        "title": "Why This Matters for Healthcare Brands",
+        "content": "Many healthcare businesses rely entirely on paid advertising because it feels faster and more controllable. The moment you stop paying, traffic stops. There is no compounding effect, no asset being built, no long-term return on what was spent. SEO works differently. A well-built healthcare SEO strategy continues generating traffic, trust and potential customers every month without additional cost per click. The content assets, the authority signals, the keyword rankings: they keep working whether or not you are actively investing at full pace. The Pistil campaign demonstrates what is possible when a healthcare brand with genuine expertise commits to a structured SEO strategy. The niche was competitive. The starting point was near zero. The results were significant and they will continue growing.",
+        "points": [
+          "Organic traffic became a primary acquisition channel, generating nearly 7,000 monthly visitors without paid spend.",
+          "Non-branded search drove the majority of new sessions, representing genuine new customer discovery.",
+          "The site established itself as the most comprehensive resource for women's health topics in the Malaysian market.",
+          "A compounding content asset was built that continues growing in authority and traffic month on month."
+        ]
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "items": [
+          {
+            "question": "How long did the SEO campaign take?",
+            "answer": "The campaign started in November 2025 and achieved significant growth by June 2026, a period of approximately seven months."
+          },
+          {
+            "question": "What industry is Pistil in?",
+            "answer": "Pistil operates within the women's healthcare and online healthcare space, specifically serving the Malaysian market."
+          },
+          {
+            "question": "What was the main SEO strategy?",
+            "answer": "The strategy focused on healthcare E-E-A-T, topical authority through content clusters, technical SEO improvements and authority building through relevant backlinks."
+          },
+          {
+            "question": "How much traffic growth was achieved?",
+            "answer": "Traffic increased from approximately 76 monthly visitors to nearly 7,000 monthly visitors, representing growth of over 9,000%."
+          },
+          {
+            "question": "What was the top performing page?",
+            "answer": "The Postinor-2 Emergency Contraceptive Pill page became the highest performing page, generating 4,400+ monthly organic visitors and ranking for 46 keywords."
+          },
+          {
+            "question": "Can similar results be achieved for other healthcare businesses?",
+            "answer": "Every website is different, and results depend on the starting point, competition level and consistency of execution. Healthcare brands with genuine expertise and a long-term SEO strategy can achieve substantial organic growth."
+          },
+          {
+            "question": "Does Daiki Media work with healthcare brands outside Malaysia?",
+            "answer": "Yes. We work with healthcare clients in Malaysia, Singapore, Australia, UAE and other international markets."
+          }
+        ]
+      },
+      "ongoingWork": {
+        "title": "About Daiki Media",
+        "content": "Daiki Media specialises in healthcare SEO, medical marketing and organic growth for health brands across Asia and international markets. We have helped healthcare organisations scale from thousands to millions of organic visitors across online pharmacies, medical clinics, telehealth platforms, aesthetic clinics and healthcare startups in Malaysia, Singapore, Australia, UAE and beyond. Our approach is built on genuine topical authority, E-E-A-T compliance, content cluster architecture and technical SEO foundations that last."
+      },
+      "cta": {
+        "title": "Ready to Grow Your Healthcare Brand Organically?",
+        "content": "If you are a healthcare startup, clinic, telehealth platform or online pharmacy looking to increase visibility, traffic and patient acquisition through SEO, let's talk. We have helped healthcare brands compete against some of the biggest names in the industry across multiple markets. Book a strategy session with Daiki Media today."
+      }
     }
   ]
 }
