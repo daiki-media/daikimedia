@@ -33,7 +33,7 @@ export const DataTable = ({ data, title, description, rows, columns, ctaButton, 
   };
 
   return (
-    <section className="relative py-12 md:py-16 px-4 bg-white dark:bg-dark-300 overflow-hidden">
+    <section className="relative py-12 md:py-16 px-4 dark:bg-dark-300 overflow-hidden">
       {/* Background blur effect - hidden on mobile for better performance */}
       <div className="absolute left-1/2 top-1/2 -z-10 flex -translate-x-1/2 -translate-y-1/2 max-md:hidden">
         <div className="rounded-full bg-primary-200/20 blur-[145px] lg:h-[330px] lg:w-[330px] xl:h-[442px] xl:w-[442px]"></div>
