@@ -70,15 +70,8 @@ const MobileNavbar = () => {
               alt="DAIKI MEDIA"
               width={160}
               height={130}
-              className="h-8 w-auto dark:hidden"
+              className="h-8 w-auto"
               />
-            <Image
-              src="/images/logo.png"
-              alt="DAIKI MEDIA dark version"
-              width={160}
-              height={130}
-              className="hidden h-8 w-auto dark:block"
-            />
             <span className="ml-2 text-lg font-bold text-gray-900 dark:text-white">
               DAIKI MEDIA
             </span>
