@@ -39,8 +39,7 @@ const HeroContent = () => {
             alt="Illustration representing SEO and digital marketing growth"
             width={600}
             height={800}
-            priority
-            fetchPriority="high"
+            loading="eager"
             sizes="50vw"
             quality={75}
             className="rounded-2xl object-cover"

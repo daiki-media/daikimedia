@@ -1,0 +1,30 @@
+# Daiki Media
+
+> Daiki Media is an SEO and digital marketing agency helping brands grow through search engine optimization, technical SEO, content strategy, and performance marketing.
+
+## Company
+- [About](https://www.daikimedia.com/about): Who Daiki Media is and how the team works with clients.
+- [Contact](https://www.daikimedia.com/contact): How to get in touch or book a consultation.
+- [Case Studies](https://www.daikimedia.com/case-studies): Real client results delivered by Daiki Media.
+- [Testimonials](https://www.daikimedia.com/testimonial): Client feedback and reviews.
+- [Pricing](https://www.daikimedia.com/price): Service packages and pricing information.
+- [FAQ](https://www.daikimedia.com/faq): Answers to common questions about Daiki Media's services.
+
+## Services
+- [SEO Services](https://www.daikimedia.com/seo-services): Core SEO service offerings.
+- [Local SEO Agency Malaysia](https://www.daikimedia.com/local-seo-agency-malaysia): Local SEO services for Malaysian businesses.
+- [iGaming SEO Agency Malaysia](https://www.daikimedia.com/igaming-seo-agency-malaysia): SEO for the iGaming industry.
+- [Dubai Marketing Agency](https://www.daikimedia.com/dubai-marketing-agency): Marketing services for the Dubai/UAE market.
+- [Singapore Marketing Agency](https://www.daikimedia.com/singapore-marketing-agency): Marketing services for the Singapore market.
+- [Web Development Agencies](https://www.daikimedia.com/web-development-agencies): Website design and development services.
+
+## Resources
+- [Blog](https://www.daikimedia.com/blog): Articles on SEO, digital marketing, and growth strategy.
+- [What is SEO Company](https://www.daikimedia.com/what-is-seo-company): Educational guide explaining what an SEO company does.
+- [What is Digital Marketing](https://www.daikimedia.com/what-is-digital-marketing): Educational guide on digital marketing fundamentals.
+- [SEO Guide for Managers](https://www.daikimedia.com/seo-guide-for-managers): SEO guidance written for business managers and decision makers.
+- [Our SEO Results](https://www.daikimedia.com/our-seo-results): Data and outcomes from past SEO campaigns.
+
+## Optional
+- [Privacy Policy](https://www.daikimedia.com/privacy): Privacy practices.
+- [Terms of Service](https://www.daikimedia.com/terms): Terms governing use of the site and services.

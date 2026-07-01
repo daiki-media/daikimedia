@@ -3,7 +3,6 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Hero from "@/components/home-1/Hero";
-import PrimaryNavbar from "@/components/navbar/PrimaryNavbar";
 
 
 // Lazy imports
@@ -37,7 +36,6 @@ const ComprehensiveServicesShowcase = dynamic(
 export default function HomePage() {
   return (
     <>
-      <PrimaryNavbar />
       <main>
         <Hero />
 
