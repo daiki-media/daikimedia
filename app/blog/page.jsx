@@ -15,12 +15,8 @@ export const metadata = {
     canonical: "https://www.daikimedia.com/blog",
   },
 };
-export const revalidate = 3600;
+export const revalidate = false;
 export default async function Blog() {
-  // Fetch once on the server (cached/ISR via lib/blogs) and hand SUMMARIES to
-  // the client widgets as initial state — this removes the client-side fetch
-  // waterfall + loading spinners that made this page feel slow, and keeps the
-  // browser payload tiny (full content stays server-side).
   const initialBlogs = (await getAllBlogs()).map(toBlogSummary);
 
   return (

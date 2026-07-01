@@ -8,7 +8,6 @@ import { useState } from "react";
 import {
   Search,
   FileText,
-  Link2,
   Settings,
   Globe,
   BarChart2,
@@ -25,10 +24,6 @@ import {
   Smartphone,
   Scale,
   Network,
-  Star,
-  BarChart3,
-  Rocket,
-  MapPin,
   CircleCheck,
 } from "lucide-react";
 

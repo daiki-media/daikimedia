@@ -1,8 +1,8 @@
 "use client";
 import NavbarItem from "@/data/navbar";
 import { cn } from "@/utils/cn";
-import { faAngleDown, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AngleDownIcon from "@/components/icons/AngleDownIcon";
+import CloseIcon from "@/components/icons/CloseIcon";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
@@ -89,10 +89,7 @@ const MobileNavbar = () => {
             title="close menu"
             onClick={closeMobileMenu}
           >
-            <FontAwesomeIcon
-              icon={faTimes}
-              className="text-gray-600 dark:text-gray-300 text-lg"
-            />
+            <CloseIcon className="text-gray-600 dark:text-gray-300 text-lg" />
           </button>
         </div>
 
@@ -117,8 +114,7 @@ const MobileNavbar = () => {
                         className="w-full flex items-center justify-between px-4 py-4 text-base font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
                       >
                         {menuItem.title}
-                        <FontAwesomeIcon
-                          icon={faAngleDown}
+                        <AngleDownIcon
                           className={cn(
                             "text-gray-500 dark:text-gray-400 transition-transform duration-200",
                             openDropdown === menuItem.id ? "rotate-180" : ""
@@ -188,8 +184,7 @@ const MobileNavbar = () => {
                         className="w-full flex items-center justify-between px-4 py-4 text-base font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
                       >
                         {menuItem.title}
-                        <FontAwesomeIcon
-                          icon={faAngleDown}
+                        <AngleDownIcon
                           className={cn(
                             "text-gray-500 dark:text-gray-400 transition-transform duration-200",
                             openDropdown === menuItem.id ? "rotate-180" : ""

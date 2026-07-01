@@ -14,18 +14,11 @@ import {
   truncate,
 } from "@/utils/textUtils";
 import dayjs from "dayjs";
-
-// Segment-level ISR: regenerate each detail page at most once per hour.
-// Combined with the module-level memo in lib/blogs.js this means the slow
-// 15MB CMS list is downloaded at most ~once per hour per worker / instance.
-export const revalidate = 3600;
+export const revalidate = false;
 
 const AUTHOR_HREF = "/author/lukesh-pillai";
 
 async function getBlogData(slug) {
-  // Fetch the full blog (with content) and the lightweight list (for related
-  // blogs) in parallel. The list endpoint no longer carries `content` per item,
-  // so we MUST go to /api/blogs/{slug} for the body of this post.
   const [blog, allBlogs] = await Promise.all([
     getBlogBySlug(slug),
     getAllBlogs(),

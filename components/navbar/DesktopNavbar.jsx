@@ -1,8 +1,7 @@
 "use client";
 import NavbarItem from "@/data/navbar";
 import { cn } from "@/utils/cn";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AngleDownIcon from "@/components/icons/AngleDownIcon";
 import Link from "next/link";
 
 const DesktopNavbar = () => {
@@ -36,10 +35,7 @@ const DesktopNavbar = () => {
                   )}
                 >
                   {menuItem.title}
-                  <FontAwesomeIcon
-                    icon={faAngleDown}
-                    className="ml-1 mt-1 text-paragraph duration-500 group-hover:rotate-180 dark:text-white"
-                  />
+                  <AngleDownIcon className="ml-1 mt-1 text-paragraph duration-500 group-hover:rotate-180 dark:text-white" />
                 </Link>
                 <div className="absolute left-0 top-12 z-10 w-full origin-top scale-y-0 rounded-medium h-[500px] bg-white p-2.5 text-gray-900 opacity-0 shadow-lg duration-500 group-hover:scale-y-100 group-hover:opacity-100 dark:bg-dark-200 dark:text-white">
                   <div className="grid grid-cols-4 gap-6 px-4">
@@ -96,10 +92,7 @@ const DesktopNavbar = () => {
                   )}
                 >
                   {menuItem.title}
-                  <FontAwesomeIcon
-                    icon={faAngleDown}
-                    className="ml-1 mt-1 text-paragraph duration-500 group-hover:rotate-180 dark:text-white"
-                  />
+                  <AngleDownIcon className="ml-1 mt-1 text-paragraph duration-500 group-hover:rotate-180 dark:text-white" />
                 </Link>
                 <ul className="absolute left-0 top-12 z-10 min-w-[250px] origin-top scale-y-0 rounded-medium bg-white p-5 opacity-0 duration-500 group-hover:scale-y-100 group-hover:opacity-100 dark:bg-dark-200 [&>*:not(:first-child)]:mt-2.5 [&>*:not(:last-child)]:border-b [&>*:not(:last-child)]:border-dashed [&>*:not(:last-child)]:border-borderColor dark:[&>*:not(:last-child)]:border-borderColor-dark">
                   {menuItem.submenu.map((submenuItem) => (
