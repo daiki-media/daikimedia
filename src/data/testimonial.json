@@ -1,0 +1,82 @@
+{
+  "TestimonialData": [
+    {
+      "id": 1,
+      "logoLight": "/images/testimonial/bodygroup.svg",
+      "logoDark": "/images/testimonial/bodygroup-dark.svg",
+      "testimonial": "We hired this SEO agency in Kuala Lumpur to improve our online visibility, and the results have been fantastic! They offered a complete strategy, from on-page SEO to building good quality backlinks that actually made a difference. Our organic traffic has grown, and our rankings have improved across multiple keywords. The team was knowledgeable and always available for updates. If you need the best SEO services in KL, this agency is the one to go with!",
+      "rating": 5,
+      "date": "Aug 03, 2024",
+      "author": {
+        "name": "Hauz Capital",
+        "designation": "Lead Developer",
+        "image": "/images/testimonial/avatar1.png"
+      }
+    },
+    {
+      "id": 2,
+      "logoLight": "/images/testimonial/caudile.svg",
+      "logoDark": "/images/testimonial/caudile-dark.svg",
+      "testimonial": "This team is simply the best when it comes to digital marketing and search engine optimization. Their expertise in SEO has helped my business stay ahead of the competition and reach a wider audience. I couldn't be happier with their results and highly recommend them to any business looking to improve their online marketing efforts.",
+      "rating": 5,
+      "date": "Nov 10, 2023",
+      "author": {
+        "name": "Tehmina Bukhari",
+        "designation": "Developer",
+        "image": "/images/testimonial/avatar2.png"
+      }
+    },
+    {
+      "id": 3,
+      "logoLight": "/images/testimonial/axeptio.svg",
+      "logoDark": "/images/testimonial/axeptio-dark.svg",
+      "testimonial": "I have been working with this SEO agency for several months now and I am beyond impressed with their digital marketing and search engine optimization skills. Their team is knowledgeable, friendly, and always available to answer any questions I have. I highly recommend them for anyone looking to improve their online visibility and drive more traffic to their website.",
+      "rating": 5,
+      "date": "Feb 12, 2024",
+      "author": {
+        "name": "Babar Hussain",
+        "designation": "UI Designer",
+        "image": "/images/testimonial/avatar3.png"
+      }
+    },
+    {
+      "id": 4,
+      "logoLight": "/images/testimonial/infinity.svg",
+      "logoDark": "/images/testimonial/infinity-dark.svg",
+      "testimonial": "I recently hired this SEO agency for its digital marketing expertise and I am extremely impressed with the results. They have a deep understanding of search marketing and SEO and have helped my business achieve higher search engine rankings and increased online visibility. I highly recommend them to anyone looking to improve their online presence.",
+      "rating": 5,
+      "date": "Feb 13, 2023",
+      "author": {
+        "name": "Bilal Rawn",
+        "designation": "Sr. Developer",
+        "image": "/images/testimonial/avatar4.png"
+      }
+    },
+    {
+      "id": 5,
+      "logoLight": "/images/testimonial/mfinity.svg",
+      "logoDark": "/images/testimonial/mfinity-dark.svg",
+      "testimonial": "If you're looking for a top-notch SEO agency that specializes in digital marketing and search marketing, look no further. This team is professional, knowledgeable, and always delivers results. I have seen a significant increase in my online visibility and search engine rankings since hiring them. I highly recommend them to any business looking to improve their online presence.",
+      "rating": 5,
+      "date": "July 23, 2023",
+      "author": {
+        "name": "Muhammad Adnan Rana",
+        "designation": "Junior Designer",
+        "image": "/images/testimonial/avatar5.png"
+      }
+    },
+    {
+      "id": 6,
+      "logoLight": "/images/testimonial/coolchat.svg",
+      "logoDark": "/images/testimonial/coolchat-dark.svg",
+      "testimonial": "Daiki Media has made my business smooth. They are great with SEO and WordPress development which is far better than any other service provider. They provide website with 90+ google page speed score, which makes it easier to rank the website on Google.",
+      "rating": 5,
+      "date": "Feb 07, 2022",
+      "author": {
+        "name": "MD. Shafayatul Haque",
+        "designation": "Manager",
+        "image": "/images/testimonial/avatar6.png"
+      }
+    }
+  ]
+}

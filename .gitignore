@@ -37,3 +37,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Claude Code tooling config (local only, not shared)
+.claude/
+
+# stale lint report snapshot
+eslint-report.txt

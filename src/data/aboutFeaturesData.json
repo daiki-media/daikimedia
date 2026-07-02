@@ -1,0 +1,25 @@
+{
+  "AboutFeaturesData": [
+    {
+      "id": 1,
+      "iconLight": "/images/about/passion.svg",
+      "iconDark": "/images/about/passion-dark.svg",
+      "title": "Our Passion",
+      "desc": "Our passion is delivering innovative digital solutions to help brands grow and thrive online."
+    },
+    {
+      "id": 2,
+      "iconLight": "/images/about/transparency.svg",
+      "iconDark": "/images/about/transparency-dark.svg",
+      "title": "Transparency",
+      "desc": "Transparency is key at Daiki Media, ensuring clear communication and trust in every project"
+    },
+    {
+      "id": 3,
+      "iconLight": "/images/about/mission.svg",
+      "iconDark": "/images/about/mission-dark.svg",
+      "title": "Our Mission",
+      "desc": "Daiki Media's mission is to empower businesses with innovative digital solutions for sustainable growth."
+    }
+  ]
+}
