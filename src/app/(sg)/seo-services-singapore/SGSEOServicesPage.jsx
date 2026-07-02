@@ -310,7 +310,7 @@ export default function SGSEOServicesPage() {
       </div>
 
       {/* ── HERO ────────────────────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:py-24">
+      <section className="mx-auto max-w-7xl px-4 py-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
 
           {/* left */}
@@ -326,7 +326,7 @@ export default function SGSEOServicesPage() {
               <motion.h1
                 variants={fadeUp}
                 custom={1}
-                className="mb-6 text-5xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-6xl"
+                className="mb-6 text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-gray-900"
               >
                 Best SEO Service Agency{" "}
                 <span className="text-red-500 italic">Singapore</span>
@@ -493,8 +493,8 @@ export default function SGSEOServicesPage() {
       </section>
 
       {/* ── RANKING FACTORS ─────────────────────────────────────────────────── */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 mb-8">
+      <section className="pt-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -503,7 +503,7 @@ export default function SGSEOServicesPage() {
           >
             <motion.div variants={fadeUp}>
               <SectionLabel>Ranking Factors</SectionLabel>
-              <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                 How Google Decides Which Websites to Show
               </h2>
               <p className="max-w-2xl text-[15px] leading-relaxed text-gray-500">
@@ -578,8 +578,8 @@ export default function SGSEOServicesPage() {
       </section>
 
       {/* ── SEO PROCESS TABLE ───────────────────────────────────────────────── */}
-      <section className="bg-gray-50 py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 mb-8">
+      <section className="bg-gray-50 pt-16">
+        <div className="mx-auto max-w-7xl px-4">
           <motion.div
             initial="hidden"
             whileInView="show"

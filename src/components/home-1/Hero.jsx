@@ -4,7 +4,7 @@ import { HeroContactForm } from "./HeroContact";
 const Hero = () => {
   return (
     <section
-      className="hero max-mb:pb-[70px] max-mb:pb-[70px] relative overflow-hidden bg-gray pb-[140px] pt-[50px] dark:bg-dark max-lg:pb-25"
+      className="hero relative overflow-hidden bg-gray pb-[140px] pt-[50px] dark:bg-dark max-lg:pb-25 max-md:pb-[70px]"
       id="scene"
     >
       {/* Desktop-only decorative lines: background-image, only requested at lg+ (never downloaded on mobile) */}
@@ -17,10 +17,8 @@ const Hero = () => {
         className="absolute bottom-0 left-0 hidden h-[444px] w-full lg:block lg:bg-[url('/images/hero-line-2.svg')] lg:bg-no-repeat dark:lg:bg-[url('/images/hero-line-2-dark.svg')]"
       />
 
-      {/* Mobile/tablet decorative lines: plain <img>, not CSS background — a background-image here is large
-          enough to win the LCP race against the hero text (verified via Lighthouse), so it must not be used
-          for anything above the fold. */}
-      <div className="absolute left-1/2 top-0 max-w-[1612px] -translate-x-1/2 lg:hidden">
+      {/* Mobile/tablet. */}
+      {/* <div className="absolute left-1/2 top-0 max-w-[1612px] -translate-x-1/2 lg:hidden">
         <img
           src="/images/hero-line-3.svg"
           alt=""
@@ -55,7 +53,7 @@ const Hero = () => {
           height={444}
           className="hidden dark:block"
         />
-      </div>
+      </div> */}
       <div className="container">
         <HeroContent />
       </div>

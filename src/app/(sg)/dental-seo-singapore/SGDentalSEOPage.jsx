@@ -278,7 +278,7 @@ export default function SGDentalSEOPage() {
       </div>
 
       {/* ── HERO ────────────────────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:py-24">
+      <section className="mx-auto max-w-7xl px-4 py-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
 
           {/* left */}
@@ -294,7 +294,7 @@ export default function SGDentalSEOPage() {
               <motion.h1
                 variants={fadeUp}
                 custom={1}
-                className="mb-6 text-5xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-6xl"
+                className="mb-6 text-3xl md:text-4xl font-extrabold leading-tight tracking-tight text-gray-900"
               >
                 Best Dental SEO Agency Singapore:{" "}
                 <span className="text-red-500 italic">Proven Marketing Strategies</span>

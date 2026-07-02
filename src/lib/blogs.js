@@ -16,10 +16,6 @@ async function fetchJsonWithRetry(url, attempts = 3) {
     try {
       const res = await fetch(url, {
         headers: REQUEST_HEADERS,
-        // Pages using this data set `revalidate = false` for build-time-only
-        // SSG. Tag-only caching (no time-based revalidate) keeps that true —
-        // content only refreshes on the next build or an on-demand
-        // revalidateTag("blogs") call, never on a background timer.
         cache: "force-cache",
         next: { tags: ["blogs"] },
       });

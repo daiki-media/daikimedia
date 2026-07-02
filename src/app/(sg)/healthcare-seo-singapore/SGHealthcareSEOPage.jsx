@@ -302,7 +302,7 @@ export default function SGHealthcareSEOPage() {
       </div>
 
       {/* ── HERO ────────────────────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:py-24">
+      <section className="mx-auto max-w-7xl px-4 py-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
 
           {/* left */}
@@ -318,7 +318,7 @@ export default function SGHealthcareSEOPage() {
               <motion.h1
                 variants={fadeUp}
                 custom={1}
-                className="mb-6 text-5xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-6xl"
+                className="mb-6 text-3xl md:text-4xl font-extrabold leading-tight tracking-tight text-gray-900"
               >
                 Best Healthcare SEO Singapore:{" "}
                 <span className="text-red-500 italic">Medical Marketing Service</span>
@@ -354,23 +354,6 @@ export default function SGHealthcareSEOPage() {
                 </Link>
               </motion.div>
 
-              {/* stats */}
-              <motion.div
-                variants={fadeUp}
-                custom={6}
-                className="mt-10 grid grid-cols-3 gap-3 border-t border-gray-100 pt-8"
-              >
-                {[
-                  { num: "75%+", label: "Patient enquiries from online search" },
-                  { num: "91%", label: "Of clicks go to Google page 1 results" },
-                  { num: "10+", label: "Years of healthcare SEO experience" },
-                ].map((s) => (
-                  <div key={s.label} className="rounded-xl border border-gray-100 bg-gray-50 p-4 text-center">
-                    <p className="text-xl font-extrabold text-gray-900">{s.num}</p>
-                    <p className="mt-1 text-[11px] leading-snug text-gray-500">{s.label}</p>
-                  </div>
-                ))}
-              </motion.div>
             </motion.div>
           </div>
 
@@ -405,6 +388,22 @@ export default function SGHealthcareSEOPage() {
             </div>
           </motion.div>
         </div>
+              <motion.div
+                variants={fadeUp}
+                custom={6}
+                className="mt-10 grid grid-cols-3 gap-3 border-t border-gray-100 pt-8"
+              >
+                {[
+                  { num: "75%+", label: "Patient enquiries from online search" },
+                  { num: "91%", label: "Of clicks go to Google page 1 results" },
+                  { num: "10+", label: "Years of healthcare SEO experience" },
+                ].map((s) => (
+                  <div key={s.label} className="rounded-xl border border-gray-100 bg-gray-50 p-4 text-center">
+                    <p className="text-xl font-extrabold text-gray-900">{s.num}</p>
+                    <p className="mt-1 text-[11px] leading-snug text-gray-500">{s.label}</p>
+                  </div>
+                ))}
+              </motion.div>
       </section>
 
       {/* ── WHY HEALTHCARE SEO IS CRITICAL ──────────────────────────────────── */}
@@ -476,7 +475,7 @@ export default function SGHealthcareSEOPage() {
         </div>
 
         {/* Comparison table */}
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 mt-4">
+        <div className="mx-auto max-w-7xl px-4 mt-8">
           <motion.div
             initial="hidden"
             whileInView="show"

@@ -432,7 +432,7 @@ export default function SGIGamingSEOPage() {
       </div>
 
       {/* ── HERO ────────────────────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:py-24">
+      <section className="mx-auto max-w-7xl px-4 py-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
 
           {/* left */}
@@ -448,7 +448,7 @@ export default function SGIGamingSEOPage() {
               <motion.h1
                 variants={fadeUp}
                 custom={1}
-                className="mb-6 text-5xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-6xl"
+                className="mb-6 text-3xl md:text-4xl font-extrabold leading-tight tracking-tight text-gray-900"
               >
                 Singapore iGaming SEO{" "}
                 <span className="text-red-500 italic">Proven Strategies</span>{" "}
@@ -484,26 +484,9 @@ export default function SGIGamingSEOPage() {
                   View Case Study <ArrowRight size={15} />
                 </Link>
               </motion.div>
-
-              {/* stats */}
-              <motion.div
-                variants={fadeUp}
-                custom={6}
-                className="mt-10 grid grid-cols-3 gap-3 border-t border-gray-100 pt-8"
-              >
-                {[
-                  { num: "10+", label: "Years Digital Marketing Experience" },
-                  { num: "500+", label: "iGaming Projects Delivered" },
-                  { num: "100%", label: "Client Satisfaction Rate" },
-                ].map((s) => (
-                  <div key={s.label} className="rounded-xl border border-gray-100 bg-gray-50 p-4 text-center">
-                    <p className="text-xl font-extrabold text-gray-900">{s.num}</p>
-                    <p className="mt-1 text-[11px] leading-snug text-gray-500">{s.label}</p>
-                  </div>
-                ))}
-              </motion.div>
             </motion.div>
           </div>
+  
 
           {/* right – hero image */}
           <motion.div
@@ -538,6 +521,22 @@ export default function SGIGamingSEOPage() {
             </div>
           </motion.div>
         </div>
+          <motion.div
+              variants={fadeUp}
+              custom={6}
+              className="mt-10 grid grid-cols-3 gap-3 border-t border-gray-100 pt-8"
+            >
+              {[
+                { num: "10+", label: "Years Digital Marketing Experience" },
+                { num: "500+", label: "iGaming Projects Delivered" },
+                { num: "100%", label: "Client Satisfaction Rate" },
+              ].map((s) => (
+                <div key={s.label} className="rounded-xl border border-gray-100 bg-gray-50 p-4 text-center">
+                  <p className="text-xl font-extrabold text-gray-900">{s.num}</p>
+                  <p className="mt-1 text-[11px] leading-snug text-gray-500">{s.label}</p>
+                </div>
+              ))}
+            </motion.div>
       </section>
 
       {/* ── TRADITIONAL VS IGAMING SEO ──────────────────────────────────────── */}

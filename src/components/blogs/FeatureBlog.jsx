@@ -19,8 +19,6 @@ const fixImagePath = (path) => {
 };
 
 const FeatureBlog = ({ initialBlogs }) => {
-  // The blog list is statically generated (revalidate = false), so
-  // initialBlogs is always the full, current dataset — no client fetch needed.
   const processedApiBlogs = (initialBlogs || []).map((blog) => ({
     ...blog,
     content:
