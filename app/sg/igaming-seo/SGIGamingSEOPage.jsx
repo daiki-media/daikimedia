@@ -448,7 +448,7 @@ export default function SGIGamingSEOPage() {
               <motion.h1
                 variants={fadeUp}
                 custom={1}
-                className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-5xl"
+                className="mb-6 text-5xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-6xl"
               >
                 Singapore iGaming SEO{" "}
                 <span className="text-red-500 italic">Proven Strategies</span>{" "}
@@ -489,16 +489,16 @@ export default function SGIGamingSEOPage() {
               <motion.div
                 variants={fadeUp}
                 custom={6}
-                className="mt-10 flex flex-wrap gap-8 border-t border-gray-100 pt-8"
+                className="mt-10 grid grid-cols-3 gap-3 border-t border-gray-100 pt-8"
               >
                 {[
                   { num: "10+", label: "Years Digital Marketing Experience" },
                   { num: "500+", label: "iGaming Projects Delivered" },
                   { num: "100%", label: "Client Satisfaction Rate" },
                 ].map((s) => (
-                  <div key={s.label}>
-                    <p className="text-2xl font-extrabold text-gray-900">{s.num}</p>
-                    <p className="mt-0.5 text-xs text-gray-500">{s.label}</p>
+                  <div key={s.label} className="rounded-xl border border-gray-100 bg-gray-50 p-4 text-center">
+                    <p className="text-xl font-extrabold text-gray-900">{s.num}</p>
+                    <p className="mt-1 text-[11px] leading-snug text-gray-500">{s.label}</p>
                   </div>
                 ))}
               </motion.div>

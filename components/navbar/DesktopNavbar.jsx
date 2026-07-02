@@ -49,9 +49,9 @@ const DesktopNavbar = () => {
                           )
                           .map((headerItem) => (
                             <div key={headerItem.id}>
-                              <h5 className="font-bold mb-2 text-black dark:text-white">
+                              <p className="font-bold mb-2 text-black dark:text-white">
                                 {headerItem.header}
-                              </h5>
+                              </p>
                               <ul>
                                 {menuItem.submenu
                                   .filter(
