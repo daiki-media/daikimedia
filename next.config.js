@@ -72,6 +72,15 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     optimisticClientCache: true,
+    optimizePackageImports: [
+      "@fortawesome/react-fontawesome",
+      "@fortawesome/fontawesome-svg-core",
+      "@fortawesome/free-solid-svg-icons",
+      "@fortawesome/free-regular-svg-icons",
+      "@fortawesome/free-brands-svg-icons",
+      "lucide-react",
+      "react-icons",
+    ],
   },
 };
 

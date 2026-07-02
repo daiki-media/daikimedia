@@ -1,41 +1,10 @@
-"use client";
-import { fadeUpAnimation } from "@/data/animation";
-import useWhileInView from "@/hooks/useWhileInView";
-import { motion } from "framer-motion";
-import { useRef } from "react";
+import ScrollFadeIn from "@/components/animations/ScrollFadeIn";
 
 const RegionalStory = () => {
-  const ref = useRef(null);
-  const controlAnimation = useWhileInView(ref);
-// 
-//   const ctaButtons = [
-//     {
-//       id: 1,
-//       text: "Explore Malaysia services",
-//       link: "/",
-//     },
-//     {
-//       id: 2,
-//       text: "Explore Singapore services",
-//       link: "/singapore-marketing-agency",
-//     },
-//     {
-//       id: 3,
-//       text: "Explore Dubai services",
-//       link: "/dubai-marketing-agency",
-//     },
-//   ];
-
   return (
     <section className="relative bg-white py-16 dark:bg-dark-300">
       <div className="container">
-        <motion.div
-          ref={ref}
-          initial="initial"
-          animate={controlAnimation}
-          variants={fadeUpAnimation}
-          className="max-w-4xl mx-auto"
-        >
+        <ScrollFadeIn className="max-w-4xl mx-auto">
           <h2 className="mb-4 text-3xl font-bold lg:text-4xl">
             A Digital Growth Partner for Brands That Want More Than Just Marketing Services
           </h2>
@@ -66,22 +35,10 @@ const RegionalStory = () => {
             <p>That means we do not just look at traffic. We look at how your brand is showing up online, how people are finding you, how they experience your website, and what is helping or stopping them from taking action.</p>
             <p>Our goal is simple: to help your business grow through digital work that is clearer, stronger, and built with purpose.</p>
           </div>
-          {/* <div className="flex flex-wrap items-center justify-center gap-4 max-sm:flex-col">
-            {ctaButtons.map((button) => (
-              <Link
-                key={button.id}
-                href={button.link}
-                className="btn"
-              >
-                {button.text}
-              </Link>
-            ))}
-          </div> */}
-        </motion.div>
+        </ScrollFadeIn>
       </div>
     </section>
   );
 };
 
 export default RegionalStory;
-

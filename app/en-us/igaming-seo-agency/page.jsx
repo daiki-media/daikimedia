@@ -1,9 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import HeroLine1 from "../../../components/icons/HeroLine1";
-import HeroLine2 from "../../../components/icons/HeroLine2";
-import HeroLine3 from "../../../components/icons/HeroLine3";
-import HeroLine4 from "../../../components/icons/HeroLine4";
 import {
   BarChart3,
   ShieldCheck,
@@ -43,21 +39,25 @@ export default function Page() {
     <>
     <main className="bg-white dark:bg-dark-300">
       <section className="relative overflow-hidden bg-rose-50 py-20 text-white">
-        <div className="absolute left-1/2 top-0 max-w-[1612px] -translate-x-1/2 max-lg:hidden">
-          <HeroLine1 />
-        </div>
+        <div
+          aria-hidden="true"
+          className="absolute left-1/2 top-0 hidden h-[520px] w-[1612px] -translate-x-1/2 lg:block lg:bg-[url('/images/hero-line-1.svg')] lg:bg-no-repeat dark:lg:bg-[url('/images/hero-line-1-dark.svg')]"
+        />
 
-        <div className="absolute bottom-0 left-0 w-full max-lg:hidden">
-          <HeroLine2 />
-        </div>
+        <div
+          aria-hidden="true"
+          className="absolute bottom-0 left-0 hidden h-[444px] w-full lg:block lg:bg-[url('/images/hero-line-2.svg')] lg:bg-no-repeat dark:lg:bg-[url('/images/hero-line-2-dark.svg')]"
+        />
 
-        <div className="absolute left-1/2 top-0 max-w-[1612px] -translate-x-1/2 lg:hidden">
-          <HeroLine3 />
-        </div>
+        <div
+          aria-hidden="true"
+          className="absolute left-1/2 top-0 hidden h-[520px] w-[375px] -translate-x-1/2 max-lg:block max-lg:bg-[url('/images/hero-line-3.svg')] max-lg:bg-no-repeat dark:max-lg:bg-[url('/images/hero-line-3-dark.svg')]"
+        />
 
-        <div className="absolute bottom-0 left-0 w-full lg:hidden">
-          <HeroLine4 />
-        </div>
+        <div
+          aria-hidden="true"
+          className="absolute bottom-0 left-0 hidden h-[444px] w-full max-lg:block max-lg:bg-[url('/images/hero-line-4.svg')] max-lg:bg-no-repeat dark:max-lg:bg-[url('/images/hero-line-4-dark.svg')]"
+        />
         <div className="absolute inset-0 bg-gradient-to-br from-rose-50/30 via-white to-amber-50/30 dark:from-rose-500/5 dark:via-dark-300 dark:to-amber-500/5">
           <div className="absolute top-20 left-10 w-96 h-96 bg-rose-200/20 dark:bg-rose-500/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-200/20 dark:bg-amber-500/5 rounded-full blur-3xl"></div>

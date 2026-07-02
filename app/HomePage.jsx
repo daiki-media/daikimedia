@@ -1,6 +1,21 @@
 import Image from "next/image";
 import Hero from "@/components/home-1/Hero";
-import BelowFoldClient from "@/components/home-1/BelowFoldClient";
+import RegionalStory from "@/components/home-1/RegionalStory";
+import LazyClients from "@/components/lazy/LazyClients";
+import Services from "@/components/shared/Services";
+import MarketsWeServe from "@/components/home-1/MarketsWeServe";
+import WhoWeHelp from "@/components/home-1/WhoWeHelp";
+import WhyChooseUs from "@/components/home-1/WhyChooseUs";
+import LazyCounter from "@/components/lazy/LazyCounter";
+import Vision from "@/components/home-1/Vision";
+import Solution from "@/components/home-1/Solution";
+import Integration from "@/components/home-1/Integration";
+import WhatClientsValue from "@/components/home-1/WhatClientsValue";
+import ContentCards from "@/components/customSections/customContentCards";
+import ComprehensiveServicesShowcase from "@/components/customSections/comprehensiveServicesShowcase";
+import LazyFaq from "@/components/lazy/LazyFaq";
+import Cta from "@/components/home-1/Cta";
+import FinancialBlog from "@/components/shared/FinancialBlog";
 import FooterClient from "@/components/home-1/FooterClient";
 
 export default function HomePage() {
@@ -38,7 +53,32 @@ export default function HomePage() {
           </div>
         </div>
 
-        <BelowFoldClient />
+        <RegionalStory />
+        <LazyClients
+          title="Trusted By Brands Ready to Grow Smarter"
+          description={
+            <>
+              We work with brands that want more than random marketing activity.<br />
+              They want structure.<br />
+              They want consistency.<br />
+              They want better outcomes from the work they are already investing in.
+            </>
+          }
+        />
+        <Services />
+        <MarketsWeServe />
+        <WhoWeHelp />
+        <WhyChooseUs />
+        <LazyCounter />
+        <Vision />
+        <Solution />
+        <Integration />
+        <WhatClientsValue />
+        <ContentCards />
+        <ComprehensiveServicesShowcase />
+        <LazyFaq />
+        <Cta />
+        <FinancialBlog />
       </main>
       <FooterClient />
     </>

@@ -1,47 +1,40 @@
-"use client";
-import { fadeUpAnimation } from "@/data/animation";
-import useWhileInView from "@/hooks/useWhileInView";
-import { motion } from "framer-motion";
-import { useRef } from "react";
 import Link from "next/link";
+import ScrollFadeIn from "@/components/animations/ScrollFadeIn";
+
+const whatWeDoSections = [
+  {
+    id: 1,
+    heading: "SEO",
+    text: "We help your brand get found where people are already searching. From technical improvements to content direction, our SEO work is built to support long-term visibility and sustainable traffic growth.",
+  },
+  {
+    id: 2,
+    heading: "Content Strategy",
+    text: "We create content with purpose. That means clearer messaging, stronger page structure, and content that helps users move from interest to action.",
+  },
+  {
+    id: 3,
+    heading: "Performance Marketing",
+    text: "Paid campaigns work better when the strategy behind them is aligned. We help businesses run digital campaigns that are backed by stronger landing pages, better targeting, and clearer goals.",
+  },
+  {
+    id: 4,
+    heading: "Website Strategy",
+    text: "Your website should do more than exist online. It should support trust, clarity, and conversions. We help improve the digital experience so the rest of your marketing performs better too.",
+  },
+  {
+    id: 5,
+    heading: "Creative Direction",
+    text: "Strong brands feel consistent. We help shape the way your business looks and communicates across digital touchpoints, so the overall experience feels more professional and more convincing.",
+  },
+  {
+    id: 6,
+    heading: "Growth Strategy",
+    text: "Sometimes the problem is not one channel. It is the lack of a bigger digital direction. We help brands connect the dots and focus on what matters most.",
+  },
+];
 
 const WhoWeHelp = () => {
-  const ref = useRef(null);
-  const controlAnimation = useWhileInView(ref);
-
-  const whatWeDoSections = [
-    {
-      id: 1,
-      heading: "SEO",
-      text: "We help your brand get found where people are already searching. From technical improvements to content direction, our SEO work is built to support long-term visibility and sustainable traffic growth.",
-    },
-    {
-      id: 2,
-      heading: "Content Strategy",
-      text: "We create content with purpose. That means clearer messaging, stronger page structure, and content that helps users move from interest to action.",
-    },
-    {
-      id: 3,
-      heading: "Performance Marketing",
-      text: "Paid campaigns work better when the strategy behind them is aligned. We help businesses run digital campaigns that are backed by stronger landing pages, better targeting, and clearer goals.",
-    },
-    {
-      id: 4,
-      heading: "Website Strategy",
-      text: "Your website should do more than exist online. It should support trust, clarity, and conversions. We help improve the digital experience so the rest of your marketing performs better too.",
-    },
-    {
-      id: 5,
-      heading: "Creative Direction",
-      text: "Strong brands feel consistent. We help shape the way your business looks and communicates across digital touchpoints, so the overall experience feels more professional and more convincing.",
-    },
-    {
-      id: 6,
-      heading: "Growth Strategy",
-      text: "Sometimes the problem is not one channel. It is the lack of a bigger digital direction. We help brands connect the dots and focus on what matters most.",
-    },
-  ];
-
   return (
     <section className="relative bg-white py-16 dark:bg-dark-300 sm:overflow-hidden">
       <div className="container">
@@ -62,13 +55,7 @@ const WhoWeHelp = () => {
           </div>
         </div>
         <div className="relative z-10">
-          <motion.div
-            className="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1"
-            ref={ref}
-            initial="initial"
-            animate={controlAnimation}
-            variants={fadeUpAnimation}
-          >
+          <ScrollFadeIn className="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1">
             {whatWeDoSections.map((section) => (
               <div
                 key={section.id}
@@ -84,7 +71,7 @@ const WhoWeHelp = () => {
                 </div>
               </div>
             ))}
-          </motion.div>
+          </ScrollFadeIn>
         </div>
         {/* CTA Button */}
         <div className="mt-15 flex items-center justify-center">

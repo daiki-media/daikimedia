@@ -1,15 +1,9 @@
-"use client";
-import { fadeUpAnimation } from "@/data/animation";
 import ServiceList from "@/data/serviceData";
-import useWhileInView from "@/hooks/useWhileInView";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import ScrollFadeIn from "@/components/animations/ScrollFadeIn";
 
 const ServiceBoxes = () => {
-  const ref = useRef(null);
-  const controlAnimation = useWhileInView(ref);
   const { ServiceData } = ServiceList;
 
   const filteredServiceData = ServiceData
@@ -24,13 +18,7 @@ const ServiceBoxes = () => {
   }, []);
 
   return (
-    <motion.div
-      className="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1"
-      ref={ref}
-      initial="initial"
-      animate={controlAnimation}
-      variants={fadeUpAnimation}
-    >
+    <ScrollFadeIn className="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1">
       {uniqueServiceData.map((items) => (
         <div
           className="relative scale-100 rounded-medium bg-white p-2.5 shadow-nav transition-transform duration-500 hover:scale-105 hover:transition-transform hover:duration-500 dark:bg-dark-200"
@@ -64,7 +52,7 @@ const ServiceBoxes = () => {
           </div>
         </div>
       ))}
-    </motion.div>
+    </ScrollFadeIn>
   );
 };
 

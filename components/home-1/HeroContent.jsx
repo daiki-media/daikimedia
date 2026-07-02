@@ -1,4 +1,18 @@
-import Image from "next/image";
+import { getImageProps } from "next/image";
+
+const HERO_PHOTO_ALT =
+  "Illustration representing SEO and digital marketing growth";
+
+const {
+  props: { srcSet: heroPhotoSrcSet, ...heroPhotoImgProps },
+} = getImageProps({
+  src: "/images/hero/testimg-mobile.avif",
+  alt: HERO_PHOTO_ALT,
+  width: 600,
+  height: 800,
+  sizes: "50vw",
+  quality: 75,
+});
 
 const HeroContent = () => {
   return (
@@ -31,22 +45,32 @@ const HeroContent = () => {
         </a>
       </div>
 
+      <link
+        rel="preload"
+        as="image"
+        href={heroPhotoImgProps.src}
+        imageSrcSet={heroPhotoSrcSet}
+        imageSizes="50vw"
+        media="(min-width: 768px)"
+        fetchPriority="high"
+      />
       <div className="col-span-12 md:col-span-6 hidden md:flex items-center justify-center">
         <div className="relative w-full h-full">
-          <Image
-            src="/images/hero/testimg-mobile.avif"
-            alt="Illustration representing SEO and digital marketing growth"
-            width={600}
-            height={800}
-            loading="eager"
-            sizes="50vw"
-            quality={75}
-            className="rounded-2xl object-cover"
-            style={{
-              maxWidth: '100%',
-              height: 'auto',
-            }}
-          />
+          <picture>
+            <source media="(min-width: 768px)" srcSet={heroPhotoSrcSet} />
+            <img
+              {...heroPhotoImgProps}
+              alt={HERO_PHOTO_ALT}
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBTAA7"
+              loading="eager"
+              fetchPriority="high"
+              className="rounded-2xl object-cover"
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+              }}
+            />
+          </picture>
         </div>
       </div>
     </section>

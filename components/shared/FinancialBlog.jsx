@@ -1,38 +1,27 @@
-"use client";
-
-import { useState, useEffect } from "react";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import dayjs from "dayjs";
+import { stripHtml } from "@/utils/textUtils";
 
-const FinancialBlog = ({ className = "dark:bg-dark pb-150 pt-150" }) => {
-  const [blogs, setBlogs] = useState([]);
-
-  const fetchBlogs = async () => {
-    try {
-      const response = await fetch(
-        "https://daiki.media/wp-json/wp/v2/posts?page=1&per_page=3"
-      );
-      if (!response.ok) {
-        throw new Error("Failed to fetch blogs data");
-      }
-      const data = await response.json();
-      setBlogs(data);
-    } catch (error) {
-      console.error("Error fetching blog data:", error);
+async function getBlogs() {
+  try {
+    const response = await fetch(
+      "https://daiki.media/wp-json/wp/v2/posts?page=1&per_page=3",
+      { next: { revalidate: 3600 } }
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch blogs data");
     }
-  };
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching blog data:", error);
+    return [];
+  }
+}
 
-  const stripHTML = (html) => {
-    const tempDiv = document.createElement("div");
-    tempDiv.innerHTML = html;
-    return tempDiv.textContent || tempDiv.innerText;
-  };
-
-  useEffect(() => {
-    fetchBlogs();
-  }, []);
+const FinancialBlog = async ({ className = "dark:bg-dark pb-150 pt-150" }) => {
+  const blogs = await getBlogs();
 
   return (
     <section className={cn("relative bg-white max-md:pb-20", className)}>
@@ -54,17 +43,10 @@ const FinancialBlog = ({ className = "dark:bg-dark pb-150 pt-150" }) => {
                 key={blogItems.id}
               >
                 <div className="h-full rounded border border-dashed border-gray-100 p-6 dark:border-borderColor-dark">
-                  {/* <img
-                    src={blogItems.yoast_head_json.og_image[0].url}
-                    alt="Blog Image"
-                    className="mb-6 w-full rounded-md"
-                    width={339}
-                    height={198} */}
-                  {/* /> */}
                   <div>
                     <Link href={`/blog/${blogItems.slug}`} className="block">
                       <h3 className="mb-3 font-semibold leading-[1.33]">
-                        {stripHTML(blogItems.title.rendered)}
+                        {stripHtml(blogItems.title.rendered)}
                       </h3>
                     </Link>
                     <div className="mb-4 flex items-center gap-x-2 ">

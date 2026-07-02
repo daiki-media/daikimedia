@@ -1,20 +1,20 @@
 import Link from 'next/link'
-import HeroLine1 from '../icons/HeroLine1'
-import HeroLine2 from '../icons/HeroLine2'
-import HeroLine3 from '../icons/HeroLine3'
 
 const Cta = () => {
   return (
     <section className="relative overflow-hidden bg-gray pb-[145px] pt-[135px] dark:bg-dark max-md:py-20">
-      <div className="absolute left-1/2 top-0 max-w-[1612px] -translate-x-1/2 max-md:hidden">
-        <HeroLine1 />
-      </div>
-      <div className="absolute bottom-0 left-0 w-full max-md:hidden">
-        <HeroLine2 />
-      </div>
-      <div className="absolute left-1/2 top-0 -translate-x-1/2 md:hidden">
-        <HeroLine3 />
-      </div>
+      <div
+        aria-hidden="true"
+        className="absolute left-1/2 top-0 hidden h-[520px] w-[1612px] -translate-x-1/2 md:block md:bg-[url('/images/hero-line-1.svg')] md:bg-no-repeat dark:md:bg-[url('/images/hero-line-1-dark.svg')]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute bottom-0 left-0 hidden h-[444px] w-full md:block md:bg-[url('/images/hero-line-2.svg')] md:bg-no-repeat dark:md:bg-[url('/images/hero-line-2-dark.svg')]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute left-1/2 top-0 hidden h-[520px] w-[375px] -translate-x-1/2 max-md:block max-md:bg-[url('/images/hero-line-3.svg')] max-md:bg-no-repeat dark:max-md:bg-[url('/images/hero-line-3-dark.svg')]"
+      />
       <div className="container relative z-10">
         <div className="mx-auto text-center">
           <h2 className="mb-5 text-[48px] font-semibold max-lg:text-[32px]">

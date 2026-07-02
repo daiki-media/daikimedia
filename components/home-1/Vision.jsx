@@ -2,10 +2,6 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
-import VisionLine1 from "../icons/VisionLine1";
-import VisionLine2 from "../icons/VisionLine2";
-import VisionLine3 from "../icons/VisionLine3";
-import VisionLine4 from "../icons/VisionLine4";
 import VisionAnimation from "./VisionAnimation";
 
 const Vision = () => {
@@ -21,18 +17,22 @@ const Vision = () => {
 
   return (
     <section className="relative -mt-24 overflow-hidden bg-gray pb-150 pt-[300px] dark:-mt-24 dark:bg-dark max-md:-mt-60 max-md:pb-20 max-md:pt-[320px] dark:max-md:-mt-60">
-      <div className="absolute left-0 top-0 max-w-[1612px] max-md:hidden">
-        <VisionLine1 />
-      </div>
-      <div className="absolute right-0 top-0 max-w-[1612px] max-md:hidden">
-        <VisionLine2 />
-      </div>
-      <div className="absolute left-0 top-0 max-w-[1612px] md:hidden">
-        <VisionLine3 />
-      </div>
-      <div className="absolute right-0 top-0 max-w-[1612px] md:hidden">
-        <VisionLine4 />
-      </div>
+      <div
+        aria-hidden="true"
+        className="absolute left-0 top-0 hidden h-[942px] w-[454px] md:block md:bg-[url('/images/vision-line-1.svg')] md:bg-no-repeat dark:md:bg-[url('/images/vision-line-1-dark.svg')]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute right-0 top-0 hidden h-[942px] w-[454px] md:block md:bg-[url('/images/vision-line-2.svg')] md:bg-no-repeat dark:md:bg-[url('/images/vision-line-2-dark.svg')]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute left-0 top-0 hidden h-[1305px] w-[140px] max-md:block max-md:bg-[url('/images/vision-line-3.svg')] max-md:bg-no-repeat dark:max-md:bg-[url('/images/vision-line-3-dark.svg')]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute right-0 top-0 hidden h-[1305px] w-[140px] max-md:block max-md:bg-[url('/images/vision-line-4.svg')] max-md:bg-no-repeat dark:max-md:bg-[url('/images/vision-line-4-dark.svg')]"
+      />
       <div className="container relative z-10">
         <div className="grid grid-cols-2 items-end gap-10 max-md:grid-cols-1 1xl:gap-x-24">
           <div>

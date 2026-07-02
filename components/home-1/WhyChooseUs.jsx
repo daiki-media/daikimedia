@@ -1,60 +1,47 @@
-"use client";
-import { fadeUpAnimation } from "@/data/animation";
-import useWhileInView from "@/hooks/useWhileInView";
-import { motion } from "framer-motion";
-import { useRef } from "react";
+import ScrollFadeIn from "@/components/animations/ScrollFadeIn";
+
+const benefits = [
+  {
+    title: "We focus on clarity",
+    description: "We help you understand what is working, what is not, and what needs to happen next."
+  },
+  {
+    title: "We connect strategy with execution",
+    description: "Good ideas only matter when they turn into meaningful action. We do both."
+  },
+  {
+    title: "We look at the full picture",
+    description: "We do not treat SEO, content, paid campaigns, and website performance like separate silos."
+  },
+  {
+    title: "We build for long-term growth",
+    description: "We are not chasing short-lived spikes. We help brands create a stronger digital foundation."
+  },
+  {
+    title: "We care about commercial outcomes",
+    description: "Traffic and visibility matter, but they matter more when they support leads, sales, and business growth."
+  }
+];
 
 const WhyChooseUs = () => {
-  const ref = useRef(null);
-  const controlAnimation = useWhileInView(ref);
-
-  const benefits = [
-    {
-      title: "We focus on clarity",
-      description: "We help you understand what is working, what is not, and what needs to happen next."
-    },
-    {
-      title: "We connect strategy with execution",
-      description: "Good ideas only matter when they turn into meaningful action. We do both."
-    },
-    {
-      title: "We look at the full picture",
-      description: "We do not treat SEO, content, paid campaigns, and website performance like separate silos."
-    },
-    {
-      title: "We build for long-term growth",
-      description: "We are not chasing short-lived spikes. We help brands create a stronger digital foundation."
-    },
-    {
-      title: "We care about commercial outcomes",
-      description: "Traffic and visibility matter, but they matter more when they support leads, sales, and business growth."
-    }
-  ];
-
   return (
     <section className="relative bg-gray-50 py-12 md:py-16 dark:bg-dark-200">
       <div className="container px-4 md:px-6">
-        <motion.div
-          ref={ref}
-          initial="initial"
-          animate={controlAnimation}
-          variants={fadeUpAnimation}
-          className="max-w-5xl mx-auto"
-        >
+        <ScrollFadeIn className="max-w-5xl mx-auto">
           {/* Subtitle */}
           <p className="text-center text-primary-600 dark:text-primary-400 font-medium uppercase tracking-wide text-sm mb-2">
             Why DaikiMedia
           </p>
-          
+
           {/* Main Title */}
           <h2 className="mb-4 text-center text-2xl md:text-3xl lg:text-4xl font-bold">
             Why Businesses Choose to Work With Us
           </h2>
-          
+
           {/* Introductory Text */}
           <p className="text-center text-gray-600 dark:text-gray-400 mb-8 md:mb-12 max-w-3xl mx-auto text-sm md:text-base">
             There are plenty of agencies offering digital services.
-            What makes DaikiMedia different is the way we think, the way we communicate, 
+            What makes DaikiMedia different is the way we think, the way we communicate,
             and the way we connect digital work to real business direction.
           </p>
 
@@ -81,7 +68,7 @@ const WhyChooseUs = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </ScrollFadeIn>
       </div>
     </section>
   );
