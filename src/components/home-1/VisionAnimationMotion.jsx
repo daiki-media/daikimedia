@@ -24,7 +24,7 @@ const VisionAnimation = () => {
       <motion.div
         ref={ref1}
         variants={fadeFromRightAnimation}
-        initial="initial"
+        initial={false}
         animate={controlAnimation1}
         className="h-[400px] md:h-[500px] flex items-stretch"
       >
@@ -43,7 +43,7 @@ const VisionAnimation = () => {
       <motion.div
         ref={ref2}
         variants={fadeFromLeftAnimation}
-        initial="initial"
+        initial={false}
         animate={controlAnimation2}
         className="w-full h-full max-w-[700px] flex items-stretch"
       >

@@ -352,7 +352,7 @@ export default function SGCasinoSEOPage() {
 
           {/* left */}
           <div>
-            <motion.div initial="hidden" animate="show" variants={stagger}>
+            <motion.div initial={false} animate="show" variants={stagger}>
               <motion.div variants={fadeUp} custom={0}>
                 <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50 px-4 py-1.5 text-xs font-semibold text-red-600">
                   <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-red-500" />
@@ -403,7 +403,7 @@ export default function SGCasinoSEOPage() {
 
           {/* right – hero image */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
@@ -438,7 +438,7 @@ export default function SGCasinoSEOPage() {
         <motion.div
           variants={fadeUp}
           custom={6}
-          initial="hidden"
+          initial={false}
           animate="show"
           className="mt-10 grid grid-cols-3 gap-3 border-t border-gray-100 pt-8"
         >
@@ -459,7 +459,7 @@ export default function SGCasinoSEOPage() {
       <section className="bg-gray-50 py-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <motion.div
-            initial="hidden"
+            initial={false}
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
             variants={stagger}
@@ -480,7 +480,7 @@ export default function SGCasinoSEOPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <motion.div
-            initial="hidden"
+            initial={false}
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
             variants={stagger}
@@ -537,7 +537,7 @@ export default function SGCasinoSEOPage() {
       <section className="bg-gray-50 py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <motion.div
-            initial="hidden"
+            initial={false}
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
             variants={stagger}
@@ -581,7 +581,7 @@ export default function SGCasinoSEOPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <motion.div
-            initial="hidden"
+            initial={false}
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
             variants={stagger}
@@ -623,7 +623,7 @@ export default function SGCasinoSEOPage() {
       <section className="bg-gray-50 py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <motion.div
-            initial="hidden"
+            initial={false}
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
             variants={stagger}
@@ -665,7 +665,7 @@ export default function SGCasinoSEOPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <motion.div
-            initial="hidden"
+            initial={false}
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
             variants={stagger}
@@ -688,7 +688,7 @@ export default function SGCasinoSEOPage() {
       <section className="bg-gray-50 py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <motion.div
-            initial="hidden"
+            initial={false}
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
             variants={stagger}
@@ -740,7 +740,7 @@ export default function SGCasinoSEOPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <motion.div
-            initial="hidden"
+            initial={false}
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
             variants={stagger}
@@ -817,7 +817,7 @@ export default function SGCasinoSEOPage() {
       <section className="bg-gray-50 py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <motion.div
-            initial="hidden"
+            initial={false}
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
             variants={stagger}
@@ -885,7 +885,7 @@ export default function SGCasinoSEOPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <motion.div
-            initial="hidden"
+            initial={false}
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
             variants={stagger}
@@ -916,7 +916,7 @@ export default function SGCasinoSEOPage() {
       {/* ── CTA ─────────────────────────────────────────────────────────────── */}
       <section className="bg-gray-50 py-20 sm:py-28">
         <motion.div
-          initial={{ opacity: 0, y: 28 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}

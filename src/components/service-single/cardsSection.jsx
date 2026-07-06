@@ -35,7 +35,7 @@ export const CardsSection = ({ data }) => {
             <motion.div
               className="grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1"
               ref={ref}
-              initial="initial"
+              initial={false}
               animate={controlAnimation}
               variants={fadeUpAnimation}
             >

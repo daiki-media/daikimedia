@@ -5,7 +5,9 @@ import PropTypes from 'prop-types'
 
 const FadeUpAnimation = ({ children, className }) => {
   return (
-    <motion.div variants={fadeUpAnimation} initial="initial" animate="animate" className={className}>
+    // initial={false}: content is server-rendered visible so heroes never
+    // wait on JS to paint (this element is usually above the fold)
+    <motion.div variants={fadeUpAnimation} initial={false} animate="animate" className={className}>
       {children}
     </motion.div>
   )

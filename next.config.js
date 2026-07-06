@@ -70,7 +70,6 @@ const nextConfig = {
   reactStrictMode: true,
 
   experimental: {
-    optimizeCss: true,
     optimisticClientCache: true,
     optimizePackageImports: [
       "@fortawesome/react-fontawesome",

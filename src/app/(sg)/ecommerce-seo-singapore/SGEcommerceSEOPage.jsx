@@ -6,23 +6,20 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { DataTable } from "@/components/service-single/dataTable";
 import {
-  Search,
   ChevronDown,
   ChevronRight,
   ArrowRight,
-  CheckCircle2,
   ShieldCheck,
-  BarChart3,
-  Settings,
-  Globe,
+  ShoppingCart,
+  CircleCheck,
+  CheckCircle2,
+  Search,
+  Tag,
   Link2,
   MapPin,
-  TrendingUp,
-  CircleCheck,
-  Smartphone,
-  Users,
-  FileText,
   Zap,
+  TrendingUp,
+  Gauge,
 } from "lucide-react";
 
 // ─── animation helpers ────────────────────────────────────────────────────────
@@ -41,124 +38,143 @@ const stagger = {
 };
 
 // ─── DataTable data ───────────────────────────────────────────────────────────
-const RANKING_FACTORS_TABLE = {
+const SEO_VS_ECOMMERCE_TABLE = {
   rows: [
     {
-      factor: "Relevance",
-      meaning: "Is your content about what people searched for?",
-      impactOnRanking:
-        'If someone searches "SEO Singapore" your site must be about SEO for Singapore',
+      goal: "Generate enquiries or leads",
+      ecommerceGoal: "Increase product sales and online revenue",
     },
     {
-      factor: "Authority",
-      meaning: "Do other trusted websites link to yours?",
-      impactOnRanking: 'Backlinks tell Google "this website is trustworthy"',
+      goal: "Home page and service pages",
+      ecommerceGoal: "Product pages, category pages, brand pages",
     },
     {
-      factor: "User Experience",
-      meaning: "Does your site load fast? Is it mobile-friendly?",
-      impactOnRanking:
-        "75% of Singapore users browse on mobile — slow sites get ranked lower",
+      goal: "Service-based keywords",
+      ecommerceGoal: "Product, category, brand, and buying-intent keywords",
     },
     {
-      factor: "Content Quality",
-      meaning: "Is your content helpful and original?",
-      impactOnRanking: "Copied or thin content gets buried by Google",
+      goal: "Usually 10 to 50 pages",
+      ecommerceGoal: "Often hundreds or thousands of pages",
     },
     {
-      factor: "Technical Health",
-      meaning: "Is your website code clean and organised?",
-      impactOnRanking:
-        "Technical issues prevent Google from crawling your site properly",
+      goal: "Blogs and service content",
+      ecommerceGoal: "Product descriptions, category pages, buying guides",
+    },
+    {
+      goal: "Basic page linking",
+      ecommerceGoal: "Product-to-category and related product linking",
     },
   ],
-};
-
-const SEO_PROCESS_TABLE = {
-  rows: [
-    {
-      ourFocus: "Keyword Research",
-      whatWeDo: "Find the exact keywords Singaporeans search for your business",
-      howItBenefits: "Target the right audience with the right intent",
-    },
-    {
-      ourFocus: "On-Page SEO",
-      whatWeDo: "Optimise your website content, titles, and structure",
-      howItBenefits: "Google understands what your site is about",
-    },
-    {
-      ourFocus: "Technical SEO",
-      whatWeDo: "Fix backend issues slowing your site or preventing ranking",
-      howItBenefits: "Fast sites rank higher — especially on mobile",
-    },
-    {
-      ourFocus: "Local SEO",
-      whatWeDo: "Optimise Google My Business, local citations, reviews",
-      howItBenefits: "Essential for any Singapore business",
-    },
-    {
-      ourFocus: "Link Building",
-      whatWeDo: "Secure quality backlinks from Singapore sources",
-      howItBenefits: "Builds authority Google respects",
-    },
-    {
-      ourFocus: "Competitor Analysis",
-      whatWeDo: "Understand what competitors rank for and why",
-      howItBenefits: "Know exactly what to beat",
-    },
-  ],
+  columns: ["goal", "ecommerceGoal"],
 };
 
 // ─── static data ─────────────────────────────────────────────────────────────
-const WHY_GENERIC_FAILS = [
-  {
-    icon: Globe,
-    title: "They Do Not Understand Singapore's Market",
-    body: "Generic agencies apply strategies that worked in Malaysia or Australia and hope they work here too. Singapore users search differently, prefer different content, and have different buying behaviour. One-size-fits-all SEO does not work.",
-  },
+const CHALLENGES = [
+  "Strong competition from local and international ecommerce brands",
+  "Thousands of similar products competing for the same keywords",
+  "Low organic traffic and heavy dependence on paid advertising",
+  "Poor product descriptions copied from manufacturers",
+  "Slow website speed affecting user experience and rankings",
+  "Weak internal linking between product and category pages",
+  "Limited visibility for high-value keywords on Google",
+  "Low conversion rates despite receiving website visitors",
+];
+
+const WHY_IMPORTANT = [
+  "Increase Google rankings for product and category pages",
+  "Drive targeted organic traffic from Singapore customers",
+  "Reduce long-term dependence on paid advertising",
+  "Improve website speed and mobile user experience",
+  "Increase product visibility for high-intent keywords",
+  "Build trust through helpful content and customer-friendly pages",
+  "Generate consistent sales throughout the year",
+  "Stay competitive in Singapore's fast-growing ecommerce market",
+];
+
+const PROCESS_STEPS = [
   {
     icon: Search,
-    title: "They Miss Local Keywords",
-    body: 'A generic agency might optimise for "digital marketing services" when Singaporeans actually search for "digital marketing agency Singapore" or "best SEO company SG". Missing local intent keywords means missing customers.',
+    title: "Complete SEO Audit",
+    body: "We analyse your current ecommerce structure, product page setup, and technical health — including mobile speed, current rankings, and competitor gaps.",
+  },
+  {
+    icon: Tag,
+    title: "Keyword Research",
+    body: "We focus on keywords that bring customers ready to buy — not just random traffic — and structure product information so Google understands what you sell.",
+  },
+  {
+    icon: Gauge,
+    title: "Fix Technical Problems",
+    body: "We fix page speed so your shop loads in under 3 seconds on mobile, and ensure your site works perfectly across phones and tablets.",
+  },
+  {
+    icon: Link2,
+    title: "Build Backlinks",
+    body: "We reach out to Singapore shopping blogs, review sites, and lifestyle publications, and create content other sites naturally want to link to.",
+  },
+  {
+    icon: Zap,
+    title: "Scale Content Efficiently",
+    body: "AI tools help create optimised product descriptions faster — every single one reviewed and improved by our human experts before it goes live.",
   },
   {
     icon: MapPin,
-    title: "They Ignore Google My Business",
-    body: "Local businesses in Singapore rank through Google My Business, but generic agencies often skip this or do it poorly. Your GMB profile is as important as your website for local rankings.",
-  },
-  {
-    icon: TrendingUp,
-    title: "They Cannot Compete with Singapore Specialists",
-    body: "When you work with a generic agency, your SEO is competing against specialists who live and breathe the Singapore market. You are at a disadvantage from day one.",
+    title: "Optimise for Local Search",
+    body: "We build citations, encourage location-specific reviews, and create landing pages for multi-store brands to capture high-intent local customers.",
   },
 ];
 
-const CASE_STUDIES = [
+const PRODUCT_OPTIMISATION_TABLE = {
+  rows: [
+    {
+      aspect: "Product Titles",
+      whatWeDo: "Clear, keyword-rich, benefit-focused",
+      impact: "Improved click-through rate from Google",
+    },
+    {
+      aspect: "Product Descriptions",
+      whatWeDo: "200 to 300 words, SEO-optimised, conversion-focused",
+      impact: "Increased conversion rate",
+    },
+    {
+      aspect: "Product Images",
+      whatWeDo: "Optimised file names, alt text, fast loading",
+      impact: "Additional traffic from Google Image search",
+    },
+    {
+      aspect: "Product Schema Markup",
+      whatWeDo: "Price, availability, ratings, reviews",
+      impact: "Increased ranking and richer search results",
+    },
+    {
+      aspect: "Related Products",
+      whatWeDo: "Internal linking to boost session duration",
+      impact: "Increased average order value",
+    },
+  ],
+  columns: ["aspect", "whatWeDo", "impact"],
+};
+
+const WHY_CHOOSE = [
   {
-    client: "Nexus Clinic",
-    industry: "Aesthetic Clinic — Kuala Lumpur",
-    challenge:
-      "Nexus Clinic aimed to improve its online presence for treatments like skin rejuvenation, acne solutions, and anti-aging procedures. Despite offering advanced treatments, their online visibility was limited and they struggled to rank against established aesthetic clinics.",
-    approach:
-      "Content-driven SEO strategy supported by AI Optimisation (AIO) for platforms like ChatGPT and Google AI, combined with strengthened Local SEO to improve visibility across KL and nearby high-intent search areas.",
-    stats: [
-      { num: "4.6x", label: "Organic Traffic Growth" },
-      { num: "35+", label: "Keywords on Page 1" },
-      { num: "168%", label: "Increase in Patient Enquiries" },
-    ],
+    icon: ShoppingCart,
+    title: "Dedicated Ecommerce Team",
+    body: "You do not get a random junior consultant or an overworked account manager juggling 20 clients. You get specialists who understand product pages, conversion funnels, and how to turn rankings into sales.",
   },
   {
-    client: "Doctor On Call",
-    industry: "Online Pharmacy & Telehealth — Malaysia",
-    challenge:
-      "Doctor On Call is a growing online pharmacy and telehealth platform offering consultations, medicines, and healthcare services. Despite strong demand, their online visibility was limited and they struggled to rank for competitive pharmacy and healthcare queries.",
-    approach:
-      "Content-driven SEO strategy with AIO (AI Optimisation) to align with modern search behaviour, strengthened Local SEO strategies, and optimisation to appear in both Google search and AI-driven platforms like ChatGPT and Google.",
-    stats: [
-      { num: "4.3x", label: "Organic Traffic Growth" },
-      { num: "45+", label: "Keywords on Page 1" },
-      { num: "172%", label: "Increase in Online Orders" },
-    ],
+    icon: Search,
+    title: "Complete Ecommerce SEO Audit",
+    body: "Before optimising, we audit your shop completely — current rankings, why competitors rank better, technical issues, and product page opportunities.",
+  },
+  {
+    icon: Tag,
+    title: "Customised Strategy for Your Shop",
+    body: "We create a strategy specific to your products, target customers, competition, and revenue goals — faster results than generic ecommerce SEO.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Marketplace Support",
+    body: "Many Singapore shops sell on Lazada and Shopee but also want their own site. We help optimise your own shop and keep listings consistent across platforms.",
   },
 ];
 
@@ -221,31 +237,88 @@ const PRICING = [
   },
 ];
 
+const SERVICES_OVERVIEW = [
+  {
+    type: "Technical SEO Audit",
+    platforms: "Screaming Frog, GSC, Semrush",
+    timeline: "5 to 10 days",
+    results: "Crawl issues fixed, indexability improved",
+    pricing: "One-Time or Retainer",
+  },
+  {
+    type: "Ecommerce Keyword Strategy",
+    platforms: "Semrush, Ahrefs, GSC",
+    timeline: "2 to 4 weeks",
+    results: "High-intent keyword map for all product pages",
+    pricing: "Retainer",
+  },
+  {
+    type: "On-Page and Product SEO",
+    platforms: "Website CMS, Schema Markup",
+    timeline: "4 to 8 weeks",
+    results: "Improved search engine rankings per product",
+    pricing: "Retainer",
+  },
+  {
+    type: "AI-Driven SEO Optimisation",
+    platforms: "AI SEO tools, GSC, Surfer SEO",
+    timeline: "Ongoing",
+    results: "Faster ranking gains via AI content signals",
+    pricing: "Retainer",
+  },
+  {
+    type: "Local SEO for Ecommerce",
+    platforms: "Google Business Profile, Local Directories",
+    timeline: "4 to 8 weeks",
+    results: "Local visibility and in-store traffic uplift",
+    pricing: "Retainer",
+  },
+  {
+    type: "Enterprise SEO",
+    platforms: "Full-site architecture, multi-category",
+    timeline: "Ongoing",
+    results: "Sustained organic traffic and visibility growth",
+    pricing: "Retainer",
+  },
+];
+
 const FAQS = [
   {
-    q: "What does an SEO agency in Singapore do?",
-    a: "An SEO agency in Singapore helps improve your website's rankings on Google, increase organic traffic from Singaporean searches, and attract real customers who are actively looking for what you offer. In Singapore's competitive market, a good agency also handles local optimisation, multilingual SEO, and compliance with Singapore's advertising regulations.",
+    q: "What is ecommerce SEO and how is it different from regular SEO?",
+    a: "Ecommerce SEO helps online shops rank on Google so customers can find your products. It is different because ecommerce focuses on product pages, conversions, and sales instead of just traffic. We optimise product titles, descriptions, images, and reviews to both rank on Google and convince customers to buy. Regular SEO ignores these conversion factors.",
   },
   {
-    q: "How long does SEO take to show results in Singapore?",
-    a: "Most SEO campaigns in Singapore start showing improvements within 60 to 90 days for lower-competition keywords. Highly competitive keywords like \"online casino Singapore\" or \"best dentist Singapore\" typically take 3 to 6 months. The timeline depends on your industry, current rankings, and how much competition you face.",
+    q: "How long does ecommerce SEO take to show sales results in Singapore?",
+    a: "Most shops see first rankings within 60 to 90 days for less competitive product keywords. Competitive keywords like \"buy laptop Singapore\" typically take 3 to 6 months. More importantly, you should see first sales from Google within 4 to 6 months if the strategy is correct. Timeline depends on product category, competition, and current domain strength.",
   },
   {
-    q: "Is SEO better than paid ads for long-term growth in Singapore?",
-    a: "SEO and paid ads work differently. SEO provides long-term, consistent traffic that keeps coming even when you stop paying — making it cheaper over time. Paid ads start immediately but stop the moment your budget runs out. The best approach for Singapore businesses is combining both — paid ads for immediate visibility, SEO for long-term sustainable growth.",
+    q: "Will ecommerce SEO help my shop sell more products?",
+    a: "Yes, when done correctly. Ecommerce SEO brings customers actively searching for your products on Google. Our Singapore shops see a 3 to 6x increase in sales from organic search after 6 to 12 months. Results depend on your product category, current rankings, and how many customers actually search for what you sell.",
   },
   {
-    q: "Can SEO help my business appear in AI search results in Singapore?",
-    a: "Yes. With proper content structure and optimisation, your website can appear in AI-driven search platforms like ChatGPT, Google AI, and Gemini — not just traditional Google search. This is becoming increasingly important in Singapore's competitive market.",
+    q: "How much does ecommerce SEO cost for a Singapore online shop?",
+    a: "Ecommerce SEO pricing depends on your shop size and product complexity. Small shops starting out invest SGD 1,500 to 2,000 monthly. Growing shops typically invest SGD 1,600 to 2,500 monthly. Large shops with hundreds of products invest SGD 2,500 to 5,000 monthly. Most shops see positive ROI within 4 to 6 months when sales from Google exceed their monthly investment.",
   },
   {
-    q: "Do I need ongoing SEO or is one-time SEO enough?",
-    a: "SEO works best as an ongoing strategy. Google's algorithm changes regularly, competitors keep improving their SEO, and new keywords emerge constantly. One-time SEO gets you started, but ongoing SEO keeps you ranking, adapts to changes, and protects your position against competitors.",
+    q: "Can my new shop rank quickly if I have no online presence?",
+    a: "Yes, new shops actually have an advantage. You can build ecommerce SEO correctly from the start without fixing old mistakes. We optimise your product pages, site structure, and technical foundation properly from day one, and new shops often see faster initial results than established shops with existing SEO problems.",
+  },
+  {
+    q: "What if my shop is on Lazada or Shopee? Can you still help?",
+    a: "Yes, but there will be limits. We can optimise your listings on these marketplaces, but we cannot control the ranking criteria and algorithms of the marketplace itself. We would also suggest building up your own ecommerce website alongside your marketplace presence.",
+  },
+  {
+    q: "How will I know whether my ecommerce SEO is effective?",
+    a: "We provide clear and transparent monthly reports showing product keyword rankings, traffic to your shop from organic search, customers from Google, and actual sales revenue from search. You will know exactly which products are ranking and generating customers. If ecommerce SEO is not generating more sales, we will change the strategy.",
+  },
+  {
+    q: "Do you guarantee my products will get ranked on the first page of Google?",
+    a: "We cannot guarantee that because we do not control rankings — Google does. We can only guarantee the effort, transparency, and strategy we use, along with monthly reports on our progress. Most ecommerce shops get page 1 rankings within 6 months. If results are not progressing after 3 months, we will change our strategy at no additional cost.",
   },
 ];
 
 const STATS = [
-  { num: "88%", label: "Singaporeans use the internet (IMDA 2024)" },
+  { num: "30+", label: "Ecommerce Businesses Helped in Singapore" },
   { num: "75%", label: "SG searches happen on mobile (Google Trends 2024)" },
   { num: "10+", label: "Years of Digital Marketing Experience" },
 ];
@@ -292,7 +365,7 @@ function FaqItem({ q, a, index }) {
 }
 
 // ─── page ─────────────────────────────────────────────────────────────────────
-export default function SGSEOServicesPage() {
+export default function SGEcommerceSEOPage() {
   return (
     <main className="bg-white text-gray-900">
 
@@ -302,9 +375,9 @@ export default function SGSEOServicesPage() {
           <ol className="flex flex-wrap items-center gap-1.5 text-xs text-gray-500">
             <li><Link href="/" className="hover:text-red-500 transition-colors">Home</Link></li>
             <li><ChevronRight size={12} /></li>
-            <li><Link href="/seo-services" className="hover:text-red-500 transition-colors">SEO Services</Link></li>
+            <li><Link href="/seo-services-singapore" className="hover:text-red-500 transition-colors">SEO Services</Link></li>
             <li><ChevronRight size={12} /></li>
-            <li className="text-red-500 font-medium">Best SEO Service Agency Singapore</li>
+            <li className="text-red-500 font-medium">Ecommerce SEO Singapore</li>
           </ol>
         </div>
       </div>
@@ -319,7 +392,7 @@ export default function SGSEOServicesPage() {
               <motion.div variants={fadeUp} custom={0}>
                 <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50 px-4 py-1.5 text-xs font-semibold text-red-600">
                   <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-red-500" />
-                  Singapore SEO Specialists
+                  Singapore Ecommerce SEO Specialists
                 </span>
               </motion.div>
 
@@ -328,20 +401,20 @@ export default function SGSEOServicesPage() {
                 custom={1}
                 className="mb-6 text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-gray-900"
               >
-                Best SEO Service Agency{" "}
+                Best Ecommerce SEO{" "}
                 <span className="text-red-500 italic">Singapore</span>
               </motion.h1>
 
               <motion.p variants={fadeUp} custom={2} className="mb-4 text-lg leading-relaxed text-gray-600">
-                Singapore's digital market is moving fast. Every day, thousands of Singaporeans search Google for products and services they need. If your business is not showing up in these results, you are losing customers to competitors who are already ranking.
+                With thousands of ecommerce stores in Singapore competing for the same customers, an appealing website is no longer enough. Without visibility on Google, chances are your customer buys from a competitor instead.
               </motion.p>
 
               <motion.p variants={fadeUp} custom={3} className="mb-4 text-[15px] leading-relaxed text-gray-500">
-                Daiki Media builds SEO strategies specifically for Singapore businesses — whether you run an ecommerce store, a service business, a healthcare clinic, or a digital product. We understand the Singapore market, the Singapore audience, and exactly what it takes to rank in a competitive local market.
+                Daiki Media specialises in ecommerce SEO for Singapore shop owners and brands. We have helped 30+ businesses rank higher, attract more customers, and grow sales revenue through Google search — all while optimising for Singapore-specific needs like local payment methods, shipping logistics, and multilingual SEO.
               </motion.p>
 
               <motion.div variants={fadeUp} custom={4} className="mb-8 flex flex-wrap gap-3">
-                {["Ecommerce", "Service Businesses", "Healthcare Clinics", "Digital Products"].map((t) => (
+                {["Product Pages", "Category Pages", "Marketplace Support", "Technical SEO"].map((t) => (
                   <span key={t} className="rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs font-medium text-gray-600">
                     {t}
                   </span>
@@ -392,7 +465,7 @@ export default function SGSEOServicesPage() {
             <div className="relative overflow-hidden rounded-2xl shadow-2xl shadow-gray-200/80">
               <Image
                 src="/images/igaming-seo-agency-malaysia/igaming-seo-agency-malaysia-hero.webp"
-                alt="Best SEO Service Agency Singapore — Daiki Media"
+                alt="Best Ecommerce SEO Singapore — Daiki Media"
                 width={600}
                 height={420}
                 className="w-full object-cover"
@@ -402,20 +475,20 @@ export default function SGSEOServicesPage() {
             </div>
 
             <div className="absolute -bottom-5 -left-5 hidden sm:block rounded-xl border border-gray-100 bg-white px-5 py-4 shadow-xl shadow-gray-200/70">
-              <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400">Internet Usage</p>
-              <p className="text-2xl font-extrabold text-red-500">88%</p>
-              <p className="text-xs text-gray-500">Singaporeans online (IMDA 2024)</p>
+              <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400">Businesses Helped</p>
+              <p className="text-2xl font-extrabold text-red-500">30+</p>
+              <p className="text-xs text-gray-500">Singapore ecommerce shops and brands</p>
             </div>
 
             <div className="absolute -right-4 top-6 hidden sm:flex items-center gap-2 rounded-xl border border-gray-100 bg-white px-4 py-2.5 shadow-lg shadow-gray-200/60">
               <ShieldCheck size={16} className="text-green-500" />
-              <p className="text-xs font-semibold text-gray-700">Singapore Market Specialists</p>
+              <p className="text-xs font-semibold text-gray-700">Ecommerce SEO Specialists</p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* ── SEO OVERVIEW ────────────────────────────────────────────────────── */}
+      {/* ── WHAT IS ECOMMERCE SEO ───────────────────────────────────────────── */}
       <section className="bg-gray-50 py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <motion.div
@@ -425,34 +498,28 @@ export default function SGSEOServicesPage() {
             variants={stagger}
           >
             <motion.div variants={fadeUp} className="mb-10">
-              <SectionLabel>SEO Overview</SectionLabel>
+              <SectionLabel>Ecommerce SEO Overview</SectionLabel>
               <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                What Is SEO and Why Does Your Singapore Business Need It?
+                What Is Ecommerce SEO and Why Is It Important in Singapore?
               </h2>
               <p className="max-w-2xl text-[15px] leading-relaxed text-gray-500">
-                SEO stands for Search Engine Optimisation — the process of making your website more visible on Google so real customers can find you when they search.
+                Ecommerce SEO is the method by which you optimise your ecommerce website to rank higher on Google based on keywords related to your products — helping you generate more traffic organically and increase sales in the long run.
               </p>
             </motion.div>
 
             <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
               <motion.div variants={fadeUp} custom={1} className="space-y-5">
                 <p className="text-[15px] leading-relaxed text-gray-600">
-                  SEO stands for Search Engine Optimisation. In simple words, it means making your website more visible on Google so that when people search for products or services you offer, your website shows up in the results.
+                  Singapore is one of the most advanced nations regarding internet and smartphone use in the world. Most consumers compare products, prices, and shipping methods before purchasing online — so where you rank matters more than ever.
                 </p>
                 <p className="text-[15px] leading-relaxed text-gray-600">
-                  Think of Google as a massive library with billions of websites. When someone searches for something, Google automatically picks the most relevant websites and shows them first. SEO is the process of telling Google your site is relevant — so it appears higher in the results.
+                  Google ranks websites that provide helpful, original, and trustworthy content. Ecommerce websites with clear product information, fast loading speeds, secure checkout, and a mobile-friendly experience are more likely to rank higher and gain customer trust.
                 </p>
 
-                {/* why SG needs it */}
                 <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
-                  <h3 className="mb-4 font-bold text-gray-900">Why Every Business in Singapore Needs SEO</h3>
+                  <h3 className="mb-4 font-bold text-gray-900">Why Ecommerce SEO Is Important</h3>
                   <ul className="space-y-3">
-                    {[
-                      "When a Singaporean wants something, the first thing they do is search Google",
-                      "Over 75% of Google searches in Singapore happen on mobile phones (Google Trends, Singapore, 2024)",
-                      "Around 88% of Singaporeans use the internet — one of the highest rates in the world (IMDA Singapore, 2024)",
-                      "SEO brings long-term customers and revenue without ongoing ad spend",
-                    ].map((item) => (
+                    {WHY_IMPORTANT.slice(0, 4).map((item) => (
                       <li key={item} className="flex items-start gap-3 text-[14px] text-gray-600">
                         <CircleCheck size={15} className="mt-0.5 flex-shrink-0 text-red-500" />
                         {item}
@@ -462,37 +529,30 @@ export default function SGSEOServicesPage() {
                 </div>
               </motion.div>
 
-              {/* right – service icons */}
+              {/* right – challenges */}
               <motion.div variants={fadeUp} custom={2}>
-                <div className="grid grid-cols-2 gap-4">
-                  {[
-                    { icon: Search, title: "Keyword Research", body: "Find what Singaporeans actually search for in your category" },
-                    { icon: Settings, title: "Technical SEO", body: "Fix issues preventing Google from crawling and ranking your site" },
-                    { icon: FileText, title: "Content Strategy", body: "Create content that ranks and converts Singapore visitors" },
-                    { icon: Link2, title: "Link Building", body: "Build authority through quality Singapore-relevant backlinks" },
-                    { icon: MapPin, title: "Local SEO", body: "Dominate Google Maps and local search results in Singapore" },
-                    { icon: Zap, title: "AI SEO (AEO/GEO)", body: "Appear on ChatGPT, Gemini, and Google AI answers" },
-                  ].map((item, i) => {
-                    const Icon = item.icon;
-                    return (
-                      <div key={item.title} className="group rounded-xl border border-gray-100 bg-white p-5 shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5">
-                        <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg border border-red-100 bg-red-50 text-red-500 transition-colors group-hover:bg-red-500 group-hover:text-white">
-                          <Icon size={17} />
-                        </div>
-                        <h4 className="mb-1 text-sm font-bold text-gray-900">{item.title}</h4>
-                        <p className="text-[12px] leading-relaxed text-gray-500">{item.body}</p>
-                      </div>
-                    );
-                  })}
+                <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+                  <h3 className="mb-4 font-bold text-gray-900">Common Challenges Ecommerce Businesses Face</h3>
+                  <ul className="space-y-3">
+                    {CHALLENGES.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-[14px] text-gray-600">
+                        <span className="mt-1.5 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-red-400" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </motion.div>
             </div>
+
+            <motion.p variants={fadeUp} custom={3} className="mt-8 max-w-3xl text-[14px] leading-relaxed text-gray-500">
+              At Daiki Media, we understand that every ecommerce business is different. We don&apos;t use the same SEO strategy for every online store. Our team analyses your products, competitors, target audience, and market opportunities before creating a customised SEO plan.
+            </motion.p>
           </motion.div>
         </div>
-
       </section>
 
-      {/* ── RANKING FACTORS ─────────────────────────────────────────────────── */}
+      {/* ── HOW ECOMMERCE SEO DIFFERS ───────────────────────────────────────── */}
       <section className="pt-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <motion.div
@@ -502,20 +562,20 @@ export default function SGSEOServicesPage() {
             variants={stagger}
           >
             <motion.div variants={fadeUp}>
-              <SectionLabel>Ranking Factors</SectionLabel>
+              <SectionLabel>Regular SEO vs Ecommerce SEO</SectionLabel>
               <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                How Google Decides Which Websites to Show
+                How Ecommerce SEO Differs From Regular SEO
               </h2>
               <p className="max-w-2xl text-[15px] leading-relaxed text-gray-500">
-                After every search, Google reviews websites through 100+ factors and ranks them. Here are the most important factors every Singapore business must understand.
+                Both aim to boost Google rankings, but the approach is completely different. Service businesses want form fills and calls — ecommerce shops need visitors to discover products and buy them online.
               </p>
             </motion.div>
           </motion.div>
         </div>
-        <DataTable data={RANKING_FACTORS_TABLE} />
+        <DataTable data={SEO_VS_ECOMMERCE_TABLE} />
       </section>
 
-      {/* ── WHY GENERIC SEO FAILS ───────────────────────────────────────────── */}
+      {/* ── COMMON MISTAKES ─────────────────────────────────────────────────── */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <motion.div
@@ -525,17 +585,155 @@ export default function SGSEOServicesPage() {
             variants={stagger}
           >
             <motion.div variants={fadeUp} className="mb-12">
-              <SectionLabel>Why Generic Fails</SectionLabel>
+              <SectionLabel>Common Mistakes</SectionLabel>
               <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                Why Generic SEO Fails in Singapore
+                Common Mistakes Many SEO Agencies Make
               </h2>
               <p className="max-w-2xl text-[15px] leading-relaxed text-gray-500">
-                Most SEO agencies prefer traditional methods to rank for Singapore-specific content, but fail because of a lack of understanding of the market and its regulations.
+                Ecommerce SEO requires a completely different approach. Generic agencies often make these mistakes on online stores.
+              </p>
+            </motion.div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                "Optimising only the homepage while ignoring product and category pages",
+                "Using duplicate product descriptions copied from suppliers",
+                "Targeting broad keywords instead of high-intent buying keywords",
+                "Ignoring product schema and structured data",
+                "Poor internal linking between related products and categories",
+                "Slow-loading product pages that increase bounce rates",
+                "Not optimising product images with proper file names and alt text",
+                "Failing to improve the mobile shopping experience",
+                "Ignoring technical issues like broken links and crawl errors",
+                "Tracking only traffic instead of actual sales and conversions",
+              ].map((item, i) => (
+                <motion.div
+                  key={item}
+                  variants={fadeUp}
+                  custom={i}
+                  className="flex items-start gap-3 rounded-xl border border-gray-100 bg-white p-5 shadow-sm"
+                >
+                  <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-red-50 text-xs font-bold text-red-500">
+                    {i + 1}
+                  </span>
+                  <p className="text-[14px] leading-relaxed text-gray-600">{item}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div variants={fadeUp} custom={4} className="mt-10 rounded-2xl border border-red-100 bg-red-50 p-6 sm:p-8">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p className="font-bold text-gray-900">Ready to grow your Singapore online store?</p>
+                  <p className="mt-1 text-[14px] text-gray-500">Work with a team that builds customised strategies for your products, competitors, and customers — not generic SEO.</p>
+                </div>
+                <Link
+                  href="https://api.whatsapp.com/send?phone=601114850067"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex flex-shrink-0 items-center gap-2 rounded-full bg-red-500 px-6 py-3 text-[14px] font-semibold text-white transition-all hover:bg-red-600"
+                >
+                  Get Free Audit <ArrowRight size={15} />
+                </Link>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── OUR PROCESS ──────────────────────────────────────────────────────── */}
+      <section className="bg-gray-50 py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <motion.div
+            initial={false}
+            whileInView="show"
+            viewport={{ once: true, margin: "-80px" }}
+            variants={stagger}
+          >
+            <motion.div variants={fadeUp} className="mb-12">
+              <SectionLabel>Our Process</SectionLabel>
+              <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                Daiki Media&apos;s Ecommerce SEO Process for Singapore
+              </h2>
+              <p className="max-w-2xl text-[15px] leading-relaxed text-gray-500">
+                Every ecommerce shop in Singapore is different, so we build a customised strategy for your shop, your products, your target customers, and your business goals.
+              </p>
+            </motion.div>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {PROCESS_STEPS.map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    key={item.title}
+                    variants={fadeUp}
+                    custom={i}
+                    className="group rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5"
+                  >
+                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-red-100 bg-red-50 text-red-500 transition-colors group-hover:bg-red-500 group-hover:text-white">
+                      <Icon size={20} />
+                    </div>
+                    <h3 className="mb-2 font-bold text-gray-900">
+                      <span className="mr-2 text-red-500">STEP {i + 1}</span>
+                      {item.title}
+                    </h3>
+                    <p className="text-[14px] leading-relaxed text-gray-500">{item.body}</p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── PRODUCT OPTIMISATION TABLE ───────────────────────────────────────── */}
+      <section className="pt-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <motion.div
+            initial={false}
+            whileInView="show"
+            viewport={{ once: true, margin: "-80px" }}
+            variants={stagger}
+          >
+            <motion.div variants={fadeUp}>
+              <SectionLabel>Product Page SEO</SectionLabel>
+              <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                What We Optimise on Every Product Page
+              </h2>
+              <p className="max-w-2xl text-[15px] leading-relaxed text-gray-500">
+                We optimise every product page for both Google and customers — writing descriptions that rank for keywords and convince customers to buy.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+        <DataTable
+          data={PRODUCT_OPTIMISATION_TABLE}
+          ctaButton="Level Up Your Business with Us"
+          ctaLink="/contact"
+        />
+      </section>
+
+      {/* ── WHY CHOOSE US ────────────────────────────────────────────────────── */}
+      <section className="py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <motion.div
+            initial={false}
+            whileInView="show"
+            viewport={{ once: true, margin: "-80px" }}
+            variants={stagger}
+          >
+            <motion.div variants={fadeUp} className="mb-12">
+              <SectionLabel>Why Choose Daiki Media</SectionLabel>
+              <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                Why Choose Daiki Media for Ecommerce SEO
+              </h2>
+              <p className="max-w-2xl text-[15px] leading-relaxed text-gray-500">
+                Generic SEO companies view your online store like a service business or clinic and focus on traffic instead of sales. We do one thing — help ecommerce businesses rank better on Google and sell more.
               </p>
             </motion.div>
 
             <div className="grid gap-6 sm:grid-cols-2">
-              {WHY_GENERIC_FAILS.map((item, i) => {
+              {WHY_CHOOSE.map((item, i) => {
                 const Icon = item.icon;
                 return (
                   <motion.div
@@ -555,119 +753,6 @@ export default function SGSEOServicesPage() {
                 );
               })}
             </div>
-
-            {/* CTA nudge */}
-            <motion.div variants={fadeUp} custom={4} className="mt-10 rounded-2xl border border-red-100 bg-red-50 p-6 sm:p-8">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <p className="font-bold text-gray-900">Ready to boost your Singapore business?</p>
-                  <p className="mt-1 text-[14px] text-gray-500">Work with a team that actually understands the Singapore market, its audience, and its search behaviour.</p>
-                </div>
-                <Link
-                  href="https://api.whatsapp.com/send?phone=601114850067"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex flex-shrink-0 items-center gap-2 rounded-full bg-red-500 px-6 py-3 text-[14px] font-semibold text-white transition-all hover:bg-red-600"
-                >
-                  Get Free Audit <ArrowRight size={15} />
-                </Link>
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ── SEO PROCESS TABLE ───────────────────────────────────────────────── */}
-      <section className="bg-gray-50 pt-16">
-        <div className="mx-auto max-w-7xl px-4">
-          <motion.div
-            initial={false}
-            whileInView="show"
-            viewport={{ once: true, margin: "-80px" }}
-            variants={stagger}
-          >
-            <motion.div variants={fadeUp}>
-              <SectionLabel>Our Process</SectionLabel>
-              <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                Daiki Media's Singapore SEO Process
-              </h2>
-              <p className="max-w-2xl text-[15px] leading-relaxed text-gray-500">
-                We go beyond basic SEO services. Daiki Media is an SEO agency focused on helping businesses improve rankings, reach the right audience, and grow through search, AI platforms, and answer-based results. Here are our focused areas for providing best results.
-              </p>
-            </motion.div>
-          </motion.div>
-        </div>
-        <DataTable
-          data={SEO_PROCESS_TABLE}
-          ctaButton="Explore Our Best Digital Marketing Agency"
-          ctaLink="/contact"
-        />
-      </section>
-
-      {/* ── CASE STUDIES ────────────────────────────────────────────────────── */}
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <motion.div
-            initial={false}
-            whileInView="show"
-            viewport={{ once: true, margin: "-80px" }}
-            variants={stagger}
-          >
-            <motion.div variants={fadeUp} className="mb-12">
-              <SectionLabel>Success Stories</SectionLabel>
-              <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                Multiple Business Success Stories Through Expert SEO
-              </h2>
-              <p className="max-w-2xl text-[15px] leading-relaxed text-gray-500">
-                Real results from real businesses who trusted Daiki Media to grow their organic presence.
-              </p>
-            </motion.div>
-
-            <div className="grid gap-8 lg:grid-cols-2">
-              {CASE_STUDIES.map((cs, i) => (
-                <motion.div
-                  key={cs.client}
-                  variants={fadeUp}
-                  custom={i}
-                  className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm"
-                >
-                  {/* top accent */}
-                  <div className="h-1.5 bg-gradient-to-r from-red-500 to-red-300" />
-                  <div className="p-5 sm:p-8">
-                    <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-red-500">{cs.industry}</div>
-                    <h3 className="mb-3 text-xl font-bold text-gray-900">{cs.client}</h3>
-
-                    <div className="mb-4">
-                      <p className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-gray-400">Challenge</p>
-                      <p className="text-[14px] leading-relaxed text-gray-500">{cs.challenge}</p>
-                    </div>
-                    <div className="mb-6">
-                      <p className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-gray-400">Approach</p>
-                      <p className="text-[14px] leading-relaxed text-gray-500">{cs.approach}</p>
-                    </div>
-
-                    {/* stats */}
-                    <div className="flex flex-wrap gap-4 border-t border-gray-50 pt-6">
-                      {cs.stats.map((s) => (
-                        <div key={s.label} className="flex-1 min-w-[80px] text-center rounded-xl bg-red-50 py-4 px-3">
-                          <p className="text-xl font-extrabold text-red-500">{s.num}</p>
-                          <p className="mt-1 text-[11px] text-gray-500">{s.label}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.div variants={fadeUp} custom={2} className="mt-8">
-              <Link
-                href="/case-studies"
-                className="inline-flex items-center gap-2 text-[14px] font-semibold text-red-500 transition-colors hover:text-red-600"
-              >
-                View all case studies <ArrowRight size={15} />
-              </Link>
-            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -684,10 +769,10 @@ export default function SGSEOServicesPage() {
             <motion.div variants={fadeUp} className="mb-12">
               <SectionLabel>Pricing</SectionLabel>
               <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                Our Singapore SEO Pricing Plans
+                Our Ecommerce SEO Pricing Plans
               </h2>
               <p className="max-w-2xl text-[15px] leading-relaxed text-gray-500">
-                Transparent, results-focused pricing built for Singapore businesses at every stage of growth.
+                Transparent, results-focused pricing built for Singapore online stores at every stage of growth.
               </p>
             </motion.div>
 
@@ -748,6 +833,34 @@ export default function SGSEOServicesPage() {
         </div>
       </section>
 
+      {/* ── SERVICES OVERVIEW ────────────────────────────────────────────────── */}
+      <section className="pt-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <motion.div
+            initial={false}
+            whileInView="show"
+            viewport={{ once: true, margin: "-80px" }}
+            variants={stagger}
+          >
+            <motion.div variants={fadeUp}>
+              <SectionLabel>Services Overview</SectionLabel>
+              <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                Ecommerce SEO Services Overview
+              </h2>
+              <p className="max-w-2xl text-[15px] leading-relaxed text-gray-500">
+                A clear breakdown of what each service includes, the tools we use, and what results to expect.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+        <DataTable
+          data={{
+            rows: SERVICES_OVERVIEW,
+            columns: ["type", "platforms", "timeline", "results", "pricing"],
+          }}
+        />
+      </section>
+
       {/* ── FAQ ─────────────────────────────────────────────────────────────── */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -760,7 +873,7 @@ export default function SGSEOServicesPage() {
             <motion.div variants={fadeUp} className="mb-12">
               <SectionLabel>FAQ</SectionLabel>
               <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                Singapore SEO Frequently Asked Questions
+                Ecommerce SEO Frequently Asked Questions
               </h2>
             </motion.div>
 
@@ -785,7 +898,7 @@ export default function SGSEOServicesPage() {
           <div className="absolute inset-0 overflow-hidden">
             <Image
               src="/images/igaming-seo-agency-malaysia/Closing CTA Background.webp"
-              alt="Singapore SEO Agency CTA background"
+              alt="Ecommerce SEO Singapore CTA background"
               fill
               className="object-cover object-right"
               aria-hidden="true"
@@ -796,13 +909,13 @@ export default function SGSEOServicesPage() {
             <div className="max-w-2xl p-4 sm:p-8">
               <SectionLabel>Get Started</SectionLabel>
               <h2 className="mb-5 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                Ready to Rank Higher in Singapore?
+                Ready to Grow Your Singapore Online Store?
               </h2>
               <p className="mb-4 text-[15px] leading-relaxed text-gray-500">
-                Daiki Media helps Singapore businesses cut through the noise on Google. We understand the local market, the search behaviour, and exactly what it takes to move your site from invisible to in front of the right customers.
+                SEO for ecommerce sites is no longer optional in Singapore. Thousands of shoppers use Google every day to find products like yours — failure to rank means losing business to competitors who already do.
               </p>
               <p className="mb-8 text-[15px] leading-relaxed text-gray-500">
-                Start with a free SEO audit. We cover your current rankings, technical issues, content gaps, and a clear picture of what is achievable in your market. No commitment required.
+                We have been doing SEO for Singapore ecommerce sites for more than 10 years. Let us run a free audit for your ecommerce site and show you the potential it holds. No commitment required.
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
@@ -825,7 +938,7 @@ export default function SGSEOServicesPage() {
 
               <div className="mt-8 flex flex-wrap gap-6">
                 {[
-                  "Trusted by businesses across Singapore and Southeast Asia",
+                  "Trusted by 30+ ecommerce businesses in Singapore",
                   "Free audit, no commitment required",
                 ].map((t) => (
                   <div key={t} className="flex items-center gap-2 text-[13px] text-gray-400">

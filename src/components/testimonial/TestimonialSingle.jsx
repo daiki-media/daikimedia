@@ -21,7 +21,7 @@ const TestimonialSingle = () => {
               <motion.div
                 className="rounded-medium bg-white p-2.5 shadow-nav dark:bg-dark-200"
                 key={testimonial.id}
-                initial="initial"
+                initial={false}
                 animate="animate"
                 variants={fadeUpAnimation}
               >

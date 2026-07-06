@@ -18,7 +18,7 @@ const CoreValueAnimation = () => {
     <motion.div
       className="relative flex items-center justify-end max-md:justify-center"
       ref={ref}
-      initial="initial"
+      initial={false}
       animate={controlAnimation}
       variants={fadeUpAnimation}>
       <Image
@@ -34,7 +34,7 @@ const CoreValueAnimation = () => {
       <motion.div
         className="absolute bottom-8 left-0 right-auto top-auto max-w-[180px] md:max-w-[250px] xl:max-w-[344px]"
         ref={ref2}
-        initial="initial"
+        initial={false}
         animate={controlAnimation2}
         variants={fadeFromRightAnimation}>
         <Image src={img2} alt="banking image" className="dark:hidden" />

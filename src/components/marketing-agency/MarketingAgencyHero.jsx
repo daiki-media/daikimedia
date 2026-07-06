@@ -48,7 +48,7 @@ const MarketingAgencyHero = ({ subtitle, title, paragraph, ctaText, ctaDescripti
           <div className="col-span-12 lg:col-span-6">
             {subtitle && (
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="mb-4 text-sm font-semibold uppercase tracking-wider text-primary dark:text-primary"
@@ -58,7 +58,7 @@ const MarketingAgencyHero = ({ subtitle, title, paragraph, ctaText, ctaDescripti
             )}
             {title && (
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="mb-6 text-4xl font-bold leading-tight text-heading dark:text-white max-lg:text-3xl max-md:text-2xl"
@@ -67,7 +67,7 @@ const MarketingAgencyHero = ({ subtitle, title, paragraph, ctaText, ctaDescripti
             )}
             {paragraph && (
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="mb-8 space-y-4"
@@ -81,7 +81,7 @@ const MarketingAgencyHero = ({ subtitle, title, paragraph, ctaText, ctaDescripti
             )}
             {(ctaText || ctaDescription) && (
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="max-md:p-4"
@@ -104,7 +104,7 @@ const MarketingAgencyHero = ({ subtitle, title, paragraph, ctaText, ctaDescripti
           <div className="col-span-12 lg:col-span-6 flex items-center justify-center">
             <motion.div
               variants={fadeFromLeftAnimation}
-              initial="initial"
+              initial={false}
               animate="animate"
               transition={{ delay: 0.4, duration: 0.8 }}
               className="relative w-full max-lg:max-w-md"

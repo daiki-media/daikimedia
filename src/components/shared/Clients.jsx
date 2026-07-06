@@ -53,6 +53,7 @@ const Clients = ({
                   className="dark:hidden object-contain"
                   fill
                   sizes="160px"
+                  quality={60}
                   style={{ maxWidth: "100%", maxHeight: "100%" }}
                 />
                 <Image
@@ -61,6 +62,7 @@ const Clients = ({
                   className="hidden dark:block object-contain"
                   fill
                   sizes="160px"
+                  quality={60}
                   style={{ maxWidth: "100%", maxHeight: "100%" }}
                 />
               </Link>

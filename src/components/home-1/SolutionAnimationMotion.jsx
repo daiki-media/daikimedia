@@ -24,7 +24,7 @@ const SolutionAnimation = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
       <motion.div
         ref={ref1}
-        initial="initial"
+        initial={false}
         animate={controlAnimation1}
         variants={fadeFromLeftAnimation}
         className="relative h-[400px] md:h-[500px] w-full rounded-lg overflow-hidden"
@@ -45,7 +45,7 @@ const SolutionAnimation = () => {
 
       <motion.div
         ref={ref2}
-        initial="initial"
+        initial={false}
         animate={controlAnimation2}
         variants={fadeFromRightAnimation}
         className="relative h-[400px] md:h-[500px] w-full rounded-lg overflow-hidden"

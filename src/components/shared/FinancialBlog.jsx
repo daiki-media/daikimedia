@@ -8,8 +8,8 @@ import { stripHtml } from "@/utils/textUtils";
 const getBlogs = cache(async () => {
   try {
     const response = await fetch(
-      "https://daiki.media/wp-json/wp/v2/posts?page=1&per_page=3",
-      { next: { revalidate: 86400 }, signal: AbortSignal.timeout(8000) }
+      "https://daiki.media/wp-json/wp/v2/posts?page=1&per_page=3&_fields=id,slug,title,date,yoast_head_json",
+      { next: { revalidate: 86400 }, signal: AbortSignal.timeout(15000) }
     );
     if (!response.ok) {
       throw new Error("Failed to fetch blogs data");

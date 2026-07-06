@@ -71,7 +71,7 @@ const ContactForm = () => {
       <motion.div
         className="container relative"
         ref={ref}
-        initial="initial"
+        initial={false}
         animate={controlAnimation}
         variants={fadeUpAnimation}
       >

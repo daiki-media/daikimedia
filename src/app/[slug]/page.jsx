@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { notFound } from "next/navigation";
 import Footer from "@/components/footer/Footer";
 import ServiceContent from "@/components/service/ServiceContent";
@@ -56,9 +55,7 @@ const ServiceDetails = async ({ params }) => {
 
   return (
     <>
-      <Head>
-        <ServiceSchema data={data} />
-      </Head>
+      <ServiceSchema data={data} />
 
       <main>
         <ServiceContent data={data} />

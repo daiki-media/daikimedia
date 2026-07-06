@@ -1,39 +1,36 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
 
+// Server-renders the final number so stats are meaningful without JS.
+// The count-up only runs for counters still below the viewport on load,
+// so the section never shows "0" in screenshots or when JS is slow.
 const CounterAnimation = ({ number }) => {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(number)
   const [isCounting, setIsCounting] = useState(false)
   const counterRef = useRef(null)
 
   useEffect(() => {
+    const el = counterRef.current
+    if (!el) return
+    if (el.getBoundingClientRect().top <= window.innerHeight) return
+
+    setCount(0)
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsCounting(true)
-        } else {
-          setIsCounting(false)
         }
       },
       { threshold: 0.5 },
     )
-
-    if (counterRef.current) {
-      observer.observe(counterRef.current)
-    }
-
-    return () => {
-      if (counterRef.current) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        observer.unobserve(counterRef.current)
-      }
-    }
+    observer.observe(el)
+    return () => observer.disconnect()
   }, [])
 
   useEffect(() => {
     if (isCounting && count < number) {
       const timer = setInterval(() => {
-        setCount((prevCount) => prevCount + 2)
+        setCount((prevCount) => Math.min(prevCount + 2, number))
       }, 10)
 
       return () => {
@@ -41,12 +38,6 @@ const CounterAnimation = ({ number }) => {
       }
     }
   }, [count, isCounting, number])
-
-  useEffect(() => {
-    if (count >= number) {
-      return
-    }
-  }, [count, number])
 
   return (
     <span className="counter" ref={counterRef}>

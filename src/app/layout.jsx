@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { cn } from "@/utils/cn";
 import { Inter, Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
-import GTMNoScript from "@/components/GTMNoScript";
 import OrganizationSchema from "@/components/schema/OrganizationSchema";
 import WebSiteSchema from "@/components/schema/WebSiteSchema";
 import DynamicBreadcrumbSchema from "@/components/schema/BreadcrumbSchema";
@@ -24,8 +23,9 @@ const jakarta_sans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-jakarta_sans",
-  preload: false, 
-  adjustFontFallback: false,
+  preload: true,
+  fallback: ['system-ui', 'arial', 'sans-serif'],
+  adjustFontFallback: true,
 });
 
 const playfair = Playfair_Display({
@@ -41,6 +41,19 @@ export const metadata = {
   metadataBase: new URL("https://www.daikimedia.com"),
   title: "Daiki Media | Expert SEO & Website Development Agency",
   description: "Connect with the best graphic design agencies...",
+  verification: {
+    google: "EIBnMq71KKUDT895qyPc5L_RMaDrmBpUG8pgX3FO6N4",
+  },
+  openGraph: {
+    title: "Daiki Media",
+    description: "Daiki Media provides expert SEO...",
+    url: "https://www.daikimedia.com/",
+    type: "website",
+    images: ["https://www.daikimedia.com/images/logo.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 const criticalCSS = `
@@ -53,20 +66,6 @@ const criticalCSS = `
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="google-site-verification" content="EIBnMq71KKUDT895qyPc5L_RMaDrmBpUG8pgX3FO6N4" />
-        
-        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
-        
-        <meta property="og:title" content="Daiki Media" />
-        <meta property="og:description" content="Daiki Media provides expert SEO..." />
-        <meta property="og:image" content="https://www.daikimedia.com/images/logo.png" />
-        <meta property="og:url" content="https://www.daikimedia.com/" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        
-        <GTMNoScript />
-      </head>
       <body
         className={cn(
           "relative overflow-x-hidden bg-white text-base antialiased dark:bg-dark-300",
@@ -76,6 +75,42 @@ export default function RootLayout({ children }) {
         )}
         suppressHydrationWarning={true}
       >
+        {/* Manual font preloads: Next 15.5 emits an empty next-font-manifest,
+            so next/font's automatic preload links never render. These hashes
+            are content-based and only change if the font files or next/font
+            version change — re-check them after upgrading Next (see
+            .next/static/media/*.p.woff2). */}
+        <link
+          rel="preload"
+          href="/_next/static/media/e4af272ccee01ff0-s.p.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/_next/static/media/636a5ac981f94f8b-s.p.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/_next/static/media/eaead17c7dbfcd5d-s.p.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NZZ2849"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
         <PrimaryNavbar />
         <DynamicBreadcrumbSchema />
         {children}
@@ -85,44 +120,42 @@ export default function RootLayout({ children }) {
         <WebSiteSchema />
         <WhatsAppFloat />
 
+        {/* Analytics (GTM + Clarity) load on first user interaction, with a
+            late fallback after the page is fully loaded and idle. Keeps the
+            ~1.3s of third-party main-thread work out of the critical load. */}
         <Script
-          id="gtm"
-          strategy="lazyOnload"
+          id="deferred-analytics"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-NZZ2849');
-            `
-          }}
-        />
-        
-        <Script
-          id="other-analytics"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-              })(window, document, "clarity", "script", "priqspzydx");
-              
-              !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              
-              if (!window.fbq) {
-                fbq('init', '4648082808576876');
-                fbq('track', 'PageView');
-              }
+              (function(){
+                var loaded = false;
+                var events = ['pointerdown','keydown','touchstart','scroll'];
+                function loadAnalytics(){
+                  if (loaded) return;
+                  loaded = true;
+                  events.forEach(function(e){ window.removeEventListener(e, loadAnalytics, {passive:true}); });
+
+                  window.dataLayer = window.dataLayer || [];
+                  window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                  var g = document.createElement('script');
+                  g.async = true;
+                  g.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-NZZ2849';
+                  document.head.appendChild(g);
+
+                  window.clarity = window.clarity || function(){ (window.clarity.q = window.clarity.q || []).push(arguments); };
+                  var c = document.createElement('script');
+                  c.async = true;
+                  c.src = 'https://www.clarity.ms/tag/priqspzydx';
+                  document.head.appendChild(c);
+                }
+                events.forEach(function(e){ window.addEventListener(e, loadAnalytics, {passive:true}); });
+                if (document.readyState === 'complete') {
+                  setTimeout(loadAnalytics, 12000);
+                } else {
+                  window.addEventListener('load', function(){ setTimeout(loadAnalytics, 12000); });
+                }
+              })();
             `
           }}
         />

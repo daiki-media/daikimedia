@@ -40,7 +40,7 @@ function Eyebrow({ children }) {
   return (
     <motion.div
       className="inline-flex items-center gap-2.5 mb-3"
-      initial={{ opacity: 0, x: -16 }}
+      initial={false}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
@@ -61,7 +61,7 @@ function FadeUp({ children, delay = 0, className = "" }) {
     <motion.div
       ref={ref}
       className={className}
-      initial={{ opacity: 0, y: 32 }}
+      initial={false}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
     >
@@ -85,7 +85,7 @@ export default function CaseStudyContent({ caseStudy }) {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Content */}
             <motion.div
-              initial={{ opacity: 0, x: -32 }}
+              initial={false}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -106,7 +106,7 @@ export default function CaseStudyContent({ caseStudy }) {
 
             {/* Right: Image */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={false}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -143,7 +143,7 @@ export default function CaseStudyContent({ caseStudy }) {
                 <motion.div
                   key={i}
                   className="grid md:grid-cols-3 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 hover:bg-red-50 dark:hover:bg-red-900/20 transition"
-                  initial={{ opacity: 0, x: -16 }}
+                  initial={false}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08, duration: 0.4 }}
@@ -247,7 +247,7 @@ export default function CaseStudyContent({ caseStudy }) {
           <FadeUp className="mb-20 lg:mb-32">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <motion.div
-                initial={{ opacity: 0, x: -32 }}
+                initial={false}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
@@ -262,7 +262,7 @@ export default function CaseStudyContent({ caseStudy }) {
               </motion.div>
               {secondImg && (
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
+                  initial={false}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
@@ -415,7 +415,7 @@ export default function CaseStudyContent({ caseStudy }) {
             <div className="grid md:grid-cols-2 gap-0 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-lg">
               {thirdImg && (
                 <motion.div
-                  initial={{ opacity: 0 }}
+                  initial={false}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   className="hidden md:block h-96"
@@ -441,7 +441,7 @@ export default function CaseStudyContent({ caseStudy }) {
                       <motion.div
                         key={i}
                         className="flex items-baseline gap-3 pb-4 border-b border-gray-200 dark:border-gray-700 last:border-b-0"
-                        initial={{ opacity: 0, y: 10 }}
+                        initial={false}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.1 }}

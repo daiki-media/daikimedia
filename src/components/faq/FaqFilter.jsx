@@ -35,7 +35,7 @@ const FaqFilter = () => {
     <motion.div
       className="mx-auto max-w-[850px]"
       ref={ref}
-      initial="initial"
+      initial={false}
       animate={controlAnimation}
       variants={fadeUpAnimation}>
       <ul className=" faq-tabs mx-auto mb-15 flex w-fit max-w-[530px] items-center border-b-2 border-white dark:border-borderColor-dark max-md:flex-col max-md:border-none">
