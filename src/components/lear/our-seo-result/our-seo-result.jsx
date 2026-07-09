@@ -140,30 +140,30 @@ export default function SeoResult() {
       <section className=" px-4 ">
         <div className="flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl shadow-xl border border-black container mx-auto">
-            <div className="p-8">
-              <h2 className="text-4xl font-bold text-center mb-8 text-gray-800">
+            <div className="p-5 md:p-8">
+              <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 text-gray-800">
                 Daiki Media vs. Competitors
               </h2>
-              <div className="grid grid-cols-2 gap-4 font-bold text-gray-600 border-b-2 border-gray-200 pb-4">
+              <div className="hidden md:grid grid-cols-2 gap-4 font-bold text-gray-600 border-b-2 border-gray-200 pb-4">
                 <div className="text-center">Daiki Media</div>
                 <div className="text-center">Other Companies</div>
               </div>
-              <div className="space-y-6">
+              <div className="space-y-6 md:space-y-6">
                 {comparisonData.map((row, index) => (
                   <div
                     key={index}
-                    className="grid grid-cols-2 gap-4 items-center py-4 border-b border-gray-200 last:border-b-0"
+                    className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 items-stretch py-4 border-b border-gray-200 last:border-b-0"
                   >
                     {/* Daiki Media Column */}
-                    <div className="flex items-center justify-center bg-green-50 rounded-full py-2 px-4">
-                      <Check className="w-5 h-5 text-green-500 mr-2" />
-                      <span className="text-green-700">{row.daikiMedia}</span>
+                    <div className="flex items-start md:items-center justify-start md:justify-center bg-green-50 rounded-2xl md:rounded-full py-3 px-4">
+                      <Check className="w-5 h-5 text-green-500 mr-2 mt-0.5 md:mt-0 flex-shrink-0" />
+                      <span className="text-green-700 text-sm md:text-base">{row.daikiMedia}</span>
                     </div>
 
                     {/* Competitors Column */}
-                    <div className="flex items-center justify-center bg-red-50 rounded-full py-2 px-4">
-                      <X className="w-5 h-5 text-red-500 mr-2" />
-                      <span className="text-red-700">{row.competitors}</span>
+                    <div className="flex items-start md:items-center justify-start md:justify-center bg-red-50 rounded-2xl md:rounded-full py-3 px-4">
+                      <X className="w-5 h-5 text-red-500 mr-2 mt-0.5 md:mt-0 flex-shrink-0" />
+                      <span className="text-red-700 text-sm md:text-base">{row.competitors}</span>
                     </div>
                   </div>
                 ))}

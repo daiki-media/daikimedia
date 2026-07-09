@@ -334,7 +334,7 @@ export default function SeoCompany() {
           <div className="container mx-auto">
             <div className="grid grid-cols-2 gap-10 max-lg:grid-cols-1 xl:gap-x-24">
               {/* Sticky Left Section */}
-              <div className="mb-12 sticky top-32 self-start">
+              <div className="mb-12 md:sticky top-32 self-start">
                 <h2 className="text-4xl font-extrabold mb-4 text-gray-900">
                   Frequently Asked Questions About SEO Services
                 </h2>
