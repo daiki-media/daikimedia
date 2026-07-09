@@ -31,7 +31,7 @@ export const FaqSection = ({ data, heading }) => {
           <FaqBackground />
           <div className="mx-auto max-w-[830px]">
             <div className="text-center">
-              <p className="section-tagline mb-3">Faq's</p>
+              <p className="section-tagline mb-3">FAQs</p>
               <h2 className="mb-12">
                 {formattedHeading}
               </h2>

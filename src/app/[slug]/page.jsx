@@ -6,6 +6,12 @@ import NewsLetter from "@/components/shared/NewsLetter";
 import Pricing from "@/components/shared/Pricing";
 import ServiceList from "@/data/singleServiceData";
 import ServiceSchema from "@/components/schema/ServicesSchema";
+import StaticBreadcrumbSchema from "@/components/schema/StaticBreadcrumbSchema";
+import LocalBusinessSchema from "@/components/schema/LocalBusinessSchema";
+import ItemListSchema from "@/components/schema/ItemListSchema";
+
+const LOCAL_BUSINESS_SLUGS = ["local-seo-services"];
+const ECOMMERCE_PLATFORMS = ["Shopify", "WooCommerce", "Custom Ecommerce Platforms"];
 
 export async function generateMetadata({ params }) {
   if (!params) return {};
@@ -56,18 +62,41 @@ const ServiceDetails = async ({ params }) => {
   return (
     <>
       <ServiceSchema data={data} />
+      {LOCAL_BUSINESS_SLUGS.includes(data.slug) && (
+        <LocalBusinessSchema url={`https://www.daikimedia.com/${data.slug}`} />
+      )}
+      {data.slug === "ecommerce-seo-strategies" && (
+        <ItemListSchema name="Supported Ecommerce Platforms" items={ECOMMERCE_PLATFORMS} />
+      )}
+      {data?.breadcrumbCategory && (
+        <StaticBreadcrumbSchema
+          items={[
+            { name: "Home", url: "https://www.daikimedia.com" },
+            {
+              name: data.breadcrumbCategory,
+              url: `https://www.daikimedia.com${data.breadcrumbCategoryUrl || "/seo-services"}`,
+            },
+            {
+              name: data.heroSection?.title || data.metaTitle,
+              url: `https://www.daikimedia.com/${data.slug}`,
+            },
+          ]}
+        />
+      )}
 
       <main>
         <ServiceContent data={data} />
-        <MembersCounter 
+        <MembersCounter
           title={data?.membersCounterSection?.title}
           metrics={data?.membersCounterSection?.metrics}
         />
-        <Pricing 
-          className={"pt-150 max-md:pt-20"}
-          heading={data?.pricingSection?.heading}
-          pricingData={data?.pricingSection?.pricingData}
-        />
+        {!data?.pricingSection?.hide && (
+          <Pricing
+            className={"pt-150 max-md:pt-20"}
+            heading={data?.pricingSection?.heading}
+            pricingData={data?.pricingSection?.pricingData}
+          />
+        )}
         <NewsLetter 
           heading={data?.newsletterSection?.heading}
           description={data?.newsletterSection?.description}

@@ -131,6 +131,24 @@ export default async function sitemap() {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/seo-services`,
+      lastModified: date,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/local-seo-agency-malaysia`,
+      lastModified: date,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/top-seo-agencies`,
+      lastModified: date,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
   ];
 
   const apiBlogs = await getAllBlogs();

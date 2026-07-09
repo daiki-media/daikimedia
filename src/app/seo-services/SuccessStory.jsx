@@ -11,7 +11,7 @@ const successStories = [
     industry: "Aesthetic & Skin Clinic Industry",
     location: "Kuala Lumpur",
     problem: "Nexus Clinic, a growing aesthetic clinic in Kuala Lumpur, aimed to improve its presence for treatments like skin rejuvenation, acne solutions, and anti-aging procedures. Despite offering advanced treatments, their online visibility was limited, and they struggled to rank against established aesthetic clinics in Malaysia.",
-    solution: "By working with Daikimedia SEO Agency Malaysia, Nexus Clinic implemented a content-driven SEO strategy supported by AI Optimization (AIO) for platforms like ChatGPT and Google AI. We also strengthened Local SEO to improve visibility across Kuala Lumpur and nearby high-intent search areas.",
+    solution: "By working with Daiki Media, Nexus Clinic implemented a content-driven SEO strategy supported by AI Optimization (AIO) for platforms like ChatGPT and Google AI. We also strengthened Local SEO to improve visibility across Kuala Lumpur and nearby high-intent search areas.",
     stats: [
       { value: "4.6x", label: "Organic Traffic Growth", color: "bg-[#FF4D3D]" },
       { value: "35+", label: "Keywords Ranked on Page 1", color: "bg-[#002B5B]" },
@@ -28,7 +28,7 @@ const successStories = [
     industry: "Online Pharmacy & Healthcare Industry",
     location: "Malaysia",
     problem: "Doctor On Call is a growing online pharmacy and telehealth platform in Malaysia, offering consultations, medicines, and healthcare services. Despite strong demand, their online visibility was limited, and they struggled to rank for competitive pharmacy and healthcare search queries.",
-    solution: "By working with Daikimedia SEO Agency Malaysia, Doctor On Call implemented a content-driven SEO strategy supported by AIO (AI Optimization) to align with modern search behaviour. We also strengthened Local SEO strategies to improve reach across Malaysia and helped them appear in both Google search and AI-driven platforms like ChatGPT and Google AI.",
+    solution: "By working with Daiki Media, Doctor On Call implemented a content-driven SEO strategy supported by AIO (AI Optimization) to align with modern search behaviour. We also strengthened Local SEO strategies to improve reach across Malaysia and helped them appear in both Google search and AI-driven platforms like ChatGPT and Google AI.",
     stats: [
       { value: "4.3x", label: "Organic Traffic Growth", color: "bg-[#FF4D3D]" },
       { value: "45+", label: "Keywords Ranked on Page 1", color: "bg-[#002B5B]" },

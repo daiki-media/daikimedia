@@ -23,11 +23,11 @@ const ContactForm = () => {
         
         {/* LEFT CONTENT */}
         <div className="text-white">
-          <h1 className="text-white text-4xl md:text-6xl font-bold leading-tight mb-6">
+          <h2 className="text-white text-4xl md:text-6xl font-bold leading-tight mb-6">
             Find Out Where You <br />
             Rank — On Google & <br />
             AI Engines
-          </h1>
+          </h2>
           <p className="text-gray-300 text-lg mb-8 max-w-md">
             Get a free SEO & AI audit report that includes:
           </p>

@@ -3,14 +3,14 @@
     {
       "id": 2,
       "slug": "enterprise-seo-services",
-      "metaTitle": "Top Enterprise SEO Agency in Malaysia for Large-Scale SEO Service, Ranking and Digital Marketing | Daiki Media",
-      "metaDescription": "Enterprise SEO strategies that drive ranking and visibility for complex, large-scale organisations. Daiki Media delivers proven enterprise SEO strategies across enterprise SEO platforms, helping enterprise brands dominate search rankings and grow at scale in Malaysia and globally.",
+      "metaTitle": "Enterprise SEO Services Malaysia | Large Scale SEO Agency | Daiki Media",
+      "metaDescription": "Scale organic search with Daiki Media enterprise SEO services in Malaysia. We handle technical SEO, site architecture, keyword strategy, content systems, dashboards, and large site optimisation.",
       "title": "Enterprise SEO Services",
       "subTitle": "Daiki Media Enterprise SEO",
       "canonicalUrl": "https://www.daikimedia.com/enterprise-seo-services",
       "heroSection": {
-        "title": "Top Enterprise SEO Agency in Malaysia",
-        "description": "Enterprise SEO is not simply regular SEO at a larger scale. It is a fundamentally different discipline that requires dedicated infrastructure, specialist seo experts, cross-functional alignment, and an approach to enterprise websites that spans thousands of pages, multiple stakeholder groups, and complex technical environments. Most enterprise organizations are already investing in digital marketing yet still struggle to rank consistently because their SEO strategies are not built to match the scale, speed, or complexity of their business.\n\nDaiki Media is a leading enterprise SEO agency serving large-scale businesses in Malaysia and globally. We help enterprises optimize their digital presence across all major search engines, improve search rankings, increase brand authority, and convert organic traffic into pipeline. Whether you are managing a large ecommerce operation, a multi-division B2B enterprise, or a consumer brand with thousands of landing pages, our enterprise SEO service is built to deliver results at your scale.\n\nEnterprise SEO requires a dedicated seo team, purpose-built seo software, and enterprise SEO platforms designed for the complexity of large-scale optimization. That is exactly what we provide.",
+        "title": "Enterprise SEO Services Malaysia",
+        "description": "Enterprise SEO is not simply regular SEO at a larger scale. It is a fundamentally different discipline that requires dedicated infrastructure, specialist seo experts, cross-functional alignment, and an approach to enterprise websites that spans thousands of pages, multiple stakeholder groups, and complex technical environments. Most enterprise organizations are already investing in digital marketing yet still struggle to rank consistently because their SEO strategies are not built to match the scale, speed, or complexity of their business.\n\nDaiki Media is a leading enterprise SEO agency serving large-scale businesses in Malaysia and globally. We build enterprise SEO roadmaps from audit, technical implementation, content optimisation, authority building, and reporting. Whether you are managing a large ecommerce operation, a multi-division B2B enterprise, or a consumer brand with thousands of landing pages, our enterprise SEO service is built to deliver results at your scale.\n\nEnterprise SEO requires a dedicated seo team, purpose-built seo software, and enterprise SEO platforms designed for the complexity of large-scale optimization. That is exactly what we provide.",
         "ctaButton": "Book a Free Enterprise SEO Strategy Call with Daiki Media",
         "link": "https://api.whatsapp.com/send?phone=601114850067"
       },
@@ -453,7 +453,27 @@
         "description": "With Daiki Media, your SEO strategy is as unique as your business. We integrate advanced tools, experienced specialists, and personalized approaches to exceed your expectations.",
         "ctaButton": "Contact Us to Customize Your Enterprise SEO Plan!",
         "link": "https://api.whatsapp.com/send?phone=601114850067"
-      }
+      },
+      "membersCounterSection": {
+        "title": "10+ Years Delivering Enterprise SEO Results",
+        "metrics": [
+          {
+            "number": 93,
+            "suffix": "%",
+            "label": "Client Satisfaction Score"
+          },
+          {
+            "number": 50,
+            "suffix": "+",
+            "label": "Enterprise Websites Optimised"
+          }
+        ]
+      },
+      "pricingSection": {
+        "hide": true
+      },
+      "breadcrumbCategory": "SEO Services",
+      "breadcrumbCategoryUrl": "/seo-services"
     },
     {
       "id": 3,
@@ -903,8 +923,8 @@
     {
       "id": 4,
       "slug": "local-seo-services",
-      "metaTitle": "Affordable Local SEO Services in Malaysia for Higher Ranking and Local Visibility | Daiki Media",
-      "metaDescription": "Get more visibility with the best local SEO services in Malaysia. Daiki Media delivers result-driven local seo strategies using proven local seo strategies and targeted keyword research. Improve local visibility, ranking, and reach more local customers today.",
+      "metaTitle": "Affordable Local SEO Services Malaysia | Google Maps SEO | Daiki Media",
+      "metaDescription": "Improve Google Maps rankings, local search visibility, calls, and enquiries with Daiki Media local SEO services in Malaysia for clinics, restaurants, contractors, retailers, and service businesses.",
       "title": "Local SEO Services",
       "metaKeywords": [
         "local seo malaysia",
@@ -1161,7 +1181,7 @@
             "investment": "Custom Quote"
           }
         ],
-        "closingContent": "Daiki Media's affordable local seo retainer model makes professional local search visibility accessible to businesses of all sizes in malaysia. Unlike one-time fixes that lose effectiveness as the competitive landscape shifts, an ongoing local seo retainer ensures your ranking is actively maintained, improved, and defended month after month. Every package delivers transparent monthly reporting so you always know exactly what your local seo investment is achieving. Citation 2: HubSpot, 'State of Marketing: Local SEO and Search Trends', 2024",
+        "closingContent": "Daiki Media's affordable local seo retainer model makes professional local search visibility accessible to businesses of all sizes in malaysia. Unlike one-time fixes that lose effectiveness as the competitive landscape shifts, an ongoing local seo retainer ensures your ranking is actively maintained, improved, and defended month after month. Every package delivers transparent monthly reporting so you always know exactly what your local seo investment is achieving.",
         "ctaButton": "Get a Custom Affordable Local SEO Quote for Your Malaysia Business from Daiki Media",
         "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
       },
@@ -1342,7 +1362,27 @@
         "description": "Our cutting-edge tools and dedicated team work tirelessly to position your business at the top of local search results. From managing citations to optimizing on-page content, we handle every detail to ensure measurable success.",
         "ctaButton": "Let's Elevate Your Local Presence",
         "link": "https://api.whatsapp.com/send?phone=601114850067"
-      }
+      },
+      "membersCounterSection": {
+        "title": "10+ Years Helping Malaysian Businesses Dominate Local Search",
+        "metrics": [
+          {
+            "number": 98,
+            "suffix": "%",
+            "label": "Client Satisfaction Rate"
+          },
+          {
+            "number": 100,
+            "suffix": "+",
+            "label": "Local SEO Campaigns Delivered"
+          }
+        ]
+      },
+      "pricingSection": {
+        "hide": true
+      },
+      "breadcrumbCategory": "SEO Services",
+      "breadcrumbCategoryUrl": "/seo-services"
     },
     {
       "id": 5,
@@ -1771,12 +1811,12 @@
       "id": 6,
       "slug": "seo-audits-services",
       "title": "SEO Audit Services",
-      "metaTitle": "Best SEO Audit Services Using a Proven Audit Tool to Fix Website SEO Issues and Drive Growth | Daiki Media",
-      "metaDescription": "Struggling with poor rankings? Daiki Media's advanced SEO audit tool and checker uncover hidden SEO issues. Improve your website SEO with proven SEO audit tools. Run your audit today.",
+      "metaTitle": "SEO Audit Services Malaysia | Technical SEO Audit | Daiki Media",
+      "metaDescription": "Find and fix SEO issues with Daiki Media SEO audit services. We review crawlability, indexation, Core Web Vitals, metadata, internal links, content, backlinks, and local SEO.",
       "subTitle": "Expert SEO Audit Services with a Powerful Free SEO Audit Tool and Checker to Fix Website SEO Issues and Accelerate Organic Growth",
       "canonicalUrl": "https://www.daikimedia.com/seo-audits-services",
       "heroSection": {
-        "title": "Expert SEO Audit Services",
+        "title": "SEO Audit Services Malaysia",
         "description": "Your website could be losing organic traffic every single day because of issues you have never seen. Broken internal links, crawl errors, duplicate metadata, slow page speed, and weak backlink authority are the kinds of hidden SEO issues that quietly suppress your rankings and cost you leads.\n\nAn SEO audit is a process of systematically evaluating your website to identify exactly what is working, what is broken, and what needs to improve. At Daiki Media, we use a data-backed SEO audit process, advanced audit tools, and deep technical expertise to audit your website for SEO from the ground up. Whether you need a free SEO audit to get started or a full technical SEO audit with a prioritised audit report, we deliver the SEO insights that translate directly into measurable growth.\n\nA thorough SEO audit ensures your site is structurally sound, strategically aligned, and consistently competitive. Our approach to SEO is performance-driven, transparent, and built on proven frameworks that help our clients scale faster.",
         "ctaButton": "Book a Free SEO Audit",
         "link": "https://api.whatsapp.com/send?phone=601114850067"
@@ -2003,7 +2043,7 @@
             "startingInvestment": "Custom Quote"
           }
         ],
-        "closingContent": "A free SEO audit tool can give you a starting SEO score and flag a handful of critical errors. But a comprehensive SEO audit conducted by a specialist delivers the depth of analysis, expert interpretation, and strategic roadmap that tools alone cannot produce. Daiki Media's SEO audit services are designed to offer comprehensive SEO coverage at every investment level, with transparent reporting and no hidden fees.\n\nCitation 2: HubSpot, 'State of Marketing Report', 2024",
+        "closingContent": "A free SEO audit tool can give you a starting SEO score and flag a handful of critical errors. But a comprehensive SEO audit conducted by a specialist delivers the depth of analysis, expert interpretation, and strategic roadmap that tools alone cannot produce. Daiki Media's SEO audit services are designed to offer comprehensive SEO coverage at every investment level, with transparent reporting and no hidden fees.",
         "ctaButton": "Get a Custom Growth Plan",
         "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
       },
@@ -2172,16 +2212,36 @@
       },
       "additionalInfo": {
         "title": "Why Choose Daiki Media for Your SEO Audit",
-        "description": "With 28+ years of experience, 500+ digital marketing experts, and a proven track record of delivering measurable results, Daiki Media is the trusted partner for businesses seeking comprehensive SEO audit services.",
+        "description": "With 10+ years of experience, 500+ digital marketing experts, and a proven track record of delivering measurable results, Daiki Media is the trusted partner for businesses seeking comprehensive SEO audit services.",
         "ctaButton": "Contact Us to Get Started",
         "link": "https://api.whatsapp.com/send?phone=601114850067"
-      }
+      },
+      "membersCounterSection": {
+        "title": "10+ Years Delivering SEO Audit and Technical SEO Results",
+        "metrics": [
+          {
+            "number": 93,
+            "suffix": "%",
+            "label": "Client Satisfaction Score"
+          },
+          {
+            "number": 500,
+            "suffix": "+",
+            "label": "SEO Audits Completed"
+          }
+        ]
+      },
+      "pricingSection": {
+        "hide": true
+      },
+      "breadcrumbCategory": "SEO Services",
+      "breadcrumbCategoryUrl": "/seo-services"
     },
     {
       "id": 7,
       "slug": "generative-engine-optimization",
-      "metaTitle": "Expert Generative Engine Optimization (GEO) Services for AI Search, Generative Engines, and SEO Visibility | Daiki Media",
-      "metaDescription": "GEO is the future of search visibility. Daiki Media's generative engine optimization services help brands get cited by ChatGPT, Gemini, Perplexity, and Claude. Outperform traditional SEO with proven GEO strategies for every generative AI platform.",
+      "metaTitle": "Generative Engine Optimization Services | GEO Agency | Daiki Media",
+      "metaDescription": "Improve visibility in ChatGPT, Gemini, Perplexity, Claude, and Google AI results with Daiki Media generative engine optimization services for AI search visibility.",
       "title": "Generative Engine Optimization (GEO)",
       "subTitle": "Unlock Your Business Potential with Generative Engine Optimization (GEO)",
       "canonicalUrl": "https://www.daikimedia.com/generative-engine-optimization",
@@ -2406,7 +2466,7 @@
             "investment": "Custom Quote"
           }
         ],
-        "closingContent": "GEO investment compounds differently from traditional seo. Because ai models draw heavily on training data and authoritative source signals that build over time, the brands that start building geo-optimised content now will have a growing citation advantage over competitors who delay. A comprehensive geo programme creates content assets and authority signals that continue to generate ai visibility returns long after the initial optimisation work is complete.\n\nCitation 2: HubSpot, 'The State of AI in Marketing and Search Optimization', 2024",
+        "closingContent": "GEO investment compounds differently from traditional seo. Because ai models draw heavily on training data and authoritative source signals that build over time, the brands that start building geo-optimised content now will have a growing citation advantage over competitors who delay. A comprehensive geo programme creates content assets and authority signals that continue to generate ai visibility returns long after the initial optimisation work is complete.",
         "ctaButton": "Get a Custom GEO Quote from Daiki Media and Start Building Your AI Visibility Today",
         "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
       },
@@ -2587,7 +2647,27 @@
         "description": "The future of search is AI-driven, and businesses that adopt Generative Engine Optimization early will lead the charge. Whether you're aiming to increase visibility on Copilot or expand your reach on platforms like ChatGPT, our team of experts is ready to optimize your search strategy.",
         "ctaButton": "Contact Us to Explore GEO Services",
         "link": "https://api.whatsapp.com/send?phone=601114850067"
-      }
+      },
+      "membersCounterSection": {
+        "title": "10+ Years Driving Search Visibility for Brands",
+        "metrics": [
+          {
+            "number": 98,
+            "suffix": "%",
+            "label": "Client Satisfaction Rate"
+          },
+          {
+            "number": 100,
+            "suffix": "+",
+            "label": "AI Search Visibility Audits Delivered"
+          }
+        ]
+      },
+      "pricingSection": {
+        "hide": true
+      },
+      "breadcrumbCategory": "SEO Services",
+      "breadcrumbCategoryUrl": "/seo-services"
     },
     {
       "id": 8,
@@ -5314,8 +5394,8 @@
     {
       "id": 14,
       "slug": "ecommerce-seo-strategies",
-      "metaTitle": "E-Commerce SEO Agency in Malaysia | Daiki Media",
-      "metaDescription": "Daiki Media is a leading e-commerce SEO agency in Malaysia. AI-driven SEO strategies for ecommerce brands to grow organic traffic and ranking. Start today.",
+      "metaTitle": "Ecommerce SEO Services Malaysia | Ecommerce SEO Agency | Daiki Media",
+      "metaDescription": "Grow product rankings, category visibility, and online sales with Daiki Media ecommerce SEO services in Malaysia for Shopify, WooCommerce, and custom ecommerce websites.",
       "title": "Ecommerce SEO Strategies",
       "subTitle": "Capture more online sales and drive revenue growth with Daiki Media's powerful ecommerce SEO services.",
       "metaKeywords": [
@@ -5330,8 +5410,8 @@
       ],
       "canonicalUrl": "https://www.daikimedia.com/ecommerce-seo-strategies",
       "heroSection": {
-        "title": "Best E-Commerce SEO Agency Malaysia",
-        "description": "Your e-commerce store could be generating significantly more organic traffic, more product page visibility, and more online sales every month. If your products are not appearing on page one of Google when shoppers in Malaysia search for what you sell, you are giving that revenue to competitors whose ecommerce SEO is better than yours. E-commerce SEO is not a minor optimisation exercise. It is the single highest-ROI digital marketing investment an online store can make for sustained, compounding revenue growth.\n\nDaiki Media is a specialist e-commerce seo agency serving ecommerce brands across Malaysia with AI-driven SEO strategies, technical SEO expertise, and a data-driven approach to seo that consistently improves search engine ranking, organic traffic, and online sales. As a leading seo agency in malaysia, we combine the latest seo tools, AI capabilities, and deep e-commerce platform expertise to build the kind of strong seo foundation that drives long-term growth for every online store we partner with.\n\nThis page covers what ecommerce seo services Daiki Media provides, how our AI-driven seo process works, what the best seo agencies in malaysia do differently, and how to choose the right seo partner for your e-commerce business in Malaysia. Whether you run a Shopify store, a WooCommerce site, or a custom e-commerce platform, Daiki Media builds the targeted seo strategy that drives traffic to your ecommerce store from the search engines your customers use every day.",
+        "title": "Ecommerce SEO Services Malaysia",
+        "description": "Your ecommerce store could be generating significantly more organic traffic, more product page visibility, and more online sales every month. If your products are not appearing on page one of Google when shoppers in Malaysia search for what you sell, you are giving that revenue to competitors whose ecommerce SEO is better than yours. Ecommerce SEO is not a minor optimisation exercise. It is the single highest-ROI digital marketing investment an online store can make for sustained, compounding revenue growth.\n\nDaiki Media is a specialist ecommerce seo agency serving ecommerce brands across Malaysia with AI-driven SEO strategies, technical SEO expertise, and a data-driven approach to seo that consistently improves search engine ranking, organic traffic, and online sales. As a leading seo agency in malaysia, we combine the latest seo tools, AI capabilities, and deep ecommerce platform expertise to build the kind of strong seo foundation that drives long-term growth for every online store we partner with.\n\nThis page covers what ecommerce seo services Daiki Media provides, how our AI-driven seo process works, what the best seo agencies in malaysia do differently, and how to choose the right seo partner for your ecommerce business in Malaysia. Whether you run a Shopify store, a WooCommerce site, or a custom ecommerce platform, Daiki Media builds the targeted seo strategy that drives traffic to your ecommerce store from the search engines your customers use every day.",
         "ctaButton": "Get Started Today",
         "link": "https://api.whatsapp.com/send?phone=601114850067"
       },
@@ -5359,8 +5439,8 @@
         },
         {
           "id": 5,
-          "title": "Local SEO for E-Commerce",
-          "description": "Service Type: Local SEO for E-Commerce | Platforms: Google Business Profile, Local Directories | Timeline: 4-8 weeks | Results Expectation: Local visibility and in-store traffic uplift | Pricing Model: Retainer"
+          "title": "Local SEO for Ecommerce",
+          "description": "Service Type: Local SEO for Ecommerce | Platforms: Google Business Profile, Local Directories | Timeline: 4-8 weeks | Results Expectation: Local visibility and in-store traffic uplift | Pricing Model: Retainer"
         },
         {
           "id": 6,
@@ -5383,14 +5463,14 @@
         "link": "https://api.whatsapp.com/send?phone=601114850067"
       },
       "whatIsEcommerceSEOSection": {
-        "title": "What Is E-Commerce SEO in Malaysia",
-        "content": "E-commerce SEO is the discipline of optimising an online store so that its product and category pages rank as highly as possible in search engine results for the transactional keywords that drive purchase intent. For e-commerce businesses in Malaysia, seo helps connect your online store with the shoppers who are actively searching for your products on search engines like google every day. Unlike Google Ads, which requires continuous ad spend to generate visibility, effective seo builds organic traffic that compounds over time and generates revenue without a direct cost per click.\n\nThe seo process for an e-commerce website is meaningfully more complex than seo for a standard service or information website. A large ecommerce site may have thousands of product pages, dozens of category structures, multiple filter combinations that create duplicate content risks, and a technical architecture that can either facilitate or obstruct search engine crawling at scale. Seo for ecommerce therefore requires specialist expertise in both search engine optimisation fundamentals and the specific technical challenges of e-commerce platform architecture.\n\nE-commerce SEO in malaysia also operates within a competitive and rapidly evolving search landscape. Ecommerce brands across Malaysia are increasingly investing in SEO as a primary digital marketing channel, and the search engine rankings for high-value product keywords in sectors like fashion, electronics, beauty, and home goods are becoming progressively more contested. The seo companies that deliver results in this environment are those that combine technical precision, AI-augmented content strategy, and sustained link building into a unified e-commerce seo approach that outperforms single-tactic competitors.\n\nSeo and ai are increasingly inseparable in modern e-commerce SEO strategy. AI tools now power keyword clustering, content brief generation, technical audit automation, and rank forecasting across large e-commerce sites. The seo agency in malaysia that leverages AI most effectively is the one that can scale high-quality SEO work across thousands of product pages without sacrificing the precision and strategic alignment that drives real ranking improvements. Daiki Media integrates AI into every dimension of our e-commerce SEO service as standard.",
+        "title": "What Is Ecommerce SEO in Malaysia",
+        "content": "Ecommerce SEO is the discipline of optimising an online store so that its product and category pages rank as highly as possible in search engine results for the transactional keywords that drive purchase intent. For ecommerce businesses in Malaysia, seo helps connect your online store with the shoppers who are actively searching for your products on search engines like google every day. Unlike Google Ads, which requires continuous ad spend to generate visibility, effective seo builds organic traffic that compounds over time and generates revenue without a direct cost per click.\n\nThe seo process for an ecommerce website is meaningfully more complex than seo for a standard service or information website. A large ecommerce site may have thousands of product pages, dozens of category structures, multiple filter combinations that create duplicate content risks, and a technical architecture that can either facilitate or obstruct search engine crawling at scale. Seo for ecommerce therefore requires specialist expertise in both search engine optimisation fundamentals and the specific technical challenges of ecommerce platform architecture.\n\nEcommerce SEO in malaysia also operates within a competitive and rapidly evolving search landscape. Ecommerce brands across Malaysia are increasingly investing in SEO as a primary digital marketing channel, and the search engine rankings for high-value product keywords in sectors like fashion, electronics, beauty, and home goods are becoming progressively more contested. The seo companies that deliver results in this environment are those that combine technical precision, AI-augmented content strategy, and sustained link building into a unified ecommerce seo approach that outperforms single-tactic competitors.\n\nSeo and ai are increasingly inseparable in modern ecommerce SEO strategy. AI tools now power keyword clustering, content brief generation, technical audit automation, and rank forecasting across large ecommerce sites. The seo agency in malaysia that leverages AI most effectively is the one that can scale high-quality SEO work across thousands of product pages without sacrificing the precision and strategic alignment that drives real ranking improvements. Daiki Media integrates AI into every dimension of our ecommerce SEO service as standard.",
         "ctaButton": "Book a Call",
         "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
       },
       "tableOne": {
-        "title": "E-Commerce SEO vs Standard SEO",
-        "description": "Understanding the difference between e-commerce seo and standard seo is important for any online store owner evaluating seo services in malaysia. Many general seo companies apply a standard seo service framework to ecommerce sites without accounting for the structural, technical, and content-specific requirements of large-scale product catalogues. This is one of the most common reasons ecommerce sites in malaysia fail to achieve the ranking and organic traffic results that their investment should produce.",
+        "title": "Ecommerce SEO vs Standard SEO",
+        "description": "Understanding the difference between ecommerce seo and standard seo is important for any online store owner evaluating seo services in malaysia. Many general seo companies apply a standard seo service framework to ecommerce sites without accounting for the structural, technical, and content-specific requirements of large-scale product catalogues. This is one of the most common reasons ecommerce sites in malaysia fail to achieve the ranking and organic traffic results that their investment should produce.",
         "rows": [
           {
             "factor": "Page Volume",
@@ -5423,13 +5503,13 @@
             "ecommerceSEO": "Critical for product feed optimisation, keyword clustering, and demand forecasting"
           }
         ],
-        "closingContent": "The distinction matters in practical terms. An seo agency that specialises in service business websites will approach keyword research, content strategy, and technical seo differently from an agency specializing in ecommerce. Daiki Media is an ecommerce seo agency that applies e-commerce-specific seo strategies from day one, including product schema markup, category page optimisation, faceted navigation management, and AI-driven product content scaling. Our approach to seo is built specifically for the e-commerce environment, not adapted from a generic digital agency template.",
+        "closingContent": "The distinction matters in practical terms. An seo agency that specialises in service business websites will approach keyword research, content strategy, and technical seo differently from an agency specializing in ecommerce. Daiki Media is an ecommerce seo agency that applies ecommerce-specific seo strategies from day one, including product schema markup, category page optimisation, faceted navigation management, and AI-driven product content scaling. Our approach to seo is built specifically for the ecommerce environment, not adapted from a generic digital agency template.",
         "ctaButton": "Grow With Us",
         "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
       },
       "aiDrivenEcommerceSection": {
-        "title": "AI-Driven SEO for E-Commerce Stores",
-        "content": "AI seo is transforming how e-commerce SEO is planned, executed, and measured. For large online stores with hundreds or thousands of product pages, AI makes it possible to apply consistent, high-quality seo optimisation at a scale that manual processes cannot match. Daiki Media uses AI tools across every stage of our ecommerce seo process, from initial technical auditing and keyword clustering through to content brief generation, rank forecasting, and ongoing seo performance monitoring.\n\nAI-driven seo for e-commerce is particularly powerful in three areas where traditional seo work is most constrained by scale. The first is keyword architecture: AI tools can cluster thousands of transactional and informational keywords by intent and map them to the correct product or category pages in a fraction of the time that manual keyword research requires. The second is content optimisation: AI analyses the top-ranking competitor pages for each target keyword and generates data-driven briefs that guide product description and category page content to the quality standard search engines reward. The third is technical monitoring: AI-powered crawl tools continuously scan large ecommerce websites for new technical seo issues before they damage ranking.",
+        "title": "AI-Driven SEO for Ecommerce Stores",
+        "content": "AI seo is transforming how ecommerce SEO is planned, executed, and measured. For large online stores with hundreds or thousands of product pages, AI makes it possible to apply consistent, high-quality seo optimisation at a scale that manual processes cannot match. Daiki Media uses AI tools across every stage of our ecommerce seo process, from initial technical auditing and keyword clustering through to content brief generation, rank forecasting, and ongoing seo performance monitoring.\n\nAI-driven seo for ecommerce is particularly powerful in three areas where traditional seo work is most constrained by scale. The first is keyword architecture: AI tools can cluster thousands of transactional and informational keywords by intent and map them to the correct product or category pages in a fraction of the time that manual keyword research requires. The second is content optimisation: AI analyses the top-ranking competitor pages for each target keyword and generates data-driven briefs that guide product description and category page content to the quality standard search engines reward. The third is technical monitoring: AI-powered crawl tools continuously scan large ecommerce websites for new technical seo issues before they damage ranking.",
         "aiCapabilities": [
           {
             "aiCapability": "AI Keyword Clustering",
@@ -5439,7 +5519,7 @@
           {
             "aiCapability": "AI Content Optimisation",
             "whatItDoes": "Analyses top-ranking competitor pages and generates data-driven content briefs for product pages",
-            "businessImpact": "Consistent on-page SEO quality at scale across every e-commerce product category"
+            "businessImpact": "Consistent on-page SEO quality at scale across every ecommerce product category"
           },
           {
             "aiCapability": "AI Rank Forecasting",
@@ -5449,12 +5529,12 @@
           {
             "aiCapability": "AI Technical Auditing",
             "whatItDoes": "Automates crawl analysis, identifies indexation errors, and surfaces duplicate content at scale",
-            "businessImpact": "Faster technical SEO resolution across large e-commerce platform architectures"
+            "businessImpact": "Faster technical SEO resolution across large ecommerce platform architectures"
           },
           {
             "aiCapability": "AI Search Demand Analysis",
             "whatItDoes": "Monitors shifting search trends and keyword demand patterns in real time",
-            "businessImpact": "Keeps e-commerce SEO strategies aligned with how shoppers actually search in Malaysia"
+            "businessImpact": "Keeps ecommerce SEO strategies aligned with how shoppers actually search in Malaysia"
           }
         ],
         "closingContent": "The latest seo developments in ai are also reshaping how search engines like google evaluate ecommerce content quality. Google's AI-driven search features, including AI Overviews, are increasingly surfacing product information and buying guidance from ecommerce sites that demonstrate strong E-E-A-T signals. An ecommerce brand that invests in ai-driven content optimisation now is building the content authority that will position it favourably in both traditional search results and the growing AI search layer simultaneously.",
@@ -5462,8 +5542,8 @@
         "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
       },
       "tableTwo": {
-        "title": "E-Commerce SEO Ranking Factors",
-        "description": "Improving ranking for an e-commerce website requires a systematic understanding of the specific signals that search engines evaluate for product and category pages. Daiki Media's e-commerce seo solutions are built around these core ranking factors, with each component of our seo service directly mapped to its impact on search engine rankings for your target product keywords.",
+        "title": "Ecommerce SEO Ranking Factors",
+        "description": "Improving ranking for an ecommerce website requires a systematic understanding of the specific signals that search engines evaluate for product and category pages. Daiki Media's ecommerce seo solutions are built around these core ranking factors, with each component of our seo service directly mapped to its impact on search engine rankings for your target product keywords.",
         "rows": [
           {
             "rankingFactor": "Technical SEO Foundation",
@@ -5482,13 +5562,13 @@
           },
           {
             "rankingFactor": "Site Authority and Backlinks",
-            "whatItInvolves": "Domain authority built through quality links from relevant e-commerce and industry publications",
+            "whatItInvolves": "Domain authority built through quality links from relevant ecommerce and industry publications",
             "priorityLevel": "High — determines ability to rank for competitive product keywords"
           },
           {
             "rankingFactor": "User Experience Signals",
             "whatItInvolves": "Core Web Vitals, mobile usability, navigation structure, and checkout conversion path quality",
-            "priorityLevel": "Medium-High — confirmed Google ranking factor affecting all e-commerce pages"
+            "priorityLevel": "Medium-High — confirmed Google ranking factor affecting all ecommerce pages"
           },
           {
             "rankingFactor": "AI Content Quality Signals",
@@ -5496,38 +5576,38 @@
             "priorityLevel": "Growing — AI-driven SEO signals increasingly influence ranking in Malaysia and globally"
           }
         ],
-        "closingContent": "Every e-commerce website starts from a different seo foundation. Some online stores have strong technical seo but weak content depth. Others have well-written product pages but critical crawl issues preventing the search engine from indexing key products. Daiki Media's in-depth seo audit at the start of every engagement establishes your exact baseline across all six ranking factor dimensions and builds a prioritised seo roadmap that addresses the highest-impact issues first.",
+        "closingContent": "Every ecommerce website starts from a different seo foundation. Some online stores have strong technical seo but weak content depth. Others have well-written product pages but critical crawl issues preventing the search engine from indexing key products. Daiki Media's in-depth seo audit at the start of every engagement establishes your exact baseline across all six ranking factor dimensions and builds a prioritised seo roadmap that addresses the highest-impact issues first.",
         "ctaButton": "Book a Call",
         "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
       },
       "technicalSEOSection": {
         "title": "Technical SEO for Online Stores",
-        "content": "Technical seo is the seo foundation on which everything else rests. For ecommerce sites in malaysia, technical seo is especially critical because the structural complexity of large product catalogues creates specific challenges around crawlability, indexation, duplicate content, and site speed that do not exist in simpler website types. Without a sound technical seo foundation, every other seo effort, from keyword optimisation to link building, delivers a fraction of its potential impact.\n\nKey technical seo priorities for e-commerce websites include clean URL architecture for product and category pages, correct implementation of canonical tags to manage duplicate content created by faceted navigation and product variants, XML sitemap optimisation to ensure search engines discover and index new products promptly, structured data and schema markup on every product page to enable rich search result features, Core Web Vitals performance across mobile and desktop, and correctly configured robots.txt to prevent crawl budget waste on low-value parameterised URLs.\n\nDaiki Media uses google search console as a core technical seo monitoring tool for every ecommerce client, tracking index coverage, crawl errors, mobile usability, and Core Web Vitals performance in real time. Our technical seo team identifies and resolves the specific issues that are most commonly suppressing ecommerce ranking in malaysia, from product pages that are blocked by incorrect noindex directives to pagination structures that dilute category page authority across dozens of paginated URLs.\n\nE-commerce platforms each have their own technical seo characteristics and built-in seo features that require platform-specific expertise to manage effectively. Shopify, WooCommerce, Magento, and custom e-commerce platform architectures each present different default technical seo configurations that Daiki Media's seo team addresses with platform-specific best practices. Our development agency relationships also mean we can implement technical seo improvements directly at the code level when required, not just at the CMS setting level.",
+        "content": "Technical seo is the seo foundation on which everything else rests. For ecommerce sites in malaysia, technical seo is especially critical because the structural complexity of large product catalogues creates specific challenges around crawlability, indexation, duplicate content, and site speed that do not exist in simpler website types. Without a sound technical seo foundation, every other seo effort, from keyword optimisation to link building, delivers a fraction of its potential impact.\n\nKey technical seo priorities for ecommerce websites include clean URL architecture for product and category pages, correct implementation of canonical tags to manage duplicate content created by faceted navigation and product variants, XML sitemap optimisation to ensure search engines discover and index new products promptly, structured data and schema markup on every product page to enable rich search result features, Core Web Vitals performance across mobile and desktop, and correctly configured robots.txt to prevent crawl budget waste on low-value parameterised URLs.\n\nDaiki Media uses google search console as a core technical seo monitoring tool for every ecommerce client, tracking index coverage, crawl errors, mobile usability, and Core Web Vitals performance in real time. Our technical seo team identifies and resolves the specific issues that are most commonly suppressing ecommerce ranking in malaysia, from product pages that are blocked by incorrect noindex directives to pagination structures that dilute category page authority across dozens of paginated URLs.\n\nEcommerce platforms each have their own technical seo characteristics and built-in seo features that require platform-specific expertise to manage effectively. Shopify, WooCommerce, Magento, and custom ecommerce platform architectures each present different default technical seo configurations that Daiki Media's seo team addresses with platform-specific best practices. Our development agency relationships also mean we can implement technical seo improvements directly at the code level when required, not just at the CMS setting level.",
         "ctaButton": "Talk to Us",
         "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
       },
       "localSEOForEcommerceSection": {
-        "title": "Local SEO for E-Commerce Malaysia",
-        "content": "Local seo is an often-overlooked dimension of e-commerce seo for online stores in malaysia that also have physical retail locations or offer click-and-collect services. Ecommerce brands with a physical presence benefit significantly from local seo investment because local search intent in malaysia is high and increasing, with large numbers of shoppers using location-modified searches like 'buy headphones KL' or 'furniture store near me' to find products they want to see before purchasing.\n\nDaiki Media's local seo service for e-commerce brands in malaysia covers Google Business Profile optimisation, NAP consistency management across local directories, local keyword targeting in category and landing pages, and review acquisition strategies that build the local search authority needed to rank in the local pack for relevant product search queries. For ecommerce brands with multiple physical locations across malaysia, we manage local seo at scale across every location simultaneously.\n\nLocal seo and e-commerce seo work together most effectively when product pages, category pages, and location landing pages are all optimised for the geographic modifiers that malaysian shoppers use in their local search behaviour. Daiki Media integrates local keyword research into the broader e-commerce seo keyword strategy, ensuring that your online store captures both national product searches and the high-converting local intent queries that drive both online and in-store sales.",
+        "title": "Local SEO for Ecommerce Malaysia",
+        "content": "Local seo is an often-overlooked dimension of ecommerce seo for online stores in malaysia that also have physical retail locations or offer click-and-collect services. Ecommerce brands with a physical presence benefit significantly from local seo investment because local search intent in malaysia is high and increasing, with large numbers of shoppers using location-modified searches like 'buy headphones KL' or 'furniture store near me' to find products they want to see before purchasing.\n\nDaiki Media's local seo service for ecommerce brands in malaysia covers Google Business Profile optimisation, NAP consistency management across local directories, local keyword targeting in category and landing pages, and review acquisition strategies that build the local search authority needed to rank in the local pack for relevant product search queries. For ecommerce brands with multiple physical locations across malaysia, we manage local seo at scale across every location simultaneously.\n\nLocal seo and ecommerce seo work together most effectively when product pages, category pages, and location landing pages are all optimised for the geographic modifiers that malaysian shoppers use in their local search behaviour. Daiki Media integrates local keyword research into the broader ecommerce seo keyword strategy, ensuring that your online store captures both national product searches and the high-converting local intent queries that drive both online and in-store sales.",
         "ctaButton": "Grow With Us",
         "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
       },
       "ecommerceSEOStrategiesSection": {
-        "title": "E-Commerce SEO Strategies by Business Type",
-        "content": "The most effective e-commerce seo strategies are tailored to the specific business model, product catalogue size, and competitive landscape of each ecommerce brand. Daiki Media's seo team builds vertical-specific strategies that account for these differences, ensuring that the seo tactics most likely to drive ranking and organic traffic in your specific product category are prioritised from the outset.\n\nFashion and Apparel E-Commerce SEO\nFashion and apparel ecommerce sites in malaysia face specific seo challenges around seasonal keyword demand shifts, product variant duplication across size and colour combinations, and high-volume collection pages that require targeted seo strategies to rank competitively. Daiki Media builds fashion e-commerce seo solutions that manage variant canonicalisation, optimise collection page content for long-term keyword ranking, and align content marketing with seasonal search demand patterns.\n\nElectronics and Technology E-Commerce SEO\nElectronics ecommerce brands compete for some of the most contested product keywords in the Malaysian search landscape. Ranking for terms like 'best laptop Malaysia' or 'wireless earphones price' requires strong domain authority, comprehensive product comparison content, and schema markup that enables rich search results with prices and ratings. Our seo work for electronics brands focuses on building the authority and content depth needed to rank for high-competition product keywords at scale.\n\nHealth and Beauty E-Commerce SEO\nHealth and beauty ecommerce sites in malaysia must navigate E-E-A-T requirements that are particularly strict for product categories involving health claims. Daiki Media's seo strategies for health and beauty ecommerce brands prioritise content credibility, clear ingredient information, and author expertise signals that satisfy google's quality guidelines for health-adjacent product content. Our seo best practices for this category ensure that product pages rank sustainably without the risk of visibility penalties from algorithm updates.\n\nEnterprise E-Commerce SEO at Scale\nEnterprise seo for large ecommerce platforms in malaysia requires a fundamentally different operational approach from standard e-commerce seo. Managing ranking and visibility across tens of thousands of product pages, multiple brand categories, and complex multi-language or multi-region site architectures demands specialist enterprise seo expertise combined with AI tooling that can monitor, audit, and optimise at the scale enterprise ecommerce requires. Daiki Media's enterprise seo capability is built for this level of complexity and scale.",
+        "title": "Ecommerce SEO Strategies by Business Type",
+        "content": "The most effective ecommerce seo strategies are tailored to the specific business model, product catalogue size, and competitive landscape of each ecommerce brand. Daiki Media's seo team builds vertical-specific strategies that account for these differences, ensuring that the seo tactics most likely to drive ranking and organic traffic in your specific product category are prioritised from the outset.\n\nFashion and Apparel Ecommerce SEO\nFashion and apparel ecommerce sites in malaysia face specific seo challenges around seasonal keyword demand shifts, product variant duplication across size and colour combinations, and high-volume collection pages that require targeted seo strategies to rank competitively. Daiki Media builds fashion ecommerce seo solutions that manage variant canonicalisation, optimise collection page content for long-term keyword ranking, and align content marketing with seasonal search demand patterns.\n\nElectronics and Technology Ecommerce SEO\nElectronics ecommerce brands compete for some of the most contested product keywords in the Malaysian search landscape. Ranking for terms like 'best laptop Malaysia' or 'wireless earphones price' requires strong domain authority, comprehensive product comparison content, and schema markup that enables rich search results with prices and ratings. Our seo work for electronics brands focuses on building the authority and content depth needed to rank for high-competition product keywords at scale.\n\nHealth and Beauty Ecommerce SEO\nHealth and beauty ecommerce sites in malaysia must navigate E-E-A-T requirements that are particularly strict for product categories involving health claims. Daiki Media's seo strategies for health and beauty ecommerce brands prioritise content credibility, clear ingredient information, and author expertise signals that satisfy google's quality guidelines for health-adjacent product content. Our seo best practices for this category ensure that product pages rank sustainably without the risk of visibility penalties from algorithm updates.\n\nEnterprise Ecommerce SEO at Scale\nEnterprise seo for large ecommerce platforms in malaysia requires a fundamentally different operational approach from standard ecommerce seo. Managing ranking and visibility across tens of thousands of product pages, multiple brand categories, and complex multi-language or multi-region site architectures demands specialist enterprise seo expertise combined with AI tooling that can monitor, audit, and optimise at the scale enterprise ecommerce requires. Daiki Media's enterprise seo capability is built for this level of complexity and scale.",
         "ctaButton": "Start Your Campaign",
         "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
       },
       "bestSEOAgentsSection": {
         "title": "Best SEO Agencies in Malaysia",
-        "content": "Choosing the right seo agency in malaysia for your e-commerce business is one of the most consequential decisions your brand will make in digital marketing. The top seo agencies in malaysia differ significantly in their technical depth, e-commerce platform expertise, AI capability, and transparency. Many seo companies in malaysia offer attractive seo packages at low price points but lack the specialist ecommerce seo knowledge to address the specific technical and content challenges that determine whether a large online store ranks effectively.\n\nWhen evaluating the best seo agencies in malaysia for e-commerce, look for an agency that demonstrates verifiable results through case studies and measurable seo growth data from comparable ecommerce brands. Look for specialist e-commerce seo expertise, not a general digital agency that treats an online store the same as a service business website. Look for transparent reporting through google search console and dedicated seo performance dashboards that show your ranking movements, organic traffic trends, and technical seo health at all times.\n\nLeading seo agency in malaysia selection should also evaluate the AI tools and marketing strategies the agency uses. The seo companies that deliver the best long-term results for ecommerce brands in 2025 and beyond are those that have fully integrated AI into their seo process, from keyword research and content planning through to technical monitoring and rank forecasting. Daiki Media is a professional seo agency offering seo services for e-commerce in malaysia that combines specialist ecommerce expertise, AI-powered tooling, and complete transparency in everything we do.\n\nA good seo partner should also understand your broader marketing strategies. SEO does not operate in isolation from Google Ads, social media, or email marketing. The ecommerce brands in malaysia that achieve the strongest overall digital performance are those that integrate their seo strategy with their paid and owned marketing channels in a coherent digital strategy framework. Daiki Media's digital marketing agency capabilities mean your e-commerce seo is always aligned with your broader marketing investment.\n\nCitation 2: HubSpot, 'State of E-Commerce and SEO in Southeast Asia', 2024",
+        "content": "Choosing the right seo agency in malaysia for your ecommerce business is one of the most consequential decisions your brand will make in digital marketing. The top seo agencies in malaysia differ significantly in their technical depth, ecommerce platform expertise, AI capability, and transparency. Many seo companies in malaysia offer attractive seo packages at low price points but lack the specialist ecommerce seo knowledge to address the specific technical and content challenges that determine whether a large online store ranks effectively.\n\nWhen evaluating the best seo agencies in malaysia for ecommerce, look for an agency that demonstrates verifiable results through case studies and measurable seo growth data from comparable ecommerce brands. Look for specialist ecommerce seo expertise, not a general digital agency that treats an online store the same as a service business website. Look for transparent reporting through google search console and dedicated seo performance dashboards that show your ranking movements, organic traffic trends, and technical seo health at all times.\n\nLeading seo agency in malaysia selection should also evaluate the AI tools and marketing strategies the agency uses. The seo companies that deliver the best long-term results for ecommerce brands in 2025 and beyond are those that have fully integrated AI into their seo process, from keyword research and content planning through to technical monitoring and rank forecasting. Daiki Media is a professional seo agency offering seo services for ecommerce in malaysia that combines specialist ecommerce expertise, AI-powered tooling, and complete transparency in everything we do.\n\nA good seo partner should also understand your broader marketing strategies. SEO does not operate in isolation from Google Ads, social media, or email marketing. The ecommerce brands in malaysia that achieve the strongest overall digital performance are those that integrate their seo strategy with their paid and owned marketing channels in a coherent digital strategy framework. Daiki Media's digital marketing agency capabilities mean your ecommerce seo is always aligned with your broader marketing investment.",
         "ctaButton": "Book a Call",
         "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
       },
       "serviceProcess": [
         {
           "title": "Step 1: In-Depth SEO Audit",
-          "desc": "Every e-commerce seo engagement begins with a comprehensive technical and content audit of your ecommerce website. We use AI-powered crawl tools, google search console data, and manual expert review to identify every technical seo issue, keyword gap, and content optimisation opportunity across your product catalogue. The audit establishes your current seo performance baseline and prioritises the specific improvements that will deliver the greatest ranking impact."
+          "desc": "Every ecommerce seo engagement begins with a comprehensive technical and content audit of your ecommerce website. We use AI-powered crawl tools, google search console data, and manual expert review to identify every technical seo issue, keyword gap, and content optimisation opportunity across your product catalogue. The audit establishes your current seo performance baseline and prioritises the specific improvements that will deliver the greatest ranking impact."
         },
         {
           "title": "Step 2: Keyword Research and Mapping",
@@ -5543,7 +5623,7 @@
         },
         {
           "title": "Step 5: Link Building and Authority",
-          "desc": "We build the domain authority your ecommerce site needs to rank for competitive product keywords through targeted link building from Malaysian and international e-commerce and industry publications. Every link acquisition is evaluated for domain relevance, authority, and traffic quality before outreach begins. Long-term seo success in e-commerce requires sustained authority building, and our link building programme is designed to compound over time."
+          "desc": "We build the domain authority your ecommerce site needs to rank for competitive product keywords through targeted link building from Malaysian and international ecommerce and industry publications. Every link acquisition is evaluated for domain relevance, authority, and traffic quality before outreach begins. Long-term seo success in ecommerce requires sustained authority building, and our link building programme is designed to compound over time."
         },
         {
           "title": "Step 6: AI Content and Category Scaling",
@@ -5551,7 +5631,7 @@
         },
         {
           "title": "Step 7: Local SEO and Google Business",
-          "desc": "For e-commerce brands with physical locations in malaysia, we implement local seo optimisation across Google Business Profile, local directory citations, and location-specific landing pages. This local seo layer captures the high-converting local search intent that drives both online purchases and in-store visits from the Malaysian market."
+          "desc": "For ecommerce brands with physical locations in malaysia, we implement local seo optimisation across Google Business Profile, local directory citations, and location-specific landing pages. This local seo layer captures the high-converting local search intent that drives both online purchases and in-store visits from the Malaysian market."
         },
         {
           "title": "Step 8: Reporting and SEO Growth Tracking",
@@ -5559,29 +5639,29 @@
         }
       ],
       "tableThree": {
-        "title": "E-Commerce SEO Pricing Malaysia",
-        "description": "Daiki Media offers transparent e-commerce seo pricing across four service tiers. The cost of e-commerce seo depends on the size of your product catalogue, the competitive intensity of your target keyword landscape, and the technical complexity of your e-commerce platform. Every seo package includes a dedicated seo team, monthly reporting, and full visibility into the seo work being performed on your behalf.",
+        "title": "Ecommerce SEO Pricing Malaysia",
+        "description": "Daiki Media offers transparent ecommerce seo pricing across four service tiers. The cost of ecommerce seo depends on the size of your product catalogue, the competitive intensity of your target keyword landscape, and the technical complexity of your ecommerce platform. Every seo package includes a dedicated seo team, monthly reporting, and full visibility into the seo work being performed on your behalf.",
         "rows": [
           {
-            "package": "E-Commerce SEO Starter",
+            "package": "Ecommerce SEO Starter",
             "whatsIncluded": "Technical SEO audit, keyword research, on-page optimisation for up to 50 pages, monthly reporting",
-            "bestFor": "New e-commerce stores in Malaysia",
+            "bestFor": "New ecommerce stores in Malaysia",
             "investment": "Retainer"
           },
           {
-            "package": "E-Commerce SEO Growth",
+            "package": "Ecommerce SEO Growth",
             "whatsIncluded": "Full on-page SEO, category page strategy, AI-driven content, local SEO, link building",
             "bestFor": "Growing online stores scaling organically",
             "investment": "Retainer"
           },
           {
-            "package": "Enterprise E-Commerce SEO",
+            "package": "Enterprise Ecommerce SEO",
             "whatsIncluded": "Multi-category architecture, AI SEO tools, advanced technical SEO, custom reporting dashboard",
-            "bestFor": "Large e-commerce platforms in Malaysia",
+            "bestFor": "Large ecommerce platforms in Malaysia",
             "investment": "Retainer"
           },
           {
-            "package": "E-Commerce SEO + Google Ads",
+            "package": "Ecommerce SEO + Google Ads",
             "whatsIncluded": "Combined SEO and Google Ads paid search for full search visibility",
             "bestFor": "Stores needing immediate and long-term traffic",
             "investment": "Custom Quote"
@@ -5592,7 +5672,7 @@
         "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
       },
       "commonChallengesSection": {
-        "title": "Common E-Commerce SEO Challenges",
+        "title": "Common Ecommerce SEO Challenges",
         "description": "",
         "challenges": [
           {
@@ -5608,75 +5688,75 @@
             "solution": "Stalled organic traffic despite seo investment almost always indicates either a fundamental technical seo issue preventing proper indexation, a keyword strategy misaligned with actual search intent, or link building insufficient to compete in a highly authoritative keyword category. Daiki Media's seo improvements audit identifies the root cause and builds a restructured seo strategy that addresses the specific barriers to seo growth for your online store."
           },
           {
-            "challenge": "I do not know whether to prioritise SEO or Google Ads for my e-commerce growth.",
-            "solution": "Google Ads and SEO serve different but complementary roles in e-commerce growth. Google Ads delivers immediate visibility and revenue while seo builds compounding organic traffic that does not require ongoing ad spend. The best e-commerce businesses in malaysia run both in coordination, using google ads data to identify the highest-converting keywords for seo investment and using seo rankings to reduce reliance on paid traffic over time. Daiki Media advises on the optimal balance between google ads and organic seo based on your specific e-commerce goals and marketing budget."
+            "challenge": "I do not know whether to prioritise SEO or Google Ads for my ecommerce growth.",
+            "solution": "Google Ads and SEO serve different but complementary roles in ecommerce growth. Google Ads delivers immediate visibility and revenue while seo builds compounding organic traffic that does not require ongoing ad spend. The best ecommerce businesses in malaysia run both in coordination, using google ads data to identify the highest-converting keywords for seo investment and using seo rankings to reduce reliance on paid traffic over time. Daiki Media advises on the optimal balance between google ads and organic seo based on your specific ecommerce goals and marketing budget."
           }
         ],
         "ctaButton": "Start Your Campaign",
         "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
       },
-      "faqSectionHeading": "E-Commerce SEO FAQs Malaysia",
+      "faqSectionHeading": "Ecommerce SEO FAQs Malaysia",
       "faqSection": [
         {
           "id": 1,
-          "question": "What is e-commerce SEO and why does my online store need it?",
-          "answer": "E-commerce SEO is the process of optimising your online store's product and category pages to rank highly in search engine results for the transactional keywords that shoppers use when searching for products. SEO helps drive organic traffic to your ecommerce store without paying for every click, making it the highest-ROI long-term digital marketing investment for online stores. For e-commerce businesses in malaysia, ranking on the first page of google for your key product categories is the difference between consistent sales growth and invisible online presence."
+          "question": "What is ecommerce SEO and why does my online store need it?",
+          "answer": "Ecommerce SEO is the process of optimising your online store's product and category pages to rank highly in search engine results for the transactional keywords that shoppers use when searching for products. SEO helps drive organic traffic to your ecommerce store without paying for every click, making it the highest-ROI long-term digital marketing investment for online stores. For ecommerce businesses in malaysia, ranking on the first page of google for your key product categories is the difference between consistent sales growth and invisible online presence."
         },
         {
           "id": 2,
-          "question": "How is e-commerce SEO different from standard SEO?",
-          "answer": "E-commerce SEO differs from standard SEO in scale, technical complexity, and keyword intent focus. An ecommerce website may have thousands of product pages requiring individual optimisation, complex technical seo challenges around duplicate content and faceted navigation, and a predominantly transactional keyword landscape where every search represents direct purchase intent. Standard seo for service websites focuses on informational and commercial intent keywords with simpler technical architectures. Daiki Media applies e-commerce-specific seo strategies that address these unique requirements rather than adapting a generic digital agency template."
+          "question": "How is ecommerce SEO different from standard SEO?",
+          "answer": "Ecommerce SEO differs from standard SEO in scale, technical complexity, and keyword intent focus. An ecommerce website may have thousands of product pages requiring individual optimisation, complex technical seo challenges around duplicate content and faceted navigation, and a predominantly transactional keyword landscape where every search represents direct purchase intent. Standard seo for service websites focuses on informational and commercial intent keywords with simpler technical architectures. Daiki Media applies ecommerce-specific seo strategies that address these unique requirements rather than adapting a generic digital agency template."
         },
         {
           "id": 3,
-          "question": "How long does e-commerce SEO take to show results in Malaysia?",
-          "answer": "E-commerce seo in malaysia typically begins to show measurable ranking improvements within 60 to 90 days for lower-competition product and category keywords. More competitive product categories may require three to six months of sustained seo work to achieve significant first-page ranking positions. Technical seo fixes often produce the fastest early improvements as search engines begin crawling and indexing previously blocked or incorrectly configured product pages. Daiki Media provides monthly seo performance reporting from the first week of engagement so you can track progress continuously."
+          "question": "How long does ecommerce SEO take to show results in Malaysia?",
+          "answer": "Ecommerce seo in malaysia typically begins to show measurable ranking improvements within 60 to 90 days for lower-competition product and category keywords. More competitive product categories may require three to six months of sustained seo work to achieve significant first-page ranking positions. Technical seo fixes often produce the fastest early improvements as search engines begin crawling and indexing previously blocked or incorrectly configured product pages. Daiki Media provides monthly seo performance reporting from the first week of engagement so you can track progress continuously."
         },
         {
           "id": 4,
-          "question": "What SEO strategies does Daiki Media use for e-commerce?",
-          "answer": "Daiki Media's e-commerce seo strategies include technical seo auditing and implementation, AI-powered keyword research and content clustering, product and category page on-page optimisation, schema markup implementation, local seo for physical locations, targeted link building, AI-driven content production for large product catalogues, and ongoing google search console monitoring. Our approach to seo is data-driven and AI-augmented, ensuring every seo improvement is aligned to the search engine ranking factors that matter most for ecommerce in the current Malaysian digital landscape."
+          "question": "What SEO strategies does Daiki Media use for ecommerce?",
+          "answer": "Daiki Media's ecommerce seo strategies include technical seo auditing and implementation, AI-powered keyword research and content clustering, product and category page on-page optimisation, schema markup implementation, local seo for physical locations, targeted link building, AI-driven content production for large product catalogues, and ongoing google search console monitoring. Our approach to seo is data-driven and AI-augmented, ensuring every seo improvement is aligned to the search engine ranking factors that matter most for ecommerce in the current Malaysian digital landscape."
         },
         {
           "id": 5,
-          "question": "How does AI improve e-commerce SEO results?",
-          "answer": "AI improves e-commerce seo in several critical ways. AI keyword clustering tools can process thousands of product keywords and map them to the correct pages far faster than manual research allows. AI content optimisation tools analyse competitor pages and generate data-driven briefs for product descriptions and category content that consistently achieve stronger search engine rankings. AI technical auditing tools continuously monitor large ecommerce sites for new issues before they damage ranking. And AI rank forecasting tools help prioritise seo work on the keyword targets that will deliver the strongest organic traffic returns. Daiki Media integrates AI into every stage of the e-commerce seo process."
+          "question": "How does AI improve ecommerce SEO results?",
+          "answer": "AI improves ecommerce seo in several critical ways. AI keyword clustering tools can process thousands of product keywords and map them to the correct pages far faster than manual research allows. AI content optimisation tools analyse competitor pages and generate data-driven briefs for product descriptions and category content that consistently achieve stronger search engine rankings. AI technical auditing tools continuously monitor large ecommerce sites for new issues before they damage ranking. And AI rank forecasting tools help prioritise seo work on the keyword targets that will deliver the strongest organic traffic returns. Daiki Media integrates AI into every stage of the ecommerce seo process."
         },
         {
           "id": 6,
-          "question": "Which e-commerce platforms does Daiki Media support for SEO?",
-          "answer": "Daiki Media provides seo services for e-commerce across all major e-commerce platforms including Shopify, WooCommerce, Magento, BigCommerce, OpenCart, and custom-built ecommerce websites. Each e-commerce platform has distinct built-in seo features, technical limitations, and configuration requirements that our seo team addresses with platform-specific expertise. Whether your ecommerce site is built on a popular platform or a custom architecture, Daiki Media has the technical knowledge to implement effective e-commerce seo solutions that work within your platform's capabilities."
+          "question": "Which ecommerce platforms does Daiki Media support for SEO?",
+          "answer": "Daiki Media provides seo services for ecommerce across all major ecommerce platforms including Shopify, WooCommerce, Magento, BigCommerce, OpenCart, and custom-built ecommerce websites. Each ecommerce platform has distinct built-in seo features, technical limitations, and configuration requirements that our seo team addresses with platform-specific expertise. Whether your ecommerce site is built on a popular platform or a custom architecture, Daiki Media has the technical knowledge to implement effective ecommerce seo solutions that work within your platform's capabilities."
         },
         {
           "id": 7,
-          "question": "What is technical SEO for e-commerce and why is it important?",
-          "answer": "Technical seo for e-commerce covers the infrastructure layer of your online store that determines whether search engines can efficiently crawl, index, and rank your product and category pages. Key technical seo components for ecommerce include URL structure, canonical tags for duplicate content management, XML sitemaps, robots.txt configuration, schema markup, page speed, Core Web Vitals, and mobile usability. Without a sound technical seo foundation, all other seo work underperforms because search engines cannot reliably access and evaluate your product pages. Daiki Media treats technical seo as the non-negotiable starting point of every ecommerce seo engagement."
+          "question": "What is technical SEO for ecommerce and why is it important?",
+          "answer": "Technical seo for ecommerce covers the infrastructure layer of your online store that determines whether search engines can efficiently crawl, index, and rank your product and category pages. Key technical seo components for ecommerce include URL structure, canonical tags for duplicate content management, XML sitemaps, robots.txt configuration, schema markup, page speed, Core Web Vitals, and mobile usability. Without a sound technical seo foundation, all other seo work underperforms because search engines cannot reliably access and evaluate your product pages. Daiki Media treats technical seo as the non-negotiable starting point of every ecommerce seo engagement."
         },
         {
           "id": 8,
-          "question": "How does Daiki Media measure e-commerce SEO performance?",
-          "answer": "Daiki Media measures e-commerce seo performance across keyword ranking position, organic traffic volume, organic revenue attribution, technical seo health scores, and conversion rate from organic search. We use google search console, Semrush, Ahrefs, and AI analytics tools to track every dimension of your seo performance. Monthly reporting translates these metrics into clear business language: how much organic traffic growth has been achieved, which product keywords have improved in ranking, and how much revenue is directly attributable to organic search. Seo performance is always reported in terms that connect directly to your commercial business goals."
+          "question": "How does Daiki Media measure ecommerce SEO performance?",
+          "answer": "Daiki Media measures ecommerce seo performance across keyword ranking position, organic traffic volume, organic revenue attribution, technical seo health scores, and conversion rate from organic search. We use google search console, Semrush, Ahrefs, and AI analytics tools to track every dimension of your seo performance. Monthly reporting translates these metrics into clear business language: how much organic traffic growth has been achieved, which product keywords have improved in ranking, and how much revenue is directly attributable to organic search. Seo performance is always reported in terms that connect directly to your commercial business goals."
         },
         {
           "id": 9,
-          "question": "Should I use SEO or Google Ads for my e-commerce store in Malaysia?",
-          "answer": "The most effective e-commerce digital marketing strategy in malaysia uses both seo and google ads as complementary channels. Google ads provides immediate, controllable visibility for priority product keywords while seo builds compounding organic traffic that reduces reliance on paid spend over time. Many of the best seo agencies in malaysia recommend a combined approach where google ads data informs the highest-priority seo keyword targets and seo rankings progressively displace the need for paid visibility on established product categories. Daiki Media advises on the optimal balance based on your specific e-commerce stage, competitive landscape, and marketing budget."
+          "question": "Should I use SEO or Google Ads for my ecommerce store in Malaysia?",
+          "answer": "The most effective ecommerce digital marketing strategy in malaysia uses both seo and google ads as complementary channels. Google ads provides immediate, controllable visibility for priority product keywords while seo builds compounding organic traffic that reduces reliance on paid spend over time. Many of the best seo agencies in malaysia recommend a combined approach where google ads data informs the highest-priority seo keyword targets and seo rankings progressively displace the need for paid visibility on established product categories. Daiki Media advises on the optimal balance based on your specific ecommerce stage, competitive landscape, and marketing budget."
         },
         {
           "id": 10,
-          "question": "How do I choose the right SEO agency in Malaysia for my e-commerce store?",
-          "answer": "Choosing the right seo agency in malaysia for e-commerce requires evaluating specialist ecommerce seo expertise, not just general seo capability. Look for an agency that can demonstrate measurable seo growth results from comparable ecommerce brands, uses AI tools as a core component of their seo service, provides transparent reporting through google search console and dedicated performance dashboards, and understands the specific technical seo challenges of your e-commerce platform. Daiki Media is an expert seo agency offering seo services in malaysia specifically designed for ecommerce brands that want data-driven, AI-powered, and transparently reported seo results."
+          "question": "How do I choose the right SEO agency in Malaysia for my ecommerce store?",
+          "answer": "Choosing the right seo agency in malaysia for ecommerce requires evaluating specialist ecommerce seo expertise, not just general seo capability. Look for an agency that can demonstrate measurable seo growth results from comparable ecommerce brands, uses AI tools as a core component of their seo service, provides transparent reporting through google search console and dedicated performance dashboards, and understands the specific technical seo challenges of your ecommerce platform. Daiki Media is an expert seo agency offering seo services in malaysia specifically designed for ecommerce brands that want data-driven, AI-powered, and transparently reported seo results."
         }
       ],
       "conclusionSection": {
         "title": "Grow Your Online Store's Visibility",
-        "description": "Your ecommerce store deserves to rank for every product category where your customers are searching. E-commerce seo is the most powerful long-term growth investment available to online stores in malaysia, and Daiki Media is the e-commerce seo agency with the technical expertise, AI capability, and ecommerce-specific seo strategies to deliver results that compound over time.\n\nWhether you are a new ecommerce brand building your seo foundation or an established online store seeking the best seo agencies in malaysia to accelerate your organic traffic growth, Daiki Media has the data-driven digital agency capability and the ecommerce seo experience to make your products visible to every shopper searching on google in malaysia and beyond.",
+        "description": "Your ecommerce store deserves to rank for every product category where your customers are searching. Ecommerce seo is the most powerful long-term growth investment available to online stores in malaysia, and Daiki Media is the ecommerce seo agency with the technical expertise, AI capability, and ecommerce-specific seo strategies to deliver results that compound over time.\n\nWhether you are a new ecommerce brand building your seo foundation or an established online store seeking the best seo agencies in malaysia to accelerate your organic traffic growth, Daiki Media has the data-driven digital agency capability and the ecommerce seo experience to make your products visible to every shopper searching on google in malaysia and beyond.",
         "ctaButton": "Get Started Today",
         "link": "https://api.whatsapp.com/send?phone=601114850067"
       },
       "exploreServicesSection": {
         "title": "Explore More Daiki Media Services",
-        "description": "Combine your e-commerce SEO with Daiki Media's full performance marketing capabilities for maximum organic and paid growth.",
+        "description": "Combine your ecommerce SEO with Daiki Media's full performance marketing capabilities for maximum organic and paid growth.",
         "services": [
           {
             "name": "Full SEO Services and Organic Search Strategy",
@@ -5687,7 +5767,7 @@
             "link": "/local-seo-agency-malaysia"
           },
           {
-            "name": "PPC Management and Google Ads for E-Commerce",
+            "name": "PPC Management and Google Ads for Ecommerce",
             "link": "/ppc-management"
           },
           {
@@ -5768,7 +5848,27 @@
         "description": "At Daiki Media, we understand that every business is unique, which is why we provide highly personalized ecommerce SEO strategies designed to deliver tangible results. Whether you're looking to increase brand awareness or generate high-quality leads, our strategies are tailored to fit your goals.",
         "ctaButton": "Contact Us to Get Started",
         "link": "https://api.whatsapp.com/send?phone=601114850067"
-      }
+      },
+      "membersCounterSection": {
+        "title": "10+ Years Driving Ecommerce SEO Growth",
+        "metrics": [
+          {
+            "number": 93,
+            "suffix": "%",
+            "label": "Client Satisfaction Score"
+          },
+          {
+            "number": 100,
+            "suffix": "+",
+            "label": "Ecommerce SEO Campaigns Delivered"
+          }
+        ]
+      },
+      "pricingSection": {
+        "hide": true
+      },
+      "breadcrumbCategory": "SEO Services",
+      "breadcrumbCategoryUrl": "/seo-services"
     },
     {
       "id": 15,
@@ -8136,19 +8236,28 @@
           "id": 1,
           "title": "Website Copywriting",
           "description": "Engage visitors with clear, persuasive content that highlights your brand’s unique value proposition, ensuring they stay on your page longer and interact with your offerings.",
-          "keywords": ["website copywriting", "best digital agency copywriting"]
+          "keywords": [
+            "website copywriting",
+            "best digital agency copywriting"
+          ]
         },
         {
           "id": 2,
           "title": "SEO Copywriting",
           "description": "Boost your rankings with content optimized for search engines without compromising readability, making sure you’re seen by your target audience.",
-          "keywords": ["SEO-optimized content", "SEO copywriting services"]
+          "keywords": [
+            "SEO-optimized content",
+            "SEO copywriting services"
+          ]
         },
         {
           "id": 3,
           "title": "Product Descriptions",
           "description": "Transform your product pages into sales-generating assets with benefit-driven copy that not only informs but entices customers to make a purchase.",
-          "keywords": ["e-commerce copywriting", "product description writing"]
+          "keywords": [
+            "e-commerce copywriting",
+            "product description writing"
+          ]
         },
         {
           "id": 4,
@@ -8163,13 +8272,19 @@
           "id": 5,
           "title": "Blog & Article Writing",
           "description": "Establish your brand as an authority with informative, well-researched, and engaging blog posts that resonate with your audience and boost SEO.",
-          "keywords": ["blog writing services", "content marketing copywriting"]
+          "keywords": [
+            "blog writing services",
+            "content marketing copywriting"
+          ]
         },
         {
           "id": 6,
           "title": "Social Media Copy",
           "description": "Craft eye-catching and engaging social media posts that resonate with your audience, promoting brand awareness and encouraging social shares.",
-          "keywords": ["social media content", "social media writing services"]
+          "keywords": [
+            "social media content",
+            "social media writing services"
+          ]
         }
       ],
       "infoStatsSection": {
@@ -8303,14 +8418,17 @@
     {
       "id": 23,
       "slug": "localized-seo-for-igaming",
-      "metaKeywords": ["igaming seo", "igaming seo agency"],
+      "metaKeywords": [
+        "igaming seo",
+        "igaming seo agency"
+      ],
       "title": "Best iGaming SEO Strategies for Casino, Bet, and Affiliate Operators to Dominate Rankings",
       "subTitle": "Struggling with iGaming SEO? Daiki Media delivers proven igaming seo strategies for casino, bet, affiliate, and operator sites. Boost ranking, visibility, and conversion with localized SEO built for the igaming industry.",
-      "metaTitle": "iGaming SEO for Casinos & Betting Sites | Daiki Media",
-      "metaDescription": "Scale casino, betting, and affiliate sites with iGaming SEO. Improve rankings, traffic, and conversions with localized, compliant strategies.",
+      "metaTitle": "iGaming SEO Services for Casinos and Betting Sites | Daiki Media",
+      "metaDescription": "Grow casino, sportsbook, affiliate, and betting site visibility with Daiki Media iGaming SEO services covering technical SEO, localized SEO, content, schema, and authority building.",
       "canonicalUrl": "https://www.daikimedia.com/localized-seo-for-igaming",
       "heroSection": {
-        "title": "iGaming SEO That Drives Rankings & Revenue",
+        "title": "iGaming SEO Services for Casinos and Betting Sites",
         "description": "The world of igaming is one of the most competitive digital landscapes on the planet. Casino, bet, sports betting, and affiliate operators are all fighting for the same high-value keywords, often in multiple languages, across multiple regulated markets, under strict advertising rules that generic seo strategies simply cannot account for.\n\niGaming SEO is not standard search engine optimization. It requires a specialist understanding of regulatory compliance, localisation, schema markup, responsible gambling requirements, and the unique link building challenges that define the igaming industry. An igaming seo strategy that works for a UK-licensed online casino will not automatically transfer to a newly launched operator targeting the Latin American market.\n\nDaiki Media builds data-driven igaming seo strategies tailored to casino operators, sportsbooks, affiliate networks, and igaming sites across global markets. This igaming seo guide covers everything from localized seo and technical seo to content marketing and conversion optimisation, giving you a complete framework for sustainable ranking growth in the competitive igaming industry.",
         "ctaButton": "Book a Free iGaming SEO Call",
         "link": "https://api.whatsapp.com/send?phone=601114850067"
@@ -8396,7 +8514,7 @@
             "igamingSEO": "Strict advertising and responsible gambling disclaimers required"
           }
         ],
-        "closingContent": "The seo effectiveness of any igaming campaign depends on how well these factors are understood and addressed from the start. Daiki Media's approach to seo for online casinos and bet operators is built on this specialised foundation, not adapted from a generic seo playbook.\n\nCitation 1: Statista, 'Online Gambling Market Revenue Report', 2024",
+        "closingContent": "The seo effectiveness of any igaming campaign depends on how well these factors are understood and addressed from the start. Daiki Media's approach to seo for online casinos and bet operators is built on this specialised foundation, not adapted from a generic seo playbook.",
         "ctaButton": "Get a Custom iGaming SEO Plan",
         "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
       },
@@ -8573,7 +8691,7 @@
             "startingInvestment": "Custom Quote"
           }
         ],
-        "closingContent": "iGaming seo is a long-term investment. Competitive igaming keyword rankings take time to build and require sustained seo efforts across technical, content, and link building dimensions. Daiki Media's igaming seo packages are structured to deliver early wins through quick-fix technical seo and on-page seo optimisation, then compound those gains through sustained content marketing and link building over the following months. Every seo optimization decision is tied to your commercial targets, not arbitrary seo metrics.\n\nCitation 2: HubSpot, 'State of Marketing and SEO Report', 2024",
+        "closingContent": "iGaming seo is a long-term investment. Competitive igaming keyword rankings take time to build and require sustained seo efforts across technical, content, and link building dimensions. Daiki Media's igaming seo packages are structured to deliver early wins through quick-fix technical seo and on-page seo optimisation, then compound those gains through sustained content marketing and link building over the following months. Every seo optimization decision is tied to your commercial targets, not arbitrary seo metrics.",
         "ctaButton": "Get a Custom iGaming SEO Quote",
         "ctaLink": "https://api.whatsapp.com/send?phone=601114850067"
       },
@@ -8741,7 +8859,27 @@
         "description": "With deep expertise in the iGaming sector, a dedicated team of SEO specialists, and a proven track record of delivering ranking improvements for casino operators, sportsbooks, and affiliate sites, Daiki Media is the trusted partner for iGaming SEO success.",
         "ctaButton": "Contact Us to Get Started",
         "link": "https://api.whatsapp.com/send?phone=601114850067"
-      }
+      },
+      "membersCounterSection": {
+        "title": "10+ Years Driving iGaming SEO Results",
+        "metrics": [
+          {
+            "number": 97,
+            "suffix": "%",
+            "label": "Client Satisfaction Rate"
+          },
+          {
+            "number": 500,
+            "suffix": "+",
+            "label": "iGaming & Casino Marketing Projects"
+          }
+        ]
+      },
+      "pricingSection": {
+        "hide": true
+      },
+      "breadcrumbCategory": "SEO Services",
+      "breadcrumbCategoryUrl": "/seo-services"
     },
     {
       "id": 24,

@@ -14,7 +14,7 @@ const testimonials = [
   {
     name: "Lim Wei Han",
     title: "Marketing Manager (E-commerce Business)",
-    text: "Our website traffic has grown steadily since engaging SEO Agency Malaysia. Their AI-driven SEO strategy helped us appear not only on Google but also in AI search results. A great partner for sustainable growth.",
+    text: "Our website traffic has grown steadily since engaging Daiki Media. Their AI-driven SEO strategy helped us appear not only on Google but also in AI search results. A great partner for sustainable growth.",
   },
   {
     name: "Farah Azman",
@@ -24,7 +24,7 @@ const testimonials = [
   {
     name: "Tan Kok Leong",
     title: "Founder (Consulting Firm)",
-    text: "We were struggling to rank against larger competitors. SEO Agency Malaysia helped us build authority through strategic content and link building. Now we rank on Page 1 for several important keywords.",
+    text: "We were struggling to rank against larger competitors. Daiki Media helped us build authority through strategic content and link building. Now we rank on Page 1 for several important keywords.",
   },
   {
     name: "Siti Mariam",
@@ -39,7 +39,7 @@ const testimonials = [
   {
     name: "Chong Mei Ling",
     title: "Digital Marketing Lead (Education Sector)",
-    text: "SEO Agency Malaysia is ahead of the curve when it comes to AI optimisation. Thanks to their expertise, our brand is now visible on platforms like ChatGPT and Gemini, which gives us a real edge.",
+    text: "Daiki Media is ahead of the curve when it comes to AI optimisation. Thanks to their expertise, our brand is now visible on platforms like ChatGPT and Gemini, which gives us a real edge.",
   },
 ];
 

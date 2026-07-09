@@ -33,7 +33,7 @@ const WhyChooseSeo = () => {
         {/* LEFT COLUMN: Header and Image */}
         <div className="lg:w-2/5 w-full">
           <span className="text-[#1A1A1A] font-medium text-lg block mb-2 uppercase tracking-wide">
-            Looking for SEO Agency Malaysia
+            Why Businesses Choose Daiki Media
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-[#1A1A1A] leading-tight mb-6">
             Why Choose <br /> Daikimedia

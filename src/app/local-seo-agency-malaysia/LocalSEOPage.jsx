@@ -30,6 +30,8 @@ import {
   Zap,
   BarChart2,
 } from "lucide-react";
+import FAQSchema from "@/components/schema/FAQSchema";
+import StaticBreadcrumbSchema from "@/components/schema/StaticBreadcrumbSchema";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -271,7 +273,7 @@ function FaqItem({ q, a, index }) {
         className="flex w-full items-start justify-between gap-4 py-5 text-left"
         aria-expanded={open}
       >
-        <span className="text-[15px] font-semibold text-gray-900">{q}</span>
+        <h3 className="text-[15px] font-semibold text-gray-900">{q}</h3>
         <ChevronDown
           size={18}
           className={`mt-0.5 flex-shrink-0 text-red-500 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
@@ -293,6 +295,14 @@ function FaqItem({ q, a, index }) {
 export default function LocalSEOPage() {
   return (
     <main className="bg-white text-gray-900">
+      <FAQSchema faqs={FAQS.map(({ q, a }) => ({ question: q, answer: a }))} />
+      <StaticBreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.daikimedia.com" },
+          { name: "SEO Services", url: "https://www.daikimedia.com/seo-services" },
+          { name: "Local SEO Services Malaysia", url: "https://www.daikimedia.com/local-seo-agency-malaysia" },
+        ]}
+      />
 
       {/* ── BREADCRUMB ──────────────────────────────────────────────────────── */}
       <div className="border-b border-gray-100 bg-gray-50">
@@ -300,11 +310,21 @@ export default function LocalSEOPage() {
           <ol className="flex flex-wrap items-center gap-1.5 text-xs text-gray-500">
             <li><Link href="/" className="hover:text-red-500 transition-colors">Home</Link></li>
             <li><ChevronRight size={12} /></li>
-            <li><Link href="/#seo-services" className="hover:text-red-500 transition-colors">SEO Services</Link></li>
+            <li><Link href="/seo-services" className="hover:text-red-500 transition-colors">SEO Services</Link></li>
             <li><ChevronRight size={12} /></li>
             <li className="text-red-500 font-medium">Local SEO Services Malaysia</li>
           </ol>
         </div>
+      </div>
+
+      {/* ── INTERNAL LINK: full local SEO services page ─────────────────────── */}
+      <div className="mx-auto max-w-7xl px-4 pt-6 sm:px-6">
+        <p className="text-sm text-gray-500">
+          Explore our full{" "}
+          <Link href="/local-seo-services" className="font-semibold text-red-500 hover:text-red-600 transition-colors">
+            Local SEO Services
+          </Link>
+        </p>
       </div>
 
       {/* ── HERO ────────────────────────────────────────────────────────────── */}

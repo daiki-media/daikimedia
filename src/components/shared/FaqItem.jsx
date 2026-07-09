@@ -8,7 +8,7 @@ const FaqItem = ({ question, answer, isOpen, onClick }) => {
       <button
         className="faq-header flex w-full cursor-pointer items-center rounded border border-dashed border-gray-100 bg-white px-5 py-3 dark:border-borderColor-dark  dark:bg-dark-200 max-md:gap-x-2.5"
         onClick={onClick}>
-        <span className="text-left text-xl font-semibold">Q. {question}</span>
+        <h3 className="text-left text-xl font-semibold">{question}</h3>
         {isOpen ? (
           <span className="ml-auto shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">

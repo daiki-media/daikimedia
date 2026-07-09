@@ -1,10 +1,26 @@
 import seoFirmsData from "@/data/seoFirmsData";
 import DynamicCompanyListing from "@/components/top-agencies/seo-firms-section";
 import Footer from "@/components/footer/Footer";
+import StaticBreadcrumbSchema from "@/components/schema/StaticBreadcrumbSchema";
+
+export const metadata = {
+  title: "Best SEO Agencies in Malaysia | SEO Company Comparison | Daiki Media",
+  description:
+    "Compare leading SEO agencies in Malaysia by services, strengths, budget, and business fit. Use this guide to choose the right SEO partner for your growth goals.",
+  alternates: {
+    canonical: "https://www.daikimedia.com/top-seo-agencies",
+  },
+};
 
 const SeoPage = () => {
   return (
     <>
+      <StaticBreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://www.daikimedia.com" },
+          { name: "Best SEO Agencies in Malaysia", url: "https://www.daikimedia.com/top-seo-agencies" },
+        ]}
+      />
       <DynamicCompanyListing
         data={seoFirmsData}
         title="Best SEO Agencies in Malaysia"

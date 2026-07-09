@@ -58,7 +58,7 @@ export default function Carousel() {
     >
       <div className="relative max-w-5xl mx-auto text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-extrabold text-[#111827] tracking-tight mb-6">
-          Advance SEO Solutions — <br /> Growth Strategies by Daikimedia
+          Advanced SEO Services for Sustainable Search Growth
         </h2>
         <p className="text-gray-500 text-lg max-w-3xl mx-auto leading-relaxed">
           We help businesses build steady organic growth that stays consistent through search changes and Google updates, using SEO strategies shaped for Malaysia's competitive market and evolving AI-driven search results.

@@ -20,9 +20,7 @@ export default function HeroSeoService() {
           <div className="max-w-xl text-center lg:text-left">
             
             <h1 className="mb-6 leading-snug text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl xl:text-6xl mt-20">
-              TOP Rated SEO Agency 
-               in Malaysia for AEO,
-              GEO and AI Search Strategies
+              SEO Services Malaysia for Google and AI Search
             </h1>
 
             <p className="mb-8 text-base text-gray-600 sm:text-lg">

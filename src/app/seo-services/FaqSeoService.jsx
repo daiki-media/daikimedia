@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
+import FAQSchema from '@/components/schema/FAQSchema';
 
 const faqData = [
   {
@@ -54,7 +55,9 @@ export default function FaqSeoService() {
   };
 
   return (
-    <section className="w-full bg-white py-20 px-6">
+    <>
+      <FAQSchema faqs={faqData} />
+      <section className="w-full bg-white py-20 px-6">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-12">
         
         {/* LEFT CONTENT: TEXT & ACCORDION */}
@@ -73,9 +76,9 @@ export default function FaqSeoService() {
                   onClick={() => toggleAccordion(index)}
                   className="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50 transition-colors"
                 >
-                  <span className="text-[17px] font-semibold text-[#1a1a1a]">
+                  <h3 className="text-[17px] font-semibold text-[#1a1a1a]">
                     {item.question}
-                  </span>
+                  </h3>
                   <ChevronRight 
                     className={`w-5 h-5 text-gray-600 transition-transform duration-300 ${openIndex === index ? 'rotate-90' : ''}`} 
                   />
@@ -108,5 +111,6 @@ export default function FaqSeoService() {
 
       </div>
     </section>
+    </>
   );
 }
