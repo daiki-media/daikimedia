@@ -161,3 +161,113 @@ export function markFaqQuestions(html) {
     }
   );
 }
+
+/**
+ * Table polish for CMS (Quill/TinyMCE) content. Two very different shapes come
+ * out of the editor and they need opposite treatment:
+ *
+ *  1. Real data tables (2+ columns) - wrapped in a scroll container (desktop
+ *     safety net for very wide tables), the first row promoted to header cells
+ *     when the table has no <th>, and every body cell tagged with the header
+ *     text of its column via data-label. That label is what lets the table
+ *     re-flow into one card per row on mobile with no horizontal scrolling.
+ *  2. Single-column tables - the editor's "highlight box": one cell holding a
+ *     heading, the next holding a list. These get flagged as layout boxes so
+ *     they render as a callout card, never with a header band.
+ *
+ * Idempotent: tables already processed are left untouched.
+ */
+export function wrapTables(html) {
+  if (!html) return "";
+
+  return html.replace(/<table\b[\s\S]*?<\/table>/gi, (tableHtml, offset, full) => {
+    // Skip if this table was already processed.
+    const before = full.slice(Math.max(0, offset - 260), offset);
+    if (/blog-table-scroll[^>]*>\s*$/i.test(before)) return tableHtml;
+    if (/data-layout-box/i.test(tableHtml)) return tableHtml;
+
+    const columnCount = countColumns(tableHtml);
+
+    // 1-column tables are layout/highlight boxes, not data tables.
+    if (columnCount < 2) {
+      return tableHtml.replace(/<table\b/i, '<table data-layout-box="true"');
+    }
+
+    let table = tableHtml;
+
+    // First row -> header row when the table has no header cells at all.
+    if (!/<th[\s>]/i.test(table)) {
+      table = table.replace(/<tr\b[^>]*>[\s\S]*?<\/tr>/i, (row) =>
+        row
+          .replace(/<tr\b([^>]*)>/i, '<tr$1 data-table-head="true">')
+          .replace(/<td\b/gi, "<th")
+          .replace(/<\/td>/gi, "</th>")
+      );
+    }
+
+    table = addCellLabels(table);
+
+    return (
+      '<div class="blog-table-scroll" role="region" aria-label="Table" tabindex="0">' +
+      table +
+      "</div>"
+    );
+  });
+}
+
+/**
+ * Column count of a CMS table: <colgroup> when present, otherwise the number of
+ * cells in the first row.
+ */
+function countColumns(tableHtml) {
+  const colgroup = tableHtml.match(/<colgroup[\s\S]*?<\/colgroup>/i);
+  if (colgroup) {
+    const cols = (colgroup[0].match(/<col\b/gi) || []).length;
+    if (cols) return cols;
+  }
+  const firstRow = tableHtml.match(/<tr\b[^>]*>[\s\S]*?<\/tr>/i);
+  if (firstRow) {
+    const cells = (firstRow[0].match(/<t[dh]\b/gi) || []).length;
+    if (cells) return cells;
+  }
+  return 1;
+}
+
+/** Plain text of a cell, safe to place inside a double-quoted attribute. */
+function cellLabel(cellHtml) {
+  const text = cellHtml
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+/**
+ * Copy each column's header text onto the body cells of that column as
+ * data-label, so CSS can print it above the value in the mobile card layout.
+ */
+function addCellLabels(tableHtml) {
+  const headerRow = (tableHtml.match(/<tr\b[^>]*>[\s\S]*?<\/tr>/gi) || []).find((row) =>
+    /<th[\s>]/i.test(row)
+  );
+  if (!headerRow) return tableHtml;
+
+  const labels = (headerRow.match(/<th\b[^>]*>[\s\S]*?<\/th>/gi) || []).map(cellLabel);
+  if (!labels.length) return tableHtml;
+
+  return tableHtml.replace(/<tr\b[^>]*>[\s\S]*?<\/tr>/gi, (row) => {
+    if (/<th[\s>]/i.test(row)) return row;
+    let cellIndex = 0;
+    return row.replace(/<td\b([^>]*)>/gi, (cellTag, attrs) => {
+      const label = labels[cellIndex];
+      cellIndex += 1;
+      if (!label || /data-label\s*=/i.test(attrs)) return cellTag;
+      return `<td${attrs} data-label="${label}">`;
+    });
+  });
+}

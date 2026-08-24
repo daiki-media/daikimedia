@@ -220,43 +220,225 @@
   font-style: italic;
 }
 
-/* ---- Tables ---- */
+/* ---- Tables ----
+   Palette: maroon header band (#8a2b36), warm off-white rows, hairline dividers.
+   Two shapes: real data tables (scroll card) and single-column layout boxes
+   (callout card) - see wrapTables in utils/contentCleaner.
+   ------------------------------------------------------------------------- */
+
+/* Scroll viewport injected around every data table. It owns the frame -
+   radius / border / shadow / spacing - so the table can scroll inside it. */
+.body :global(.blog-table-scroll) {
+  margin: 2.2em 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  border: 1px solid #f0e7e7;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 14px 34px -22px rgba(84, 24, 32, 0.35);
+  scrollbar-width: thin;
+  scrollbar-color: #d8c6c8 transparent;
+}
+
+.body :global(.blog-table-scroll):focus-visible {
+  outline: 2px solid #8a2b36;
+  outline-offset: 3px;
+}
+
+.body :global(.blog-table-scroll)::-webkit-scrollbar {
+  height: 6px;
+}
+
+.body :global(.blog-table-scroll)::-webkit-scrollbar-track {
+  background: #f7f1f1;
+}
+
+.body :global(.blog-table-scroll)::-webkit-scrollbar-thumb {
+  background: #d8c6c8;
+  border-radius: 999px;
+}
+
 .body table {
   width: 100%;
   margin: 2.2em 0;
   border-collapse: separate;
   border-spacing: 0;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 10px 28px -14px rgba(0, 0, 0, 0.25);
   font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
   font-size: 0.95rem;
 }
 
-.body thead th,
-.body th {
-  background: #111111;
-  color: #ffffff;
-  font-weight: 600;
-  text-align: left;
-  padding: 0.85rem 1.1rem;
-  border: none;
+/* Neutralise editor-authored widths that would overflow the article column */
+.body table[width],
+.body table[style*="width"] {
+  width: 100% !important;
 }
 
+.body :global(.blog-table-scroll) > table {
+  margin: 0;
+  min-width: 100%;
+  /* the wrapper clips the rounded frame; a scrollable overflow on the table
+     itself would break position:sticky for the pinned first column */
+  overflow: visible;
+  border-radius: 0;
+}
+
+/* ---- Header band ---- */
+.body thead th,
+.body th {
+  background: #8a2b36;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: left;
+  padding: 1rem 1.15rem;
+  border: none;
+  vertical-align: middle;
+  letter-spacing: 0.01em;
+}
+
+/* Editor content inside a header cell (headings, strong, spans, links) must
+   never keep its own dark colour - that is how a header band goes unreadable. */
+.body th *,
+.body thead th * {
+  color: inherit !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.body th h2::after,
+.body th h3::after {
+  display: none;
+}
+
+/* ---- Body cells ---- */
 .body td {
-  padding: 0.8rem 1.1rem;
-  border-top: 1px solid #ececec;
-  color: #374151;
+  padding: 0.95rem 1.15rem;
+  border-top: 1px solid #f0e7e7;
+  color: #4b5563;
   background: #ffffff;
+  vertical-align: top;
+}
+
+/* First column reads as the row label */
+.body :global(.blog-table-scroll) td:first-child {
+  font-weight: 600;
+  color: #1f2430;
+}
+
+/* CMS cells wrap their text in <p>; drop the article paragraph rhythm inside
+   cells so rows stay compact instead of ~3x taller than needed. */
+.body th p,
+.body td p {
+  margin: 0;
+  font-size: inherit;
+  line-height: 1.55;
+}
+
+.body th p + p,
+.body td p + p {
+  margin-top: 0.4em;
+}
+
+/* Lists inside cells: the table already provides the card, so drop the list
+   card chrome but keep the indent the bullet needs. */
+.body td ul,
+.body th ul {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: none;
+  border-radius: 0;
+}
+
+.body td ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.body td ul > li {
+  padding-left: 1.35rem;
+  margin-bottom: 0.45rem;
+}
+
+.body td ul > li:last-child {
+  margin-bottom: 0;
 }
 
 .body tbody tr:nth-child(even) td {
-  background: #fafafa;
+  background: #faf6f6;
+}
+
+/* When the first body row was promoted to a header row, shift the zebra so the
+   stripe still starts on the second data row. */
+.body tbody tr[data-table-head="true"] ~ tr:nth-child(even) td {
+  background: #ffffff;
+}
+
+.body tbody tr[data-table-head="true"] ~ tr:nth-child(odd) td {
+  background: #faf6f6;
 }
 
 .body tbody tr:hover td {
-  background: #fff0f2;
+  background: #fdf1f2;
   transition: background 0.18s ease;
+}
+
+/* ---- Single-column layout box (editor "highlight box") ----
+   A heading in the first cell, a list in the next. No header band, no zebra -
+   it renders as one soft callout card. */
+.body table[data-layout-box="true"] {
+  width: 100%;
+  margin: 2.2em 0;
+  font-family: inherit;
+  font-size: inherit;
+  border: 1px solid #f6e7e9;
+  border-radius: 18px;
+  background: #fffafa;
+  box-shadow: 0 14px 34px -24px rgba(138, 43, 54, 0.4);
+}
+
+.body table[data-layout-box="true"] td,
+.body table[data-layout-box="true"] tbody tr:nth-child(even) td,
+.body table[data-layout-box="true"] tbody tr:hover td {
+  background: transparent;
+  border-top: none;
+  padding: 0.3rem 1.75rem;
+  color: inherit;
+  font-weight: inherit;
+}
+
+.body table[data-layout-box="true"] tr:first-child td {
+  padding-top: 1.6rem;
+}
+
+.body table[data-layout-box="true"] tr:last-child td {
+  padding-bottom: 1.6rem;
+}
+
+.body table[data-layout-box="true"] td h2,
+.body table[data-layout-box="true"] td h3,
+.body table[data-layout-box="true"] td h4 {
+  margin: 0 0 0.35rem;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.body table[data-layout-box="true"] td h2::after {
+  display: none;
+}
+
+.body table[data-layout-box="true"] td p {
+  line-height: 1.75;
 }
 
 /* ---- Code ---- */
@@ -312,10 +494,138 @@
     font-size: 1.25rem;
   }
 
-  .body table {
+  /* Tables re-flow into one card per row - no horizontal scrolling. Each cell
+     prints its column header above the value (data-label, set by wrapTables). */
+  .body :global(.blog-table-scroll) {
+    margin: 1.8em 0;
+    overflow: visible;
+    border: none;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  .body :global(.blog-table-scroll) > table,
+  .body :global(.blog-table-scroll) tbody,
+  .body :global(.blog-table-scroll) tr,
+  .body :global(.blog-table-scroll) td {
     display: block;
-    overflow-x: auto;
-    white-space: nowrap;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .body :global(.blog-table-scroll) colgroup {
+    display: none;
+  }
+
+  /* The header row lives on inside each card, as the cell labels */
+  .body :global(.blog-table-scroll) thead,
+  .body :global(.blog-table-scroll) tr[data-table-head="true"] {
+    display: none;
+  }
+
+  .body :global(.blog-table-scroll) > table {
+    font-size: 1rem;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  /* one row = one card */
+  .body :global(.blog-table-scroll) tbody tr {
+    margin: 0 0 0.9rem;
+    border: 1px solid #f0e7e7;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 12px 28px -22px rgba(84, 24, 32, 0.45);
+    overflow: hidden;
+  }
+
+  .body :global(.blog-table-scroll) tbody tr:last-child {
+    margin-bottom: 0;
+  }
+
+  .body :global(.blog-table-scroll) tbody td,
+  .body :global(.blog-table-scroll) tbody tr:nth-child(even) td,
+  .body :global(.blog-table-scroll) tbody tr:nth-child(odd) td,
+  .body :global(.blog-table-scroll) tbody tr:hover td,
+  .body
+    :global(.blog-table-scroll)
+    tbody
+    tr[data-table-head="true"]
+    ~ tr:nth-child(even)
+    td,
+  .body
+    :global(.blog-table-scroll)
+    tbody
+    tr[data-table-head="true"]
+    ~ tr:nth-child(odd)
+    td {
+    position: static;
+    padding: 0.8rem 1.05rem;
+    border-top: 1px solid #f6eeee;
+    background: #ffffff;
+    box-shadow: none;
+    font-size: 0.95rem;
+    color: #4b5563;
+    font-weight: 400;
+  }
+
+  /* column header printed above the value */
+  .body :global(.blog-table-scroll) tbody td[data-label]:not([data-label=""])::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 0.3rem;
+    font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+    font-size: 0.66rem;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #a87b82;
+  }
+
+  /* first cell = card head: the row label */
+  .body :global(.blog-table-scroll) tbody td:first-child,
+  .body :global(.blog-table-scroll) tbody tr:nth-child(even) td:first-child,
+  .body :global(.blog-table-scroll) tbody tr:nth-child(odd) td:first-child,
+  .body :global(.blog-table-scroll) tbody tr:hover td:first-child {
+    padding: 0.9rem 1.05rem 0.95rem;
+    border-top: none;
+    border-left: 3px solid #8a2b36;
+    background: #fdf6f6;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #1f2430;
+  }
+
+  .body
+    :global(.blog-table-scroll)
+    tbody
+    td:first-child[data-label]:not([data-label=""])::before {
+    color: #8a2b36;
+  }
+
+  /* Layout boxes stay full width - nothing to scroll */
+  .body table[data-layout-box="true"] {
+    border-radius: 14px;
+  }
+
+  .body table[data-layout-box="true"] td,
+  .body table[data-layout-box="true"] tbody tr:nth-child(even) td,
+  .body table[data-layout-box="true"] tbody tr:hover td {
+    padding: 0.3rem 1.15rem;
+    min-width: 0;
+    position: static;
+    box-shadow: none;
+  }
+
+  .body table[data-layout-box="true"] tr:first-child td {
+    padding-top: 1.25rem;
+  }
+
+  .body table[data-layout-box="true"] tr:last-child td {
+    padding-bottom: 1.25rem;
   }
 
   .body ul {
@@ -324,5 +634,22 @@
 
   .body ul > li {
     padding-left: 1.6rem;
+  }
+}
+
+/* Very small phones: tighten the card padding a touch */
+@media (max-width: 430px) {
+  .body :global(.blog-table-scroll) tbody td,
+  .body :global(.blog-table-scroll) tbody tr:nth-child(even) td,
+  .body :global(.blog-table-scroll) tbody tr:nth-child(odd) td {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.92rem;
+  }
+
+  .body :global(.blog-table-scroll) tbody td:first-child,
+  .body :global(.blog-table-scroll) tbody tr:nth-child(even) td:first-child,
+  .body :global(.blog-table-scroll) tbody tr:nth-child(odd) td:first-child {
+    padding: 0.8rem 0.9rem 0.85rem;
+    font-size: 1rem;
   }
 }

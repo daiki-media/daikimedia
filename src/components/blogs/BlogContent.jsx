@@ -3,6 +3,7 @@ import {
   cleanBlogContent,
   enhanceBlogContent,
   markFaqQuestions,
+  wrapTables,
 } from '@/utils/contentCleaner';
 
 export default function BlogContent({ content }) {
@@ -11,7 +12,9 @@ export default function BlogContent({ content }) {
   // 2. Resolve image src to absolute, add alt + lazy-loading
   const withImages = enhanceBlogContent(cleaned);
   // 3. Flag question paragraphs so they render as FAQ accents
-  const finalHtml = markFaqQuestions(withImages);
+  const withFaq = markFaqQuestions(withImages);
+  // 4. Wrap tables so wide ones scroll inside their own container on mobile
+  const finalHtml = wrapTables(withFaq);
 
   return (
     <div className={styles.wrapper}>
