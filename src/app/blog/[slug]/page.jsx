@@ -2,11 +2,13 @@ import { redirect } from "next/navigation";
 import Footer from "@/components/footer/Footer";
 import NewsLetter from "@/components/shared/NewsLetter";
 import ArticleSchema from "@/components/schema/ArticleSchema";
+import FAQSchema from "@/components/schema/FAQSchema";
 import BlogContent from "@/components/blogs/BlogContent";
 import BlogDetailHero from "@/components/blogs/BlogDetailHero";
 import RelatedBlogs from "@/components/blogs/RelatedBlogs";
 import { getAllBlogs, getBlogBySlug, getRelatedBlogs } from "@/lib/blogs";
 import { getCMSImageUrl } from "@/utils/imageUtils";
+import { extractFaqs } from "@/utils/faqExtractor";
 import {
   decodeHtmlEntities,
   stripHtml,
@@ -140,6 +142,11 @@ export default async function BlogDetails({ params }) {
       "Blog post content"
   );
 
+  // FAQ blocks live inside the CMS content, not as separate fields, so they are
+  // read back out of the post body. Only FAQs that are actually rendered on the
+  // page end up in the schema; posts without an FAQ section emit nothing.
+  const faqs = extractFaqs(blog.content);
+
   return (
     <>
       <ArticleSchema
@@ -158,6 +165,10 @@ export default async function BlogDetails({ params }) {
         imageWidth={1200}
         imageHeight={630}
       />
+
+      {faqs.length > 0 && (
+        <FAQSchema faqs={faqs} pageUrl={getCurrentUrl()} />
+      )}
 
       <main className="flex flex-col">
         <BlogDetailHero
