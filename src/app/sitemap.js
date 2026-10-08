@@ -149,6 +149,26 @@ export default async function sitemap() {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    // Live, indexable, self-canonical service pages that were never listed
+    // here (added 8 Oct 2026). Each is a full page of unique copy; pages still
+    // under merge or noindex review are deliberately left out until decided.
+    ...[
+      "/igaming-seo-agency-malaysia",
+      "/seo-services-singapore",
+      "/igaming-seo-singapore",
+      "/singapore-casino-seo",
+      "/ppc-agency-singapore",
+      "/ecommerce-seo-singapore",
+      "/healthcare-seo-singapore",
+      "/dental-seo-singapore",
+      "/google-december-2025-core-update",
+      "/what-is-digital-marketing",
+    ].map((path) => ({
+      url: `${baseUrl}${path}`,
+      lastModified: date,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    })),
   ];
 
   const apiBlogs = await getAllBlogs();
@@ -197,5 +217,15 @@ export default async function sitemap() {
     priority: caseStudy.priority,
   }));
 
-  return [...staticRoutes, ...blogRoutes, ...serviceRoutes, ...authorRoutes, ...caseStudyRoutes];
+  // singleServiceData.json also carries "local-seo-agency-malaysia", which is
+  // a static route listed above, so the merged list held that URL twice. One
+  // entry per URL, first occurrence wins.
+  const seen = new Set();
+  return [...staticRoutes, ...blogRoutes, ...serviceRoutes, ...authorRoutes, ...caseStudyRoutes].filter(
+    (entry) => {
+      if (seen.has(entry.url)) return false;
+      seen.add(entry.url);
+      return true;
+    },
+  );
 }

@@ -30,7 +30,9 @@ export const metadata = {
   description: "DaikiMedia helps iGaming brands grow with smart, compliance-aware SEO for regulated US markets. Get a strategy built for casino, sportsbook, and affiliate search visibility.",
   keywords: "iGaming SEO agency, igaming seo services, online gambling seo agency, regulated gambling seo, online casino seo services, sports betting seo agency",
   alternates: {
-    canonical: "/en-us/igaming-seo-agency/",
+    // Absolute and without a trailing slash: the slashed form 308s to this
+    // URL, so the old canonical pointed at a redirect.
+    canonical: "https://www.daikimedia.com/en-us/igaming-seo-agency",
   },
 };
 

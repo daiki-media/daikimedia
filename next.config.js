@@ -10,6 +10,27 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // ── One canonical origin: https://www.daikimedia.com ──────────────────
+      // Vercel's domain settings already send http:// and the bare apex to
+      // www, but the project's own daikimedia.vercel.app alias served the
+      // whole site as a second, indexable copy (checked 8 Oct 2026: 200, no
+      // noindex header). A host-matched redirect here closes that and any
+      // other alias in one hop, and keeps the apex covered even if the
+      // domain settings are ever changed. Preview deployments
+      // (*-git-*.vercel.app) are deliberately not matched, so staging links
+      // keep working.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "daikimedia.vercel.app" }],
+        destination: "https://www.daikimedia.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "daikimedia.com" }],
+        destination: "https://www.daikimedia.com/:path*",
+        permanent: true,
+      },
       {
         source: "/learn/:slug",
         destination: "/:slug",

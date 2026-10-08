@@ -15,7 +15,9 @@ export const metadata = {
   description: "DaikiMedia helps casino brands grow with smart, branded, and compliance-aware SEO strategies for competitive US search markets. Build authority, traffic, and better organic visibility.",
   keywords: "casino SEO agency, online casino SEO services, gambling SEO agency, casino SEO expert, regulated casino marketing, US casino SEO",
   alternates: {
-    canonical: "/en-us/casino-seo-agency/",
+    // Absolute and without a trailing slash: the slashed form 308s to this
+    // URL, so the old canonical pointed at a redirect.
+    canonical: "https://www.daikimedia.com/en-us/casino-seo-agency",
   },
 };
 
