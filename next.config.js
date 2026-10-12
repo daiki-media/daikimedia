@@ -31,6 +31,16 @@ const nextConfig = {
         destination: "https://www.daikimedia.com/:path*",
         permanent: true,
       },
+      // /en-us was a placeholder page ("description of the page") with no
+      // hreflang alternate and no internal link pointing at it (checked
+      // 12 Oct 2026). The team chose to send it to the homepage. Only the
+      // exact path matches; /en-us/casino-seo-agency and
+      // /en-us/igaming-seo-agency are real pages and stay.
+      {
+        source: "/en-us",
+        destination: "/",
+        permanent: true,
+      },
       {
         source: "/learn/:slug",
         destination: "/:slug",

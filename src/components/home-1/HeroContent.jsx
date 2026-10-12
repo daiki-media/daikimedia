@@ -22,11 +22,11 @@ const HeroContent = () => {
           5k+ Trusted Businesses
         </p>
         <h1 className="mb-4 max-md:mb-8 lg:text-6xl">
-          Growth Marketing {" "}
+          SEO Agency in Malaysia{" "}
           <span className="block rounded-[88px] mr-4 my-2  border-2 border-paragraph bg-transparent px-5 pb-2.5 pt-1 font-playfair italic leading-none dark:border-[#F0F3EA]">
-            That Actually Moves
+            That Turns Rankings
           </span>{" "}
-           Your Business Forward
+          Into Revenue
         </h1>
         <p className="mb-4 max-w-[590px] max-md:mb-8">
           At DaikiMedia, we help brands grow with sharper strategy, stronger visibility, and digital marketing that feels connected from start to finish.

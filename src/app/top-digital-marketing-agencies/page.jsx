@@ -2,6 +2,15 @@ import digitalMarketingData from "@/data/digitalMarketingData";
 import DynamicCompanyListing from "@/components/top-agencies/seo-firms-section";
 import Footer from "@/components/footer/Footer";
 
+export const metadata = {
+  title: "Best Digital Marketing Agencies in Malaysia | Daiki Media",
+  description:
+    "Discover top-rated digital marketing agencies in Malaysia. These experts specialise in comprehensive digital strategies, from SEO and PPC to social media marketing and content creation.",
+  alternates: {
+    canonical: "https://www.daikimedia.com/top-digital-marketing-agencies",
+  },
+};
+
 const DigitalMarketingPage = () => {
   return (
     <>

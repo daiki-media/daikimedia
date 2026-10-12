@@ -2,6 +2,15 @@ import seoFirmsData from "@/data/graphicDesignAgenciesData";
 import DynamicCompanyListing from "@/components/top-agencies/seo-firms-section";
 import Footer from "@/components/footer/Footer";
 
+export const metadata = {
+  title: "Best Graphic Design Agencies in Malaysia | Daiki Media",
+  description:
+    "A curated list of the best graphic design agencies in Malaysia, with each agency's profile, services and clients, compiled by Daiki Media.",
+  alternates: {
+    canonical: "https://www.daikimedia.com/best-graphic-design-agencies",
+  },
+};
+
 const SeoPage = () => {
   return (
     <>
