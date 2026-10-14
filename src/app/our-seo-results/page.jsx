@@ -2,9 +2,9 @@ import Footer from "@/components/footer/Footer";
 import SeoResult from "@/components/lear/our-seo-result/our-seo-result";
 
 export const metadata = {
-  title: "Our SEO Result | Daiki Media",
+  title: "Our SEO Results Proven Case Studies & Organic Growth Proof",
   description:
-    "Discover the impressive SEO results achieved by Daiki Media. Learn how our tailored SEO strategies have driven success for businesses across various industries.",
+    "Explore our proven SEO case studies and organic growth proof. See how our data-driven strategies deliver higher rankings and measurable revenue for clients.",
   keywords:
     "SEO results, Daiki Media, SEO strategies, business growth, search engine optimization, digital marketing",
   alternates: {

@@ -87,6 +87,7 @@
       "id": 4,
       "slug": "seo-services",
       "title": "SEO Services",
+      "linkText": "Explore our SEO services",
       "excerpt": "Improve your website’s visibility and ranking on search engines with our expert SEO services designed to drive organic traffic and boost conversions.",
       "iconLight": "/images/services/seo-service.svg",
       "iconDark": "/images/services/seo-service.svg",

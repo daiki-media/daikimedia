@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import {
   PlayCircle,
   CheckCircle,
@@ -126,6 +127,13 @@ export default function SeoResult() {
             digital marketing. With our proven track record of success,
             we&apos;ll help you achieve higher website traffic, increased leads,
             and exponential revenue growth.
+          </p>
+          <p className="text-base mb-8 max-w-4xl mx-auto">
+            Learn more about our{" "}
+            <Link href="/seo-services" className="font-semibold text-red-600 hover:underline">
+              SEO services
+            </Link>
+            .
           </p>
           <a
             href="https://api.whatsapp.com/send?phone=601114850067"

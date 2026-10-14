@@ -636,6 +636,17 @@ export default function CaseStudyContent({ caseStudy }) {
           </FadeUp>
         )}
 
+        {/* ── SEO SERVICES LINK ── */}
+        <FadeUp className="mb-12">
+          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            Want to see how we approach campaigns like this? Learn more about our{" "}
+            <Link href="/seo-services" className="font-semibold text-red-600 dark:text-red-400 hover:underline">
+              SEO services
+            </Link>
+            .
+          </p>
+        </FadeUp>
+
         {/* ── CTA ── */}
         {caseStudy.cta && (
           <FadeUp>

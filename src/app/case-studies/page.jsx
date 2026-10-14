@@ -3,6 +3,7 @@ import NewsLetter from "@/components/shared/NewsLetter";
 import PageHero from "@/components/shared/PageHero";
 import CaseStudyCard from "@/components/case-studies/CaseStudyCard";
 import caseStudiesData from "@/data/caseStudiesData.json";
+import Link from "next/link";
 
 export const metadata = {
   title: "Case Studies | Daiki Media SEO Agency",
@@ -38,6 +39,13 @@ export default function CaseStudiesPage() {
                 <p className="text-lg text-gray-600">No case studies available at the moment.</p>
               </div>
             )}
+            <p className="mt-12 text-center text-lg text-gray-600 dark:text-gray-300">
+              Learn more about our{" "}
+              <Link href="/seo-services" className="font-semibold text-red-600 hover:underline">
+                SEO services
+              </Link>
+              .
+            </p>
           </div>
         </section>
         <NewsLetter />

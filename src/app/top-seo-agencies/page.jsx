@@ -4,9 +4,9 @@ import Footer from "@/components/footer/Footer";
 import StaticBreadcrumbSchema from "@/components/schema/StaticBreadcrumbSchema";
 
 export const metadata = {
-  title: "Best SEO Agencies in Malaysia | SEO Company Comparison | Daiki Media",
+  title: "Best SEO Agencies in Malaysia 2026 Top Ranked Expert Firms",
   description:
-    "Compare leading SEO agencies in Malaysia by services, strengths, budget, and business fit. Use this guide to choose the right SEO partner for your growth goals.",
+    "Discover the leading SEO agencies in Malaysia for 2026. Compare top-ranked expert firms delivering proven organic growth, higher rankings, and maximum ROI.",
   alternates: {
     canonical: "https://www.daikimedia.com/top-seo-agencies",
   },

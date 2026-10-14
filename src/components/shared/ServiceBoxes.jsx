@@ -47,7 +47,7 @@ const ServiceBoxes = () => {
               href={`/${items.slug}`}
               className="btn-outline btn-sm dark:bg-white dark:text-black hover:dark:bg-black hover:dark:text-white"
             >
-              Read More
+              {items.linkText || "Read More"}
             </Link>
           </div>
         </div>

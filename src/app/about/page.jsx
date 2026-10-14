@@ -10,9 +10,9 @@ import AboutFeature from "@/data/aboutFeaturesData";
 import TestimonialV2 from "@/components/shared/TestimonialV2";
 
 export const metadata = {
-  title: "About | Daiki Media",
+  title: "About Daiki Media: Your Trusted Digital Growth Partner in Malaysia",
   description:
-    "Daiki Media provides expert SEO, web development, and digital marketing services, helping brands grow online with strategic, innovative, and results-driven solutions",
+    "Learn more about Daiki Media, your trusted digital growth partner in Malaysia delivering cutting-edge SEO, web development, and marketing solutions for enterprises.",
   keywords: "about, Daiki Media, our mission, media company, team",
 };
 const About = () => {

@@ -496,7 +496,7 @@ export default function SGDentalSEOPage() {
                 Our team builds customised SEO strategies using local keyword research, technical SEO, content optimisation, Google Business Profile management, competitor analysis, and high-quality link building — all based on your clinic's services, target audience, and business goals. With over 10 years of experience, we continuously monitor performance and adapt to Google's latest algorithm changes.
               </p>
               <Link
-                href="/sg/seo-services"
+                href="/seo-services-singapore"
                 className="mt-4 inline-flex items-center gap-1.5 text-[14px] font-medium text-red-500 transition-colors hover:text-red-600"
               >
                 Check Our Affordable Local SEO Services in Singapore <ArrowRight size={14} />

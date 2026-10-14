@@ -292,7 +292,7 @@ export default function SGPPCAgencyPage() {
           <ol className="flex flex-wrap items-center gap-1.5 text-xs text-gray-500">
             <li><Link href="/" className="hover:text-red-500 transition-colors">Home</Link></li>
             <li><ChevronRight size={12} /></li>
-            <li><Link href="/digital-marketing" className="hover:text-red-500 transition-colors">Digital Marketing</Link></li>
+            <li><Link href="/digital-marketing-services" className="hover:text-red-500 transition-colors">Digital Marketing</Link></li>
             <li><ChevronRight size={12} /></li>
             <li className="text-red-500 font-medium">PPC Agency Singapore</li>
           </ol>
