@@ -23,8 +23,12 @@ export default function HeroSeoService() {
               SEO Services Malaysia for Google and AI Search
             </h1>
 
+            <p className="mb-4 text-base text-gray-600 sm:text-lg">
+              Daiki Media provides SEO services to Malaysian businesses that want to rank higher on Google, grow organic traffic, and get found in AI-driven search including ChatGPT, Gemini and Google AI Overviews. We combine established SEO practice with Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO), built around one principle: measurable deliverables, not vague promises.
+            </p>
+
             <p className="mb-8 text-base text-gray-600 sm:text-lg">
-                    Daikimedia helps businesses rank higher on Google, grow organic traffic, and increase qualified leads through advanced SEO, AEO, GEO, and AI search strategies.
+              This page sets out exactly what you get when you work with us: the deliverables, the process month by month, one verified case study with real numbers, how our pricing works, and how to get started.
             </p>
             
             <Link

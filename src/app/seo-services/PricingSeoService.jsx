@@ -1,19 +1,20 @@
 import React from "react";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 const pricingPlans = [
   {
     name: "Lite SEO",
     price: "2000",
-    description: "Best for businesses starting to improve rankings and search presence",
+    description: "For local SMEs starting to improve rankings and search presence",
     ribbonText: "LOCAL SMES",
     ribbonBg: "bg-[#3F51B5]",
     titleColor: "text-[#3F51B5]",
     buttonBg: "bg-[#3F51B5]",
     tickColor: "text-[#3F51B5]",
     features: [
-      "Target Keywords: Up to 15",
-      "Technical SEO Audit and fixes",
+      "Up to 15 target keywords",
+      "Technical SEO audit and fixes",
       "On-page optimization (up to 8 pages)",
       "Local SEO and Google Business Profile setup",
       "Basic keyword strategy and tracking",
@@ -24,21 +25,20 @@ const pricingPlans = [
   {
     name: "Growth SEO",
     price: "5000",
-    description: "Built for businesses ready to compete and grow consistently",
+    description: "For mid-sized businesses ready to compete and grow consistently",
     ribbonText: "MID-SIZED BUSINESSES",
     ribbonBg: "bg-[#FF4D3D]",
     titleColor: "text-[#FF4D3D]",
     buttonBg: "bg-[#FF4D3D]",
     tickColor: "text-[#FFB400]",
     features: [
-      "Target Keywords: Up to 35",
+      "Up to 35 target keywords",
       "Full on-page SEO and content optimization",
       "Technical SEO improvements and site structure",
-      "Content briefs and SEO blog strategy (4 per month)",
+      "Content briefs and SEO blog strategy (4 articles per month)",
       "Link building campaigns for authority growth",
       "Local SEO and conversion-focused improvements",
-      "AI SEO integration (AEO + GEO strategies)",
-      "Optimization for AI search platforms (ChatGPT, Gemini, Google AI)",
+      "AI SEO integration (AEO + GEO), optimised for ChatGPT, Gemini and Google AI",
       "Weekly performance reports",
       "Dedicated account manager",
     ],
@@ -46,24 +46,23 @@ const pricingPlans = [
   {
     name: "Advanced SEO",
     price: "7000",
-    description: "For businesses aiming for strong market positioning and long-term growth",
+    description: "For regional brands aiming for strong market positioning",
     ribbonText: "REGIONAL BRANDS",
     ribbonBg: "bg-[#3F51B5]",
     titleColor: "text-[#003366]",
     buttonBg: "bg-[#3F51B5]",
     tickColor: "text-[#3F51B5]",
     features: [
-      "Target Keywords: 60+",
+      "60+ target keywords",
       "Advanced technical SEO and site architecture optimization",
       "Full content strategy and ongoing blog production",
       "High-authority backlink acquisition",
       "Internal linking and topical authority building",
-      "Advanced AEO and GEO implementation",
-      "AI search optimization across multiple platforms",
-      "Schema markup and structured data implementation",
+      "Advanced AEO and GEO implementation across multiple AI platforms",
+      "Schema markup and structured data",
       "Conversion-focused SEO improvements",
       "Competitor and keyword gap analysis",
-      "Weekly performance reports + strategy calls",
+      "Weekly performance reports and strategy calls",
       "Dedicated SEO strategist",
     ],
   },
@@ -73,7 +72,7 @@ const PricingSeoService = () => {
   return (
     <section className="relative w-full py-20 px-4 overflow-hidden bg-[#FDFBF4]">
       {/* Background Image with Overlay */}
-      <div 
+      <div
         className="absolute inset-0 w-full h-full z-0"
         style={{
           backgroundImage: "url('/images/seoService/deco3.webp')",
@@ -81,17 +80,18 @@ const PricingSeoService = () => {
           backgroundPosition: "center",
         }}
       />
-      
+
       {/* Subtle gradient overlay for better text readability */}
       <div className="absolute inset-0 w-full h-full z-0 bg-gradient-to-b from-[#FDFBF4]/80 via-transparent to-[#FDFBF4]/80" />
-      
+
       <div className="relative z-10 max-w-7xl mx-auto text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-6">
-          SEO Pricing Malaysia That <br /> Grows with Your Business
+          SEO Pricing Malaysia: How Our Plans Work
         </h2>
         <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
-          Simple, structured plans focused on improving rankings, search performance, 
-          and long-term results without rigid contracts.
+          Our pricing is structured around the scope, the number of keywords targeted, the volume
+          of content produced, and the depth of technical and link-building work involved. Plans are
+          month-to-month; there are no long-term lock-in contracts.
         </p>
       </div>
 
@@ -112,14 +112,14 @@ const PricingSeoService = () => {
               <h3 className={`text-3xl font-bold mb-6 ${plan.titleColor}`}>
                 {plan.name}
               </h3>
-              
+
               <div className="flex items-baseline mb-4 text-[#1A1A1A]">
                 <span className="text-2xl font-bold mr-1">RM</span>
                 <span className="text-6xl font-black">{plan.price}</span>
                 <span className="text-gray-400 ml-2 text-lg">/ month</span>
               </div>
 
-              <p className="text-gray-500 text-sm mb-8 leading-relaxed font-medium">
+              <p className="text-gray-500 text-sm mb-8 leading-relaxed font-medium italic">
                 {plan.description}
               </p>
 
@@ -134,9 +134,9 @@ const PricingSeoService = () => {
             </div>
 
             <div className="p-8 pt-0">
-              <button className={`w-full py-4 rounded-full text-white font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg ${plan.buttonBg}`}>
+              <Link href="/contact" className={`block w-full py-4 rounded-full text-center text-white font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg ${plan.buttonBg}`}>
                 Choose Plan
-              </button>
+              </Link>
             </div>
           </div>
         ))}
@@ -144,12 +144,16 @@ const PricingSeoService = () => {
 
       {/* Footer Button */}
       <div className="relative z-10 mt-16 text-center">
-        <button className="inline-flex items-center gap-2 border-2 border-[#003366] bg-white text-[#003366] px-10 py-4 rounded-full hover:bg-[#003366] hover:text-white transition-all duration-300 font-bold group shadow-md hover:shadow-lg">
-          Negotiate With Us 
-          <span className="bg-[#003366] text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] group-hover:bg-white group-hover:text-[#003366] transition-all duration-300">
-            →
-          </span>
-        </button>
+        <p className="text-gray-700 text-lg">
+          <strong>Need a custom scope?</strong> Running a large or multi-market site? See{" "}
+          <Link href="/enterprise-seo-services" className="text-[#3F51B5] font-semibold hover:underline">
+            Enterprise SEO Services
+          </Link>{" "}
+          or{" "}
+          <Link href="/contact" className="text-[#3F51B5] font-semibold hover:underline">
+            talk to us about your requirements
+          </Link>
+        </p>
       </div>
     </section>
   );

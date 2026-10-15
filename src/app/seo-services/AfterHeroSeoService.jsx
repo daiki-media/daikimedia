@@ -102,54 +102,34 @@ export default function AfterHeroSeoService() {
 
             {/* RIGHT CONTENT */}
             <div>
-            {/* SMALL RED H3 */}
-            <h3 className="text-sm font-bold text-red-500 uppercase tracking-wide mb-3">
-                About Daikimedia
-            </h3>
-
             {/* MAIN HEADING */}
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 leading-tight">
-                SEO Company in Malaysia Aligned with How Search Works Today
+                About Daiki Media: An SEO Company Built for How Search Works Today
             </h2>
-
-            {/* BLUE LINE */}
-            <p className="text-lg text-blue-600 font-medium mb-6">
-                With Daikimedia, your SEO strategy is built to improve Google rankings,
-                organic visibility, and search performance across Malaysia.
-            </p>
 
             {/* DESCRIPTION */}
             <p className="text-gray-700 mb-5 leading-relaxed">
-                Daikimedia is an SEO agency in Malaysia built by a team of search
-                specialists, SEO strategists, and content experts who understand how
-                visibility is earned today. Based on years of hands-on experience,
-                we’ve adapted our approach as search has evolved beyond traditional
-                rankings.
-            </p>
-
-            <p className="text-gray-700 mb-5 leading-relaxed">
-                We now focus on helping businesses appear across Google, AI-driven
-                search, and answer-based platforms where real decisions are made.
-                Our work blends <span className="font-semibold">SEO</span>,{" "}
-                <span className="font-semibold">AEO</span>, and{" "}
-                <span className="font-semibold">GEO</span> into a structured strategy
-                that improves how your brand is found, understood, and trusted.
+                Daiki Media is an SEO company in Malaysia run by search specialists,
+                SEO strategists and content experts. Search no longer stops at ten
+                blue links, and our approach has adapted accordingly. We help
+                businesses appear across Google, AI-driven search, and answer-based
+                platforms, where an increasing share of buying research now starts.
             </p>
 
             {/* SERVICES LIST */}
             <div className="space-y-3 mb-8">
                 <p className="font-semibold text-gray-900">
-                SEO Services Malaysia We Handle End to End
+                Our work covers three connected areas, handled end to end:
                 </p>
 
                 <ul className="space-y-2 text-gray-700">
-                <li>• From fixing technical SEO issues to building content that supports rankings</li>
-                <li>• From ranking on Google to getting cited in ChatGPT, Gemini, and AI overviews</li>
-                <li>• From increasing domain authority to reducing spam signals and stabilising traffic</li>
+                <li>• Fixing technical SEO issues and building content that supports rankings</li>
+                <li>• Ranking on Google and structuring content to be eligible for citation in ChatGPT, Gemini and AI Overviews</li>
+                <li>• Increasing domain authority, reducing spam signals and stabilising traffic through legitimate link building and technical hygiene</li>
                 </ul>
             </div>
 
-              <Link href="/about/">About Us</Link>
+              <Link href="/about" className="inline-flex items-center gap-2 font-semibold text-[#003366] hover:underline">Learn More About Us <span>→</span></Link>
             </div>
         </div>
     </section>

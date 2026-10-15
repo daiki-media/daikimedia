@@ -29,7 +29,7 @@ const testimonials = [
   {
     name: "Siti Mariam",
     title: "Operations Manager (Finance & Legal)",
-    text: "What I appreciate most is their results-driven approach. They don't just talk about rankings—they focus on real business outcomes. Our leads from organic search have doubled since the campaign started.",
+    text: "What I appreciate most is their results-driven approach. They don't just talk about rankings; they focus on real business outcomes. Our leads from organic search have doubled since the campaign started.",
   },
   {
     name: "Arjun Nair",
@@ -46,9 +46,9 @@ const testimonials = [
 export default function WhatClientSay() {
   return (
     <section className="relative w-full bg-[#FCF9F1] py-24 px-4 overflow-hidden">
-      
+
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 w-full h-full z-0"
         style={{
           backgroundImage: "url('/images/seoService/shape-deco.webp')",
@@ -56,13 +56,13 @@ export default function WhatClientSay() {
           backgroundRepeat: "no-repeat",
         }}
       />
-      
+
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header with Styled Slash Marks */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-[#111] inline-flex items-center gap-4">
-            What Our Clients Say
+            Client Experiences
           </h2>
         </div>
 
@@ -145,7 +145,7 @@ export default function WhatClientSay() {
           width: 12px;
           height: 12px;
         }
-        
+
         /* Hide default Swiper navigation */
         .swiper-button-next,
         .swiper-button-prev {

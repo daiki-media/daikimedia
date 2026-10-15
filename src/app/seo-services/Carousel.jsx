@@ -2,6 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Link from "next/link";
 
 // Import Swiper styles
 import "swiper/css";
@@ -11,37 +12,39 @@ import "swiper/css/pagination";
 const services = [
   {
     title: "SEO Services Malaysia",
-    desc: "SEO Strategies that build growth and keep your rankings strong.",
+    desc: "Core search strategies that build and protect rankings.",
     icon: "/images/seoService/search-engine-optimization.png",
   },
   {
-    title: "AI Optimisation (AIO)",
-    desc: "Get featured in Google AI results and answer sections.",
+    title: "AI Optimization (AIO)",
+    desc: "Structuring content to be eligible for Google AI Overviews and answer sections.",
     icon: "/images/seoService/artificial-intelligence.webp",
   },
   {
-    title: "Generative Engine Optimisation (GEO)",
-    desc: "Get found in AI-generated results.",
+    title: "Generative Engine Optimization (GEO)",
+    desc: "Formatting and citing content so it can be referenced in AI-generated results.",
+    href: "/generative-engine-optimization",
     icon: "/images/seoService/seo-location.png",
   },
   {
-    title: "Answer Engine Optimisation (AEO)",
-    desc: "Get featured in snippets and voice search.",
+    title: "Answer Engine Optimization (AEO)",
+    desc: "Targeting featured snippets, voice search and direct answers.",
     icon: "/images/seoService/web-apps.png",
   },
   {
     title: "Local SEO Malaysia",
-    desc: "Rank in local searches and Google Business Profile.",
+    desc: "Ranking in local searches and on Google Business Profile.",
+    href: "/local-seo-services",
     icon: "/images/seoService/seo-location.png",
   },
   {
     title: "Link Building Services",
-    desc: "High-quality, relevant backlinks to build authority.",
+    desc: "Backlinks from relevant, vetted sources to build domain authority.",
     icon: "/images/seoService/link.png",
   },
   {
     title: "SEO Website Development",
-    desc: "SEO-optimized websites with fast loading and smooth UX.",
+    desc: "SEO-optimised websites with fast loading and smooth UX.",
     icon: "/images/seoService/web-apps.png",
   },
 ];
@@ -58,10 +61,10 @@ export default function Carousel() {
     >
       <div className="relative max-w-5xl mx-auto text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-extrabold text-[#111827] tracking-tight mb-6">
-          Advanced SEO Services for Sustainable Search Growth
+          AI-Integrated SEO Strategies for Google and AI Search
         </h2>
         <p className="text-gray-500 text-lg max-w-3xl mx-auto leading-relaxed">
-          We help businesses build steady organic growth that stays consistent through search changes and Google updates, using SEO strategies shaped for Malaysia's competitive market and evolving AI-driven search results.
+          Our SEO strategies are shaped for Malaysia's competitive market and for AI-driven search results, built for steady organic growth that holds up through algorithm updates.
         </p>
       </div>
 
@@ -92,7 +95,11 @@ export default function Carousel() {
                 </div>
 
                 <h3 className="text-[20px] font-bold text-[#003366] mb-3">
-                  {item.title}
+                  {item.href ? (
+                    <Link href={item.href} className="hover:underline">{item.title}</Link>
+                  ) : (
+                    item.title
+                  )}
                 </h3>
                 <p className="text-gray-500 text-sm leading-[1.6] max-w-[280px]">
                   {item.desc}
@@ -110,15 +117,6 @@ export default function Carousel() {
         </div>
 
         <div className="custom-pagination flex justify-center gap-2 mt-4"></div>
-      </div>
-
-      <div className="flex justify-center mt-8">
-        <button className="flex items-center gap-2 border-2 border-[#003366] text-[#003366] px-8 py-3 rounded-full hover:bg-[#003366] hover:text-white transition-all duration-300 font-bold text-sm">
-          Explore Our Services 
-          <span className="bg-[#003366] text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] group-hover:bg-white group-hover:text-[#003366]">
-            ➔
-          </span>
-        </button>
       </div>
 
       {/* Global Style Overrides for Swiper Dots */}
